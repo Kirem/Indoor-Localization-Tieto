@@ -10,6 +10,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Polygon;
 
 /**
  * Created by Mateusz on 2015-03-18.
+ *
  */
 public class TestPolygon extends InstrumentationTestCase {
     Polygon polygonArr;
@@ -37,3 +38,4 @@ public class TestPolygon extends InstrumentationTestCase {
         assertEquals(36.0, polygonList.calculateLength());
     }
 }
+
