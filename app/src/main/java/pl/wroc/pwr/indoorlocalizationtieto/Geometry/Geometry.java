@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by Mateusz on 2015-03-18.
  */
-abstract class Geometry {
+public abstract class Geometry {
     public enum Type {
         POINT, LINE, LINESTRING, POLYGON, MULTIPOLYGON
     }
