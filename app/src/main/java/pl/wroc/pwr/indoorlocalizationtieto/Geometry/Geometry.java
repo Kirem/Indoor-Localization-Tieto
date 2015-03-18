@@ -103,7 +103,7 @@ class Polygon extends Geometry {
 
     public Polygon(Point[] pointsarr) {
         points.clear();
-        points.
+//        points.
         for(Point p : pointsarr) {
             points.add(p);
         }
