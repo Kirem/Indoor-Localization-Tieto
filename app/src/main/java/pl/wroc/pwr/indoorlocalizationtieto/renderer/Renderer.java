@@ -5,6 +5,6 @@ public class Renderer {
     }
 
     private void drawPolygon(){
-        
+
     }
 }
