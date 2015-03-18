@@ -1,5 +1,6 @@
 package pl.wroc.pwr.indoorlocalizationtieto.Geometry;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,21 +9,23 @@ import java.util.List;
 public class Multipolygon extends Geometry {
     private List<Polygon> polygons;
 
-    public Multipolygon(List<Polygon> polygonslist) {
-        polygons.addAll(polygonslist);
+    public Multipolygon(List<Polygon> polygonsList) {
+        polygons = new ArrayList<>();
+        polygons.addAll(polygonsList);
     }
 
-    public Multipolygon(Polygon[] polygonsarr) {
-        for(Polygon p : polygonsarr) {
+    public Multipolygon(Polygon[] polygonsArr) {
+        polygons = new ArrayList<>();
+        for(Polygon p : polygonsArr) {
             polygons.add(p);
         }
     }
 
     @Override
-    public double CalculateLength() {
-        float length = 0;
+    public double calculateLength() {
+        double length = 0;
         for(Polygon p : polygons) {
-            length += p.CalculateLength();
+            length += p.calculateLength();
         }
         return length;
     }

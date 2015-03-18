@@ -1,32 +1,41 @@
 package pl.wroc.pwr.indoorlocalizationtieto.Geometry;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Mateusz on 2015-03-18.
  */
 public class LineString extends Geometry {
-    private List<Line> lines;
+    private List<Point> points;
 
-    public LineString(List<Line> linelist) {
-        lines.addAll(linelist);
+    public LineString(List<Point> pointsList) {
+        points = new ArrayList<>();
+        points.addAll(pointsList);
     }
 
-    public LineString(Line[] linearr) {
-        for (Line l : linearr) {
-            lines.add(l);
+    public LineString(Point[] pointsArr) {
+        points = new ArrayList<>();
+        for (Point p : pointsArr) {
+            points.add(p);
         }
     }
 
 
     @Override
-    public double CalculateLength() {
-        float length =0;
-        for(Line l : lines) {
-            length += l.CalculateLength();
+    public double calculateLength() {
+        double length =0;
+        for(int i=0; i<points.size()-1; i++) {
+            Point p1 = points.get(i);
+            Point p2 = points.get(i+1);
+
+            length += Math.sqrt(Math.pow(p2.getX() - p1.getX(),2) + Math.pow(p2.getY() - p1.getY(), 2));
         }
         return length;
     }
 
-    public List<Line> getLines() { return lines; }
+    /**
+     * @return list of points, that make up the LineString
+     */
+    public List<Point> getLineString() { return points; }
 }
