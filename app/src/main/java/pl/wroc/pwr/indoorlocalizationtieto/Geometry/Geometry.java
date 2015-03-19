@@ -1,10 +1,11 @@
 package pl.wroc.pwr.indoorlocalizationtieto.Geometry;
 
+import java.util.List;
+
 /**
  * Created by Mateusz on 2015-03-18.
  */
-public abstract class Geometry {
-
-    public abstract double CalculateLength();
-
+public interface Geometry {
+    public abstract double calculateLength();
+    //public boolean isEqual();
 }

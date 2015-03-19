@@ -1,15 +1,23 @@
 package pl.wroc.pwr.indoorlocalizationtieto.map;
 
 
+import java.util.ArrayList;
+
+import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.LineString;
 
 public class Road extends MapObject{
 
     //TODO z czego sklada sie droga?
-    Road(LineString lineString) {
-        super(lineString);
+    Road(long id, LineString lineString) {
+        super(id, lineString);
     }
 
 
-
+    @Override
+    ArrayList<Geometry> getGeometries() {
+        ArrayList<Geometry> geometries = new ArrayList<>();
+        geometries.add(this.getObjectGeometry());
+        return geometries;
+    }
 }

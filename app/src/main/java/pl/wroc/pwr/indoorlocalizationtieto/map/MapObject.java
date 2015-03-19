@@ -7,7 +7,9 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 public abstract class MapObject {
     private Geometry objectGeometry;
     private String name;
-    MapObject(Geometry geometry) {
+    private long id;
+    MapObject(long n, Geometry geometry) {
+        id = n;
         objectGeometry = geometry;
     }
 

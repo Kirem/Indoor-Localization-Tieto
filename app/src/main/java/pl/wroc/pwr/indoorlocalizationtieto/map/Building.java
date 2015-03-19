@@ -9,8 +9,8 @@ public class Building extends MapObject{
     ArrayList<Level> levels;
 //TODO jak zaprojektowac wyjscia z budynkow?
 
-    public Building(Polygon buildingShape) {
-        super(buildingShape);
+    public Building(long id, Polygon buildingShape) {
+        super(id, buildingShape);
     }
 
     public Level getLevel(int position){
