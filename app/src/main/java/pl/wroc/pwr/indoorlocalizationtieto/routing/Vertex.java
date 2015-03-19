@@ -6,13 +6,15 @@ public class Vertex {
     private int id;
     private ArrayList<Vertex> neighbours;
 
-    public Vertex(int id){
+    public Vertex(int id) {
         this.id = id;
     }
-    public void addNeighbour(Vertex neighbour){
+
+    public void addNeighbour(Vertex neighbour) {
         neighbours.add(neighbour);
     }
-    public int getId(){
+
+    public int getId() {
         return id;
     }
 
