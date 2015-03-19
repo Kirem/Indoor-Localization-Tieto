@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Mateusz on 2015-03-18.
  */
-public class LineString extends Geometry {
+public class LineString implements Geometry {
     private List<Point> points;
 
     public LineString(List<Point> pointsList) {

@@ -3,7 +3,7 @@ package pl.wroc.pwr.indoorlocalizationtieto.Geometry;
 /**
  * Created by Mateusz on 2015-03-18.
  */
-public class Point extends Geometry{
+public class Point implements Geometry{
     private double x,y;
 
     public Point(double px, double py) {

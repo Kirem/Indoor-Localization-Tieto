@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Mateusz on 2015-03-18.
  */
-public class Multipolygon extends Geometry {
+public class Multipolygon implements Geometry {
     private List<Polygon> polygons;
 
     public Multipolygon(List<Polygon> polygonsList) {

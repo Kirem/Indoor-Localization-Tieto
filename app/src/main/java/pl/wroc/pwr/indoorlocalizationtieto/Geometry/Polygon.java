@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Mateusz on 2015-03-18.
  */
-public class Polygon extends Geometry {
+public class Polygon implements Geometry {
     protected List<Point> points;
 
     public Polygon(List<Point> pointsList) {
