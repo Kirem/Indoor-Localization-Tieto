@@ -1,12 +1,15 @@
 package pl.wroc.pwr.indoorlocalizationtieto.map;
 
+import java.util.ArrayList;
+
+import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Polygon;
 
 //TODO czy pokoj powinien miec informacje o pietrze na ktorym sie znajduje(dla windy np.)
 public class Room extends MapObject {
     private boolean isCorridor;
-    Room(Polygon roomShape, boolean isCorridor) {
-        super(roomShape);
+    Room(long id, Polygon roomShape, boolean isCorridor) {
+        super(id, roomShape);
         this.isCorridor = isCorridor;
     }
 
@@ -19,4 +22,10 @@ public class Room extends MapObject {
     }
 
 
+    @Override
+    ArrayList<Geometry> getGeometries() {
+        ArrayList<Geometry> geometries = new ArrayList<>();
+        geometries.add(this.getObjectGeometry());
+        return geometries;
+    }
 }
