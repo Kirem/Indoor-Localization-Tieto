@@ -1,13 +1,23 @@
 package pl.wroc.pwr.indoorlocalizationtieto.map;
 
+import java.util.ArrayList;
+
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
-public class MapObject {
+
+public abstract class MapObject {
     private Geometry objectGeometry;
-    public MapObject(Geometry objectGeometry) {
+    private String name;
+    MapObject(Geometry geometry) {
+        objectGeometry = geometry;
+    }
+
+    public Geometry getObjectGeometry() {
+        return objectGeometry;
+    }
+
+    public void setObjectGeometry(Geometry objectGeometry) {
         this.objectGeometry = objectGeometry;
     }
 
-    public Geometry getGeometry() {
-        return objectGeometry;
-    }
+    abstract ArrayList<Geometry> getGeometries();
 }
