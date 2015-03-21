@@ -1,26 +1,29 @@
 package pl.wroc.pwr.indoorlocalizationtieto.Geometry;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Mateusz on 2015-03-18.
  */
-public class Polygon extends Geometry {
+public class Polygon implements Geometry {
     protected List<Point> points;
 
-    public Polygon(List<Point> pointslist) {
-        points.addAll(pointslist);
+    public Polygon(List<Point> pointsList) {
+        points = new ArrayList<>();
+        points.addAll(pointsList);
     }
 
-    public Polygon(Point[] pointsarr) {
-        for(Point p : pointsarr) {
+    public Polygon(Point[] pointsArr) {
+        points = new ArrayList<>();
+        for(Point p : pointsArr) {
             points.add(p);
         }
     }
 
     @Override
-    public double CalculateLength() {
-        float length =0;
+    public double calculateLength() {
+        double length = 0;
         Point p1, p2;
         for(int i=0; i<points.size(); i++) {
             p1 = points.get(i);
@@ -33,7 +36,10 @@ public class Polygon extends Geometry {
         return length;
     }
 
-    public List<Point> getPoints() {
+    /**
+     * @return list of points, that make up the Polygon
+     */
+    public List<Point> getPolygon() {
         return points;
     }
 }
