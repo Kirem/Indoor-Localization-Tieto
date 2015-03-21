@@ -9,13 +9,13 @@ public class Crossing extends MapObject {
     private ArrayList<MapObject> roads;
     //stworzyc klase nadrzedna opisujaca obiekty pozwalajace na poruszanie sie?
 
-    Crossing(Point p) {
-        super(p);
+    Crossing(long id, Point p) {
+        super(id, p);
         roads = new ArrayList<>();
     }
 
-    Crossing(ArrayList<MapObject> crossings, Point p) {
-        super(p);
+    Crossing(long id, ArrayList<MapObject> crossings, Point p) {
+        super(id, p);
         roads = new ArrayList<>();
     }
 

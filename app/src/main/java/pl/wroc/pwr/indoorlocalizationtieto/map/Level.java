@@ -11,15 +11,15 @@ public class Level extends MapObject {
     private int currentLevel;
     //TODO zmienic nazwe currentLevel...
 
-    public Level(Polygon shape, int currentLevel) {
-        super(shape);
+    public Level(long id, Polygon shape, int currentLevel) {
+        super(id, shape);
         this.currentLevel = currentLevel;
         rooms = new ArrayList<>();
         doors = new ArrayList<>();
     }
 
-    public Level(Polygon shape, int currentLevel, ArrayList<Room> rooms, ArrayList<Door> doors) {
-        super(shape);
+    public Level(long id, Polygon shape, int currentLevel, ArrayList<Room> rooms, ArrayList<Door> doors) {
+        super(id, shape);
         this.currentLevel = currentLevel;
         this.rooms = new ArrayList<>(rooms);
         this.doors = new ArrayList<>(doors);
