@@ -7,7 +7,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 
 public class POI extends MapObject {
 
-    POI(long id, Point p) {
+    public POI(long id, Point p) {
         super(id, p);
 
     }
