@@ -1,10 +1,9 @@
 package pl.wroc.pwr.indoorlocalizationtieto.renderer;
 
-public class Renderer {
-    Renderer() {
-    }
+import android.content.Context;
+import android.graphics.Canvas;
 
-    private void drawPolygon(){
-
-    }
+public interface Renderer {
+    public void draw(Canvas canvas);
+    public void setContext(Context context);
 }
