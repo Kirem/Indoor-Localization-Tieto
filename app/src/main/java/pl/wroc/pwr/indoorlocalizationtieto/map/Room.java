@@ -8,7 +8,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Polygon;
 //TODO czy pokoj powinien miec informacje o pietrze na ktorym sie znajduje(dla windy np.)
 public class Room extends MapObject {
     private boolean isCorridor;
-    Room(long id, Polygon roomShape, boolean isCorridor) {
+    public Room(long id, Polygon roomShape, boolean isCorridor) {
         super(id, roomShape);
         this.isCorridor = isCorridor;
     }

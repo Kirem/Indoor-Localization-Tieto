@@ -9,7 +9,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.LineString;
 public class Road extends MapObject{
 
     //TODO z czego sklada sie droga?
-    Road(long id, LineString lineString) {
+    public Road(long id, LineString lineString) {
         super(id, lineString);
     }
 
