@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <color name="map_background_color">#C7CCB9</color>
+    <color name="map_line_color">#000</color>
+    <!--<color name="map_line_color">#52DEE5</color>-->
+
+</resources>
