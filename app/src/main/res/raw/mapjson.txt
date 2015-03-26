@@ -1,0 +1,69 @@
+{
+	"highway":{
+		"primary":{
+			"width":5,
+			"color":"0xEC4E20"
+		},
+		"secondary":{
+			"width":4,
+			"color":"0xff6400"
+		},
+		"unclassified":{
+			"width":2,
+			"color":"0x969590"
+		},
+		"residental":{
+			"width":3,
+			"color":"0xE4E4E4"
+		},
+		"pedestrian":{
+			"width":2,
+			"color":"0xEC4E20"
+		},
+		"footway":{
+			"width":1,
+			"color":"0xb4c696"
+		}
+
+
+	},
+
+	"building":{
+		"university":{
+			"background_color":"0xE3D26F",
+			"border_color":"0x7B1E7A"
+		},
+		"school":{
+			"background_color":"0xE3D26F",
+			"border_color":"0x0C0A3E"
+		},
+		"apartments":{
+            "background_color":"0x2978A0",
+			"border_color":"0x0C0A3E"
+		}
+	},
+	"buildingPart":{
+		"room":{
+            "background_color":"0xC6E0FF",
+			"border_color":"0x253031"
+		},
+		"corridor":{
+			"background_color":"0xF3B61F",
+			"border_color":"0x253031"
+
+		}
+	},
+	"POI" : {
+		"router":{
+
+		},
+		"elevator":{
+
+		},
+		"doors":{
+
+		}
+	}
+}
+
+
