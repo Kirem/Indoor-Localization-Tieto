@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_2d2c5aab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-03-26T16:58:24Z",
+      "side": 1,
+      "message": "try to keep commit message titles under 72 characters",
+      "revId": "4c97f9efb684e373c3c9ca57cdbf479a41633e06",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
