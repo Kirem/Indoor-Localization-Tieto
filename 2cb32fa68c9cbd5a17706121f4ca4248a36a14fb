@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_672caeac",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryRenderer.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-03-27T14:20:07Z",
+      "side": 1,
+      "message": "Myślałem o tym, ale przy rysowaniu Polygony rysowanie następuje dwukrotnie - raz tło raz obwód figury. Wtedy stworzyć dodatkowo jakieś obiekty?",
+      "parentUuid": "1a106d94_67902eed",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_8793aaf9",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryRenderer.java",
         "patchSetId": 2
@@ -70,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_aa2b0b81",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryStyleMapper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-03-27T14:20:07Z",
+      "side": 1,
+      "message": "Mój pomysł polegał na tym, że GeometryStyleMapper udostępniał by prymitywny iterator który udostępniał by w prosty sposób parę Geometry - MapObjectStyle. W przypadku Map\u003c\u003e musiałbym całą logikę udostępniania Geometry zmienić - powinienem to zrobić? Myślałem nad stworzeniu obiektu swojego zamiast pary",
+      "parentUuid": "1a106d94_c74ac282",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_a74fc691",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryStyleMapper.java",
         "patchSetId": 2
@@ -81,6 +117,24 @@
       "writtenOn": "2015-03-27T13:07:34Z",
       "side": 1,
       "message": "MapObjectStyle getStyleForGeom(Geometry){} ?",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_ea0ea333",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryStyleMapper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-03-27T14:20:07Z",
+      "side": 1,
+      "message": "Wtedy GeometryRenderer.java musiałby posiadać osobną ArrayList\u003cGeometry\u003e",
+      "parentUuid": "1a106d94_a74fc691",
       "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
@@ -104,6 +158,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_a71d0676",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryStyleMapper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-03-27T14:20:07Z",
+      "side": 1,
+      "message": "Autor chciał w łatwiejszy sposób iterować po obiektach do rysowania. W ten sposób w GeometryRenderer.java W jednej pętli można napisać rysowanie wszyskich obiektów.",
+      "parentUuid": "1a106d94_e7bb7e70",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_67a78e50",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
         "patchSetId": 2
@@ -115,6 +187,24 @@
       "writtenOn": "2015-03-27T12:56:52Z",
       "side": 1,
       "message": "Potrzebne czy nie? Jeśli nie to usuń. Komentarze nie są od trzymania tymczasowego kodu :-) kod jest w historii gita",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_07133a67",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-03-27T14:20:07Z",
+      "side": 1,
+      "message": "Racja, już usuwam.",
+      "parentUuid": "1a106d94_67a78e50",
       "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
