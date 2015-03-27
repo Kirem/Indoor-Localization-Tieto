@@ -53,6 +53,40 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_c74ac282",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryStyleMapper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T13:07:34Z",
+      "side": 1,
+      "message": "Map\u003cGeometry,MapObjectStyle\u003e może by tak?",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_a74fc691",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryStyleMapper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T13:07:34Z",
+      "side": 1,
+      "message": "MapObjectStyle getStyleForGeom(Geometry){} ?",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_e7bb7e70",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryStyleMapper.java",
         "patchSetId": 2
