@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_503fa625",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Vertex.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-03-27T21:05:47Z",
+      "side": 1,
+      "message": "ups, miałam usunąć. Tzn. pousuwam te pokomentowane oczywiście",
+      "range": {
+        "startLine": 8,
+        "startChar": 2,
+        "endLine": 8,
+        "endChar": 4
+      },
+      "revId": "1190c91e8d19c1b57416860928bc519dd74812ca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
