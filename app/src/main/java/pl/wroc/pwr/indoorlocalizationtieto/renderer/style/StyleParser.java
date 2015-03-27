@@ -2,12 +2,11 @@ package pl.wroc.pwr.indoorlocalizationtieto.renderer.style;
 
 import android.graphics.Color;
 import android.util.Log;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
-
 import pl.wroc.pwr.indoorlocalizationtieto.map.MapObject;
 
 public class StyleParser {
@@ -22,15 +21,13 @@ public class StyleParser {
         }
     }
 
-    public MapObjectStyle getStyle(Map<String, String> options) {
-        if (jsonObject == null) {
-            return null;
-        }
-        String objectClass = options.get(MapObject.OBJECT_CLASS);
-
+    public List<MapObjectStyle> getStyles(Map<String, String> options) {
+        int width = -1;
         String backgroundColor = null;
         String borderColor = null;
-        Integer width = -1;
+        List<MapObjectStyle> styles = new ArrayList<>();
+
+        String objectClass = options.get(MapObject.OBJECT_CLASS);
         try {
             backgroundColor = jsonObject.getJSONObject(objectClass).
                     getJSONObject(options.get(MapObject.OBJECT_TYPE)).getString("background_color");
@@ -50,21 +47,19 @@ public class StyleParser {
         } catch (JSONException e) {
             Log.e(STYLE_PARSER_TAG, e.toString());
         }
-//                Log.d(STYLE_PARSER_TAG, "borderColor: " + backgroundColor);
-//                Log.d(STYLE_PARSER_TAG, "backgroundColor: " + Color.parseColor(backgroundColor));
-
-        MapObjectStyle style = new MapObjectStyle();
-        if (backgroundColor != null)
+        if (backgroundColor != null) {
+            MapObjectStyle style = new MapObjectStyle();
             style.setBackgroundColor(Color.parseColor(backgroundColor));
-
-        if (borderColor != null)
-            style.setBorderColor(Color.parseColor(borderColor));
-
-        if (width != -1)
-            style.setLineWidth(width);
-
-
-        return style;
-
+            if(width != -1){
+                style.setLineWidth(width);
+            }
+            styles.add(style);
+            style = new MapObjectStyle();
+            if(borderColor != null){
+                style.setBorderColor(Color.parseColor(borderColor));
+                styles.add(style);
+            }
+        }
+        return styles;
     }
 }

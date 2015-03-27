@@ -4,12 +4,10 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Line;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.LineString;
@@ -20,7 +18,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.map.MapObject;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.style.MapObjectStyle;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.style.StyleBuilder;
 
-public class GeometryRenderer implements Renderer{
+public class GeometryRenderer implements Renderer {
     ArrayList<MapObject> renderedMapObjects;
     Map<MapObject, List<MapObjectStyle>> styleMapper;
     private Context context;
@@ -34,15 +32,14 @@ public class GeometryRenderer implements Renderer{
         defaultPaint = new Paint();
     }
 
-
     @Override
     public void setStyle(int id) {
         prepareStyles(id);
     }
 
-    private void prepareStyles(int id){
+    private void prepareStyles(int id) {
         styleMapper = new HashMap<>();
-        for(MapObject object : renderedMapObjects){
+        for (MapObject object : renderedMapObjects) {
             List<MapObjectStyle> styles = StyleBuilder.build(object, context, id);
             styleMapper.put(object, styles);
         }
@@ -50,13 +47,13 @@ public class GeometryRenderer implements Renderer{
 
     @Override
     public void draw(Canvas canvas) {
-        for(MapObject object : renderedMapObjects){
+        for (MapObject object : renderedMapObjects) {
             drawObject(canvas, object, styleMapper.get(object));
         }
     }
 
-    private void drawObject(Canvas canvas, MapObject object, List<MapObjectStyle> styles){
-        if(styles != null && styles.size() > 0) {
+    private void drawObject(Canvas canvas, MapObject object, List<MapObjectStyle> styles) {
+        if (styles != null && styles.size() > 0) {
             for (MapObjectStyle style : styles) {
                 activePaint.set(defaultPaint);
                 style.stylise(activePaint);
@@ -65,7 +62,7 @@ public class GeometryRenderer implements Renderer{
         }
     }
 
-    private void drawGeometry(Canvas canvas,Geometry geometry) {
+    private void drawGeometry(Canvas canvas, Geometry geometry) {
         if (geometry instanceof Point) {
             drawPoint(canvas, (Point) geometry);
         } else if (geometry instanceof Line) {
@@ -110,7 +107,6 @@ public class GeometryRenderer implements Renderer{
         canvas.drawPath(path, activePaint);
     }
 
-
     //TODO fix multipolygon drawing
     private void drawMultiPolygon(Canvas canvas, Multipolygon multipolygon) {
         List<Polygon> polygons = multipolygon.getPolygons();
@@ -125,24 +121,12 @@ public class GeometryRenderer implements Renderer{
         Path path = new Path();
         path.setFillType(Path.FillType.EVEN_ODD);
         Point first = pointList.get(0);
-        path.moveTo((float)first.getX(), (float)first.getY());
+        path.moveTo((float) first.getX(), (float) first.getY());
         for (int i = 1; i < pointList.size(); i++) {
             point = pointList.get(i);
             path.lineTo((float) point.getX(), (float) point.getY());
         }
-        path.lineTo((float)first.getX(), (float)first.getY());
-        return path;
-    }
-
-    private Path getPath(LineString lineString){
-        List<Point> points = lineString.getLineString();
-        Path path = new Path();
-        Point first = points.get(0);
-        path.moveTo((float)first.getX(), (float)first.getY());
-        for(int i = 1; i < points.size(); i++){
-            Point point = points.get(i);
-            path.lineTo((float) point.getX(), (float) point.getY());
-        }
+        path.lineTo((float) first.getX(), (float) first.getY());
         return path;
     }
 }

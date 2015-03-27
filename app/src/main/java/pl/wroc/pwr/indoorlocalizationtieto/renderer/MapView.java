@@ -10,7 +10,6 @@ import android.view.View;
 public class MapView extends View {
     Renderer renderer = null;
 
-
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public MapView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
@@ -35,7 +34,6 @@ public class MapView extends View {
     public void setRenderer(Renderer renderer) {
         this.renderer = renderer;
     }
-
 
     public Renderer getRenderer() {
         return renderer;

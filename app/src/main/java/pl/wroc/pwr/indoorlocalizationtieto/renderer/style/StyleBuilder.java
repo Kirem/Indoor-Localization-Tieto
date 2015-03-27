@@ -1,9 +1,7 @@
 package pl.wroc.pwr.indoorlocalizationtieto.renderer.style;
 
 import android.content.Context;
-
 import java.util.List;
-
 import pl.wroc.pwr.indoorlocalizationtieto.map.MapObject;
 
 public class StyleBuilder {
@@ -15,7 +13,6 @@ public class StyleBuilder {
             parser = new StyleParser(styleJson);
         }
         List<MapObjectStyle> objectStyles = parser.getStyles(object.getOptions());
-
         return objectStyles;
     }
 }

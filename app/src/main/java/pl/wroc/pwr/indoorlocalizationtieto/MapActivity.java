@@ -21,12 +21,7 @@ public class MapActivity extends ActionBarActivity {
         Renderer renderer = new GeometryRenderer(LocalTester.SetupDummyMapObjects(), this);
         renderer.setStyle(R.raw.mapjson);
         map.setRenderer(renderer);
-
-        map.setRenderer(renderer);
-
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,10 +41,6 @@ public class MapActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-
-
-
 }
