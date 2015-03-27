@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_a76866f6",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/style/MapObjectStyle.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T12:58:15Z",
+      "side": 1,
+      "message": "Rly Integer?",
+      "range": {
+        "startLine": 4,
+        "startChar": 38,
+        "endLine": 4,
+        "endChar": 42
+      },
+      "revId": "335279bc3b55bb4283b3d1c85d3bb1a06ae163f0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
