@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import java.util.ArrayList;
-
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Line;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
@@ -14,6 +12,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Polygon;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.GeometryRenderer;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.MapView;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.Renderer;
+
 
 
 public class MapActivity extends ActionBarActivity {
@@ -25,6 +24,7 @@ public class MapActivity extends ActionBarActivity {
         MapView mapView = (MapView) findViewById(R.id.mapView);
         Renderer renderer = new GeometryRenderer(setupDummyGeometries());
         mapView.setRenderer(renderer);
+
     }
 
 
@@ -66,4 +66,5 @@ public class MapActivity extends ActionBarActivity {
 
         return geometries;
     }
+
 }
