@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_67902eed",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryRenderer.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T12:56:52Z",
+      "side": 1,
+      "message": "Może lepiej style.setpaint(paint); ? Logikę zmiany stylu wypchnąć do MapObjectStyle",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_8793aaf9",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryRenderer.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T12:56:52Z",
+      "side": 1,
+      "message": "jeden enter wystarczy po funkcji :-)",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_c7bc826f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryStyleMapper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T12:56:52Z",
+      "side": 1,
+      "message": "Płacą Ci od linii? Usuń te zbędne puste linie. Jedna wystarczy",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_e7bb7e70",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryStyleMapper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T12:56:52Z",
+      "side": 1,
+      "message": "Co autor miał na myśli iterując?",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_67a78e50",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T12:56:52Z",
+      "side": 1,
+      "message": "Potrzebne czy nie? Jeśli nie to usuń. Komentarze nie są od trzymania tymczasowego kodu :-) kod jest w historii gita",
+      "revId": "2cb32fa68c9cbd5a17706121f4ca4248a36a14fb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
