@@ -36,8 +36,9 @@ public class MapView extends View {
 
     public void setRenderer(Renderer renderer) {
         this.renderer = renderer;
-        renderer.setContext(getContext());
+//        renderer.setContext(getContext());
     }
+
 
     public Renderer getRenderer() {
         return renderer;
