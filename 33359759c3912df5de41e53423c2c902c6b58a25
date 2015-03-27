@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_c7600238",
+        "filename": "app/src/main/res/raw/mapjson.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T12:00:39Z",
+      "side": 0,
+      "message": "To nie ma sensu :-) nie usuwaj tego pliku tylko ustaw sie na miejsce gdy go nie było. Bo teraz aby włączyć tę zmianę do kodu musisz też włączyć schemat",
+      "range": {
+        "startLine": 2,
+        "startChar": 9,
+        "endLine": 2,
+        "endChar": 12
+      },
+      "revId": "33359759c3912df5de41e53423c2c902c6b58a25",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}

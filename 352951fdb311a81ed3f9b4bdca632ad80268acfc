@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_075b3a88",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/Renderer.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T12:00:39Z",
+      "side": 1,
+      "message": "Czym jest id?",
+      "range": {
+        "startLine": 7,
+        "startChar": 24,
+        "endLine": 7,
+        "endChar": 26
+      },
+      "revId": "352951fdb311a81ed3f9b4bdca632ad80268acfc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_a7650647",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/style/StyleParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-27T12:00:39Z",
+      "side": 1,
+      "message": "może pubic?",
+      "range": {
+        "startLine": 4,
+        "startChar": 18,
+        "endLine": 4,
+        "endChar": 19
+      },
+      "revId": "352951fdb311a81ed3f9b4bdca632ad80268acfc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
