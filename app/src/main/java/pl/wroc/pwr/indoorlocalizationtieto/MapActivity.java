@@ -5,6 +5,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import pl.wroc.pwr.indoorlocalizationtieto.localTester.LocalTester;
+import pl.wroc.pwr.indoorlocalizationtieto.renderer.GeometryRenderer;
+import pl.wroc.pwr.indoorlocalizationtieto.renderer.MapView;
+import pl.wroc.pwr.indoorlocalizationtieto.renderer.Renderer;
+
 
 public class MapActivity extends ActionBarActivity {
 
@@ -12,6 +17,12 @@ public class MapActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+        MapView map = (MapView) findViewById(R.id.mapView);
+        Renderer renderer = new GeometryRenderer(LocalTester.SetupDummyMapObjects(), this);
+        renderer.setStyle(R.raw.mapjson);
+        map.setRenderer(renderer);
+
+        map.setRenderer(renderer);
 
     }
 
