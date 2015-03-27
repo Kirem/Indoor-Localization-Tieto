@@ -11,6 +11,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Line;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Polygon;
+import pl.wroc.pwr.indoorlocalizationtieto.localTester.LocalTester;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.GeometryRenderer;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.MapView;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.Renderer;
@@ -22,9 +23,10 @@ public class MapActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        MapView mapView = (MapView) findViewById(R.id.mapView);
-        Renderer renderer = new GeometryRenderer(setupDummyGeometries());
-        mapView.setRenderer(renderer);
+        MapView map = (MapView) findViewById(R.id.mapView);
+        Renderer renderer = new GeometryRenderer(LocalTester.SetupDummyMapObjects(), this);
+        renderer.setStyle(R.raw.mapjson);
+        map.setRenderer(renderer);
     }
 
 
