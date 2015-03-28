@@ -2,6 +2,103 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a106d94_769c5a6a",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/MapActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-28T17:37:44Z",
+      "side": 1,
+      "message": "To przenieś do testów jednostkowych.",
+      "range": {
+        "startLine": 33,
+        "startChar": 38,
+        "endLine": 33,
+        "endChar": 41
+      },
+      "revId": "1190c91e8d19c1b57416860928bc519dd74812ca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_d688ae24",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/MapActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-28T17:37:44Z",
+      "side": 1,
+      "message": "I to.",
+      "revId": "1190c91e8d19c1b57416860928bc519dd74812ca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_b68d3234",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Dijkstry.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-28T17:37:44Z",
+      "side": 1,
+      "message": "Czy jeśli ktoś wyznaczy 2 różne trasy na tym samym obiekcie to będzie to działać poprawnie? Nie widzę usuwania elementów z arrayList przed wyznaczeniem trasy. Testowałaś to?",
+      "revId": "1190c91e8d19c1b57416860928bc519dd74812ca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_16836605",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Edge.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-28T17:37:44Z",
+      "side": 1,
+      "message": "Błagam. Dodaj kilka enterów. Linijka powinna mieć max 80 znaków.",
+      "range": {
+        "startLine": 28,
+        "startChar": 86,
+        "endLine": 28,
+        "endChar": 90
+      },
+      "revId": "1190c91e8d19c1b57416860928bc519dd74812ca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_f687aa0d",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Graph.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-28T17:37:44Z",
+      "side": 1,
+      "message": "często przy wyznaczaniu trasy mówi się o koszcie, a nie o dystansie ponieważ, ktoś może preferować drogi danego typu, a więc koszt to np. cost\u003ddistance*value. Możesz zostawić tak jak jest, ale sami musicie ocenić czy chcecie mieć możliwość preferowania danej drogi (np. droga korytarzem vs droga przez pokój)",
+      "revId": "1190c91e8d19c1b57416860928bc519dd74812ca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_503fa625",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Vertex.java",
         "patchSetId": 1
