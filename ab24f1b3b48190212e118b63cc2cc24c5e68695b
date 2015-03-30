@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_7caa7971",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Edge.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-30T07:57:29Z",
+      "side": 1,
+      "message": "Myślę, że i dystans i edgeMultipler powinny być float lub double.",
+      "revId": "ab24f1b3b48190212e118b63cc2cc24c5e68695b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_3ca00190",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Graph.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-30T07:57:29Z",
+      "side": 1,
+      "message": "Nie wiem jaki macie \"code style\", ale chyba jeden enter po funkcji jest mile widziany. Ale to taka drobna uwaga, zrób z nią co chcesz.",
+      "range": {
+        "startLine": 39,
+        "startChar": 15,
+        "endLine": 39,
+        "endChar": 16
+      },
+      "revId": "ab24f1b3b48190212e118b63cc2cc24c5e68695b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_1cb1c5e1",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Vertex.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-30T07:57:29Z",
+      "side": 1,
+      "message": "Jeśli chcecie używać id z OSM to int może być za mało. Zapytaj osoby związane z parserem czym będzie id.",
+      "range": {
+        "startLine": 6,
+        "startChar": 11,
+        "endLine": 6,
+        "endChar": 12
+      },
+      "revId": "ab24f1b3b48190212e118b63cc2cc24c5e68695b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
