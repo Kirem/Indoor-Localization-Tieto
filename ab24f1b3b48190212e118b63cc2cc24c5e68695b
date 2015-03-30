@@ -2,6 +2,80 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a106d94_bcccf136",
+        "filename": ".idea/misc.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-30T08:41:37Z",
+      "side": 1,
+      "message": "Nie wiem czy powinnas takie cos komitowac",
+      "range": {
+        "startLine": 6,
+        "startChar": 54,
+        "endLine": 6,
+        "endChar": 55
+      },
+      "revId": "ab24f1b3b48190212e118b63cc2cc24c5e68695b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_1cd265d2",
+        "filename": "app/app.iml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-30T08:41:37Z",
+      "side": 1,
+      "message": "Usuniecie tej linii jest konieczne?",
+      "revId": "ab24f1b3b48190212e118b63cc2cc24c5e68695b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_fcd669c4",
+        "filename": "app/app.iml",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-30T08:41:37Z",
+      "side": 1,
+      "message": "Zmiana kolejnosci nie ma sensu.",
+      "revId": "ab24f1b3b48190212e118b63cc2cc24c5e68695b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_7cef19b1",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/MapActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-30T08:41:37Z",
+      "side": 1,
+      "message": "Myślę, że te śmeici możesz usunąć, tak aby nie było zmien w pliku. Wtedy może konflikt zniknie. \n\nmożesz użyć: \ngit reset HEAD^ app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/MapActivity.java",
+      "revId": "ab24f1b3b48190212e118b63cc2cc24c5e68695b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_7caa7971",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Edge.java",
         "patchSetId": 2
