@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_50e201a0",
+        "filename": "app/app.iml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-03-30T13:44:31Z",
+      "side": 1,
+      "message": "2 taby to jedyna zmiana w linijce? Popraw to w gerricie. Na górze obok \"Patch set\" jest edytuj w widoku zmian.",
+      "revId": "59d82605d4b30e40983e220abdebcd4661d51156",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
