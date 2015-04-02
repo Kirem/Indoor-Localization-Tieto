@@ -6,7 +6,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 
 public class Crossing extends MapObject {
-    private ArrayList<MapObject> roads;
+    private ArrayList<Road> roads;
     //stworzyc klase nadrzedna opisujaca obiekty pozwalajace na poruszanie sie?
 
     public Crossing(long id, Point p) {
@@ -14,12 +14,12 @@ public class Crossing extends MapObject {
         roads = new ArrayList<>();
     }
 
-    public Crossing(long id, ArrayList<MapObject> crossings, Point p) {
-        super(id, p);
-        roads = new ArrayList<>();
+    public Crossing(long id, ArrayList<Road> roadsList, Point crossPoint) {
+        super(id, crossPoint);
+        roads = new ArrayList<>(roadsList);
     }
 
-    public ArrayList<MapObject> getRoads() {
+    public ArrayList<Road> getRoads() {
         return roads;
     }
 
