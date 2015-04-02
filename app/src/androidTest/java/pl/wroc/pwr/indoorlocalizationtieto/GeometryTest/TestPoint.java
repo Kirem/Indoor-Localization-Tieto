@@ -7,7 +7,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 /**
  * Created by Mateusz on 2015-03-18.
  */
-public class testPoint extends InstrumentationTestCase {
+public class TestPoint extends InstrumentationTestCase {
 
     Point point;
 
