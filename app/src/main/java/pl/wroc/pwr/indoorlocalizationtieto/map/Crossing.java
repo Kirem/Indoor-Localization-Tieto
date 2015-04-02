@@ -14,9 +14,9 @@ public class Crossing extends MapObject {
         roads = new ArrayList<>();
     }
 
-    public Crossing(long id, ArrayList<MapObject> crossings, Point p) {
+    public Crossing(long id, ArrayList<MapObject> r, Point p) {
         super(id, p);
-        roads = new ArrayList<>();
+        roads = new ArrayList<>(r);
     }
 
     public ArrayList<MapObject> getRoads() {

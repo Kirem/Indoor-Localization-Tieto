@@ -13,7 +13,7 @@ public class POI extends MapObject {
     }
 
     @Override
-    ArrayList<Geometry> getGeometries() {
+    public ArrayList<Geometry> getGeometries() {
         ArrayList<Geometry> geometries = new ArrayList<>();
         geometries.add(this.getObjectGeometry());
         return geometries;
