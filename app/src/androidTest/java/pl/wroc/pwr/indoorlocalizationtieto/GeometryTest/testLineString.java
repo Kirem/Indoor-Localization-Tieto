@@ -11,7 +11,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 /**
  * Created by Mateusz on 2015-03-18.
  */
-public class testLineString extends InstrumentationTestCase {
+public class TestLineString extends InstrumentationTestCase {
 
     LineString lineStringArr;
     LineString lineStringList;
