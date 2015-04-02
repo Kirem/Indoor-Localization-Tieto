@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_e294f538",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/MapTest/TestBuilding.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-02T18:27:55Z",
+      "side": 1,
+      "message": "Dodaj testowanie drugiego Levelu. Moim zdaniem ten test sfailuje dla levelu 1.",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_a29cbd6a",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Building.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-02T18:27:55Z",
+      "side": 1,
+      "message": "NA PRZYSZLOSC: Wydaje mi sie, ze w kazdym z mapobjectow brakuje metody equals()",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_82e70112",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Building.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-02T18:27:55Z",
+      "side": 1,
+      "message": "floor/level zamias position?",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_a2731d4c",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Building.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-02T18:27:55Z",
+      "side": 1,
+      "message": "tu cos jest nie tak...\n\njesli dodamy 2 Level\u0027e, jeden na poziomie 0, drugi na poziomie 1 i zawolamy metode getLevel(1) to zamiast levelu dostaniemy IndexOutOfBoundsException",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_22e3ad08",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossing.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-02T18:27:55Z",
+      "side": 1,
+      "message": "NA PRZYSLOSC: po metodach getRoads() i addRoad() wnosze, ze zamiast ArrayList\u003cMapObject\u003e roads; mozna napisac ArrayList\u003cRoad\u003e roads;\n\nJestem w bledzie?",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_e2d87555",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossing.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-02T18:27:55Z",
+      "side": 1,
+      "message": "czy zamiast \u0027r\u0027 nie mozna byloby napisac roads? a zamiast p \u0027crossingCenter\u0027 czy cos innego znaczacego cokolwiek?",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_6292c558",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Room.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-02T18:27:55Z",
+      "side": 1,
+      "message": "NA PRZYSLOSC: Jesli metoda ta bedzie wolana przez renderer co klatke (i przy zalozeniu ze wyglada ona podobnie dla wszystkich MapOobject\u0027ow) garbage collector bedzie mial co robic- moze zaowocowac to bardzo srednia wydajnoscia. Wezcie to pod uwage (jestem przeciwnikiem przedwczesnej optymalizacji, ale warto o tym pomyslec zawczasu)",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
