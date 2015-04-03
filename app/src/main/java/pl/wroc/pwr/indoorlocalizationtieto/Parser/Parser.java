@@ -1,5 +1,7 @@
 package pl.wroc.pwr.indoorlocalizationtieto.Parser;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,8 +20,14 @@ import pl.wroc.pwr.indoorlocalizationtieto.map.Room;
 
 public class Parser {
 
-    // URL to get contacts JSON
-    private static String url;
+    // URL with api service
+    private static String serviceUrl = "http://www.overpass-api.de/api/interpreter?data=";
+    private String url;
+    // Value of area range which will be parsed
+    private static double range;
+    private double currentLatitude;
+    private double currentLongitude;
+
 
     // JSON Node names
     private static final String TAG_ELEMENTS = "elements";
@@ -39,15 +47,77 @@ public class Parser {
     private ArrayList<Node> nodesList = new ArrayList<>();
     private ArrayList<Way> waysList = new ArrayList<>();
 
-    public Parser() {
-        url = "http://www.overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%3B+%28+++node%28poly%3A%2251.0955288+17.0194662+51.094649+17.0215236+51.0933816+17.0200614+51.094052+17.0174978%22%29%3B+++way%28poly%3A%2251.0955288+17.0194662+51.094649+17.0215236+51.0933816+17.0200614+51.094052+17.0174978%22%29%3B+%29%3B+out+body%3B+%3E%3B+out+skel+qt%3B";
+    public Parser(){}
+
+    public Parser(double longitude, double latitude, double r) {
+        range = r;
+        currentLongitude = longitude;
+        currentLatitude = latitude;
     }
 
-    public Parser(String s) {
-        url = s;
+    public void updatePosition(double longitude, double latitude){
+        currentLongitude = longitude;
+        currentLatitude = latitude;
     }
+
+    /**
+     * Method to generate query according to schema
+      [out:json];
+      (
+      node
+      (MAX_LATITUDE,MAX_LOGNITUDE,MIN_LATITUDE,MIN_LOGNITUDE);
+      way
+      (MAX_LATITUDE,MAX_LOGNITUDE,MIN_LATITUDE,MIN_LOGNITUDE);
+      rel
+      (MAX_LATITUDE,MAX_LOGNITUDE,MIN_LATITUDE,MIN_LOGNITUDE);
+        );
+      (._;>;);
+      out;
+     * @return query
+     */
+    public String generateQuery(){
+        double maxLongitude = currentLongitude + range;
+        double minLongitude = currentLongitude - range;
+        double maxLatitude = currentLatitude + range;
+        double minLatitude = currentLatitude - range;
+
+        String queryParameters = "(" + Double.toString(minLatitude) + "," +
+                Double.toString(minLongitude) + "," + Double.toString(maxLatitude) + "," +
+                Double.toString(maxLongitude) + ");" +"\n";
+
+        String query = "[out:json];\n" +
+                "(\n" +
+                "  node\n" +
+                queryParameters+
+                "  way\n" +
+                queryParameters+
+                "  rel\n" +
+                queryParameters+
+                ");\n" +
+                "(._;>;);\n" +
+                "out;";
+        return query;
+    }
+
+    /**
+     * Method to encode query to url
+     * @return encodedQuery
+     */
+    public String encodeQuery() {
+        String query = generateQuery();
+        String encodedQuery = new String();
+
+        try {
+            encodedQuery = URLEncoder.encode(query,"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return encodedQuery;
+    }
+
 
     public void GetElements() {
+            url = serviceUrl + encodeQuery();
             // Creating service handler class instance
             ServiceHandler sh = new ServiceHandler();
 
