@@ -88,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_4bed1d25",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-03T22:07:51Z",
+      "side": 1,
+      "message": "Nawet sie troche zgadzam. Moim zdaniem zmiana mozliwosci zapytan istnieje (updatePosition + generateQuery), ale sama koncepcja jest nieco kulawa.\n\nNa poczatku w oczy od rzucilo mi sie dwoch kandydatow na metody statyczne: generateQuery i encodeQuery. Nie bardzo widze powod dla ktorego te metody musza byc czescia instancji parsera, zamiast po prostu dostac w prametrach to, co jest im do rzycia potrzebne\n\n  static public String generateQuery(longitude, latitude, radius)\n  static public String generateEncodedQuery(longitude, latitude, radius)\n\nDocelowo mozna byloby uczynic je protected/private, bo chyba i tak miechem tej klasy bedzie co innego.\n\nGetElements rowniez moglaby bys statyczna, gdyby zwracala  nodesList i arrayList, zamiast korzystac z pol instancji Parser\u0027a. Sugerowalbym zatem (poza zmiana nazwy na fetchElements) wprowadzenie prostego pojemnijka na dane:\n\nprotected class Elements {\n    ArrayList\u003cNode\u003e nodesList \u003d new ArrayList\u003c\u003e();\n    ArrayList\u003cWay\u003e waysList \u003d new ArrayList\u003c\u003e();\n}\n\nmetoda getElements moglaby wygladac tak:\n\nstatic public Elements fetchElements(longitude, latitude, radius) {\n    String encodedQuery \u003d generateEncodedQuery(longitude, latitude, radius);\n    Elements elements;\n    ...\n    return elements;\n}\n\ndzieki czemu parseElements, mogloby wygladac tak:\n\nvoid parseRegion(longitude, latitude, radius) {\n    ...\n    Elements el \u003d fetchElements(longitude, latitude, radius);\n    ...     \n}\n\nWydaje mi sie, ze parseRegion powinien zwrocic jakis obiekt opisuacy sparsowany region (instancje ParsedRegion?). Moim zdaniem Parser powinien zawierac wylacznie pola ktore sa potrzebne do samego parsowania (mam wrazenie, ze moze byc ich malo/wcale), a nie przechowujace jego wynik.\n\nUwaga ogolna: requesty http zajmuja troche czasu, a ja nie widze tutaj ani zadnych callbackow/listenerow, ani obslugi tego wszystkiego za pomoca innego watku, ani za pomoca handlera- wez to pod uwage (niekoniecznie teraz), bo jesli ktos bedzie wolal to bezposrednio z UI thread, to bedzie to prowadzilo czasem do \"application not responding\".",
+      "parentUuid": "1a106d94_87f9cb4f",
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_676daf32",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
         "patchSetId": 1
@@ -99,6 +117,30 @@
       "writtenOn": "2015-04-03T19:50:58Z",
       "side": 1,
       "message": "final? chyba nie będziemy tego zmieniać",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 90
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_abf491f2",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-03T22:07:51Z",
+      "side": 1,
+      "message": "a jak juz final, to i WIELKIE litery",
+      "parentUuid": "1a106d94_676daf32",
       "range": {
         "startLine": 24,
         "startChar": 0,
@@ -273,6 +315,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_8b80b547",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-03T22:07:51Z",
+      "side": 1,
+      "message": "czytelnosc to kwestia sporna, jednak wydaje mie sie ze bedzie nieco mniej GC. Tak czy inaczej- nie wiem czy jest to wyjatkowo istotne",
+      "parentUuid": "1a106d94_a777a701",
+      "range": {
+        "startLine": 84,
+        "startChar": 15,
+        "endLine": 84,
+        "endChar": 30
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_476a331b",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
         "patchSetId": 1
@@ -308,6 +374,30 @@
       "side": 1,
       "message": "Mirek ma rację (no prawie...@Mirek: wielkiej* :D)",
       "parentUuid": "1a106d94_476a331b",
+      "range": {
+        "startLine": 119,
+        "startChar": 16,
+        "endLine": 119,
+        "endChar": 27
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_eb968993",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-03T22:07:51Z",
+      "side": 1,
+      "message": "te, a nie zwrocilo waszej uwagi ze get* powinna cos zwracac?\n\nloadElements? fetchElements?",
+      "parentUuid": "1a106d94_675e4f47",
       "range": {
         "startLine": 119,
         "startChar": 16,
