@@ -2,6 +2,75 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a106d94_cb3c6dc2",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/ParserTest/TestParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-04-03T20:37:30Z",
+      "side": 1,
+      "message": "Wyłączcie w opcjach tworzenie tych nagłówków, bo raczej zbędny.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 3
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_6b757997",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/ParserTest/TestParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-04-03T20:37:30Z",
+      "side": 1,
+      "message": "Z doświadczenia: tu by było cięcie o linię za dużo.",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 0
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_4b787d8f",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/ParserTest/TestParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-04-03T20:37:30Z",
+      "side": 1,
+      "message": "A tutaj o linię za mało - czyli oddziel funkcje.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 4
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_87f9cb4f",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
         "patchSetId": 1
@@ -53,6 +122,30 @@
       "writtenOn": "2015-04-03T19:50:58Z",
       "side": 1,
       "message": "static?",
+      "range": {
+        "startLine": 27,
+        "startChar": 12,
+        "endLine": 27,
+        "endChar": 18
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_67776fd5",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-04-03T20:37:30Z",
+      "side": 1,
+      "message": "to się podepnę przy okazji - nie lepiej nazwać zmienną tak, żeby mówiła sama za siebie i komentarz był zbędny? :)",
+      "parentUuid": "1a106d94_a74e87bf",
       "range": {
         "startLine": 27,
         "startChar": 12,
@@ -196,6 +289,53 @@
         "startChar": 16,
         "endLine": 119,
         "endChar": 27
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_675e4f47",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-04-03T20:37:30Z",
+      "side": 1,
+      "message": "Mirek ma rację (no prawie...@Mirek: wielkiej* :D)",
+      "parentUuid": "1a106d94_476a331b",
+      "range": {
+        "startLine": 119,
+        "startChar": 16,
+        "endLine": 119,
+        "endChar": 27
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_c7362303",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-04-03T20:37:30Z",
+      "side": 1,
+      "message": "Nie sądzę, by ten komentarz był potrzebny w sumie.",
+      "range": {
+        "startLine": 121,
+        "startChar": 0,
+        "endLine": 121,
+        "endChar": 12
       },
       "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
