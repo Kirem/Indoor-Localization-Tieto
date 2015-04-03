@@ -1,0 +1,228 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_87f9cb4f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-03T19:50:58Z",
+      "side": 1,
+      "message": "1. Czemu nie rozdzielić parsowania zapytań i parsowania danych na dwie klasy? \n2. W tym momencie nie ma możliwości zmiany zapytań po utworzeniu obiektu. Nie powinno jej być?",
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_676daf32",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-03T19:50:58Z",
+      "side": 1,
+      "message": "final? chyba nie będziemy tego zmieniać",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 90
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_a74e87bf",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-03T19:50:58Z",
+      "side": 1,
+      "message": "static?",
+      "range": {
+        "startLine": 27,
+        "startChar": 12,
+        "endLine": 27,
+        "endChar": 18
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_27e9f780",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-03T19:50:58Z",
+      "side": 1,
+      "message": "Co to jest? Stopnie? Kilometry?",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 36
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_e7c7df10",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-03T19:50:58Z",
+      "side": 1,
+      "message": "nie do konca rozumiem, czemu to TAGS się pojawiło?",
+      "range": {
+        "startLine": 40,
+        "startChar": 32,
+        "endLine": 40,
+        "endChar": 53
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_27d297d2",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-03T19:50:58Z",
+      "side": 1,
+      "message": "Bez sensu konstruktor domyślny.. Nie będziemy dla równika szukać mapy.",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 21
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_e7eebf8a",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-03T19:50:58Z",
+      "side": 1,
+      "message": "Dobrze rozumiem, że przy tym konstruktorze range \u003d\u003d 0? W takim przypadku będziemy pobierać punkt z mapy. Bez sensu.",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 66
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_a777a701",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-03T19:50:58Z",
+      "side": 1,
+      "message": "zastanawiam się, czy z StringBuilder\u0027em nie będzie czytelniejsze..",
+      "range": {
+        "startLine": 84,
+        "startChar": 15,
+        "endLine": 84,
+        "endChar": 30
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_476a331b",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-03T19:50:58Z",
+      "side": 1,
+      "message": "czemu z dużej?",
+      "range": {
+        "startLine": 119,
+        "startChar": 16,
+        "endLine": 119,
+        "endChar": 27
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_67548f54",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-03T19:50:58Z",
+      "side": 1,
+      "message": "tak samo tutaj. Z dużej?",
+      "range": {
+        "startLine": 182,
+        "startChar": 16,
+        "endLine": 182,
+        "endChar": 25
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
