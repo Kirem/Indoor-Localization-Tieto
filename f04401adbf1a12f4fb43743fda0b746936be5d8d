@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_363c8be2",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Building.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-03T09:54:00Z",
+      "side": 1,
+      "message": "Ja bym dodał to nawet jako String, albo float aby nie było problemu z np. półpiętrami.",
+      "parentUuid": "1a106d94_82e70112",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_a2731d4c",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Building.java",
         "patchSetId": 1
@@ -98,6 +116,23 @@
       "writtenOn": "2015-04-02T18:27:55Z",
       "side": 1,
       "message": "czy zamiast \u0027r\u0027 nie mozna byloby napisac roads? a zamiast p \u0027crossingCenter\u0027 czy cos innego znaczacego cokolwiek?",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_b62fdba0",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Level.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-03T09:54:00Z",
+      "side": 1,
+      "message": "Nie wiem czy INT jest tutaj najlepszy.",
       "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
