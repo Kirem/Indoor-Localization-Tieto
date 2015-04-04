@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_4b999d1e",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/ParserTest/TestParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-04T13:53:56Z",
+      "side": 1,
+      "message": "Nie widzę nic złego w tych nagłówkach...",
+      "parentUuid": "1a106d94_cb3c6dc2",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 3
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_6b757997",
         "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/ParserTest/TestParser.java",
         "patchSetId": 1
@@ -153,6 +177,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_0b8fa5cd",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-04T13:53:56Z",
+      "side": 1,
+      "message": "Ok.",
+      "parentUuid": "1a106d94_676daf32",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 90
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_a74e87bf",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
         "patchSetId": 1
@@ -200,6 +248,29 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_673f6f26",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-04T13:53:56Z",
+      "side": 1,
+      "message": "chyba nie powinna być static",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 32
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_27e9f780",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
         "patchSetId": 1
@@ -211,6 +282,30 @@
       "writtenOn": "2015-04-03T19:50:58Z",
       "side": 1,
       "message": "Co to jest? Stopnie? Kilometry?",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 36
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_8ba3954e",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-04T13:53:56Z",
+      "side": 1,
+      "message": "Stopnie.",
+      "parentUuid": "1a106d94_27e9f780",
       "range": {
         "startLine": 28,
         "startChar": 0,
@@ -246,6 +341,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_2b9421e1",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-04T13:53:56Z",
+      "side": 1,
+      "message": "To już było.",
+      "parentUuid": "1a106d94_e7c7df10",
+      "range": {
+        "startLine": 40,
+        "startChar": 32,
+        "endLine": 40,
+        "endChar": 53
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_27d297d2",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
         "patchSetId": 1
@@ -269,6 +388,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_cb846db3",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-04T13:53:56Z",
+      "side": 1,
+      "message": "W takim razie poleci :)",
+      "parentUuid": "1a106d94_27d297d2",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 21
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_e7eebf8a",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
         "patchSetId": 1
@@ -280,6 +423,30 @@
       "writtenOn": "2015-04-03T19:50:58Z",
       "side": 1,
       "message": "Dobrze rozumiem, że przy tym konstruktorze range \u003d\u003d 0? W takim przypadku będziemy pobierać punkt z mapy. Bez sensu.",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 66
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_eb8969cb",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-04T13:53:56Z",
+      "side": 1,
+      "message": "To nie jest konstruktor.",
+      "parentUuid": "1a106d94_e7eebf8a",
       "range": {
         "startLine": 58,
         "startChar": 0,
@@ -410,6 +577,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_6bbd7968",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-04T13:53:56Z",
+      "side": 1,
+      "message": "Było.",
+      "parentUuid": "1a106d94_476a331b",
+      "range": {
+        "startLine": 119,
+        "startChar": 16,
+        "endLine": 119,
+        "endChar": 27
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_c7362303",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
         "patchSetId": 1
@@ -433,6 +624,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_4bc07de0",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-04T13:53:56Z",
+      "side": 1,
+      "message": "Było, poza tym, komentarzy nigdy za wiele :D !",
+      "parentUuid": "1a106d94_c7362303",
+      "range": {
+        "startLine": 121,
+        "startChar": 0,
+        "endLine": 121,
+        "endChar": 12
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_67548f54",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
         "patchSetId": 1
@@ -444,6 +659,30 @@
       "writtenOn": "2015-04-03T19:50:58Z",
       "side": 1,
       "message": "tak samo tutaj. Z dużej?",
+      "range": {
+        "startLine": 182,
+        "startChar": 16,
+        "endLine": 182,
+        "endChar": 25
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_2bfd413b",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-04T13:53:56Z",
+      "side": 1,
+      "message": "Ta metoda już tu była, przeglądałem tylko swoje zmiany.",
+      "parentUuid": "1a106d94_67548f54",
       "range": {
         "startLine": 182,
         "startChar": 16,
