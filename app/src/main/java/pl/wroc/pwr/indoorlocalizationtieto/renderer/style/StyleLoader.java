@@ -13,12 +13,13 @@ import pl.wroc.pwr.indoorlocalizationtieto.R;
 
 public class StyleLoader {
     private static final String STYLE_LOADER_TAG = "STYLE LOADER TAG";
+
     static public String ReadStringFromResource(Context ctx, int resourceID) {
         StringBuilder contents = new StringBuilder();
         String sep = System.getProperty("line.separator");
 
         try {
-            InputStream is = ctx.getResources().openRawResource(R.raw.mapjson);
+            InputStream is = ctx.getResources().openRawResource(resourceID);
 
             BufferedReader input = new BufferedReader(new InputStreamReader(is), 1024 * 8);
             try {
