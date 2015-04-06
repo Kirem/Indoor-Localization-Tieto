@@ -4,10 +4,12 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.support.v4.util.ArrayMap;
+import android.util.Log;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Line;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.LineString;
@@ -16,40 +18,50 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Polygon;
 import pl.wroc.pwr.indoorlocalizationtieto.map.MapObject;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.style.MapObjectStyle;
-import pl.wroc.pwr.indoorlocalizationtieto.renderer.style.StyleBuilder;
+import pl.wroc.pwr.indoorlocalizationtieto.renderer.style.StyleManager;
 
 public class GeometryRenderer implements Renderer {
     ArrayList<MapObject> renderedMapObjects;
-    Map<MapObject, List<MapObjectStyle>> styleMapper;
-    private Context context;
+    StyleManager styleManager;
     private Paint defaultPaint;
     private Paint activePaint;
+    private int zoomLevel;
 
     public GeometryRenderer(ArrayList<MapObject> objects, Context context) {
         renderedMapObjects = new ArrayList<>(objects);
-        this.context = context;
+        styleManager = new StyleManager(context);
+
         activePaint = new Paint();
         defaultPaint = new Paint();
+        zoomLevel = 1;
     }
 
     @Override
     public void setStyle(int id) {
-        prepareStyles(id);
-    }
-
-    private void prepareStyles(int id) {
-        styleMapper = new HashMap<>();
-        for (MapObject object : renderedMapObjects) {
-            List<MapObjectStyle> styles = StyleBuilder.build(object, context, id);
-            styleMapper.put(object, styles);
-        }
+        styleManager.loadStyle(id);
     }
 
     @Override
-    public void draw(Canvas canvas) {
+    public void setZoomLevel(int zoomLevel) {
+        this.zoomLevel = zoomLevel;
+    }
+
+    @Override
+    public void draw(Canvas canvas, Vector2d<Float> offset) {
+        canvas.save();
+        canvas.scale(zoomLevel, zoomLevel);
+        Log.i(getClass().getSimpleName(), "Pointer.X = " + offset.x + " Pointer.Y = " + offset.y);
+        canvas.translate(offset.x, offset.y);
+
         for (MapObject object : renderedMapObjects) {
-            drawObject(canvas, object, styleMapper.get(object));
+            ArrayMap<String, String> options = object.getOptions();
+            String objectClass = options.get(MapObject.OBJECT_CLASS);
+            String objectType = options.get(MapObject.OBJECT_TYPE);
+            List<MapObjectStyle> styles =
+                    styleManager.getStyleSetForData(zoomLevel, objectClass, objectType);
+            drawObject(canvas, object, styles);
         }
+        canvas.restore();
     }
 
     private void drawObject(Canvas canvas, MapObject object, List<MapObjectStyle> styles) {

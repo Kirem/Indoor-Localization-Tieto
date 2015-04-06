@@ -6,6 +6,7 @@ public class MapObjectStyle {
     private int backgroundColor;
     private int borderColor;
     private int lineWidth;
+    private boolean isDrawn;
 
     public MapObjectStyle() {
         backgroundColor = -1;
@@ -13,24 +14,12 @@ public class MapObjectStyle {
         lineWidth = -1;
     }
 
-    public int getBackgroundColor() {
-        return backgroundColor;
-    }
-
     public void setBackgroundColor(int backgroundColor) {
         this.backgroundColor = backgroundColor;
     }
 
-    public int getBorderColor() {
-        return borderColor;
-    }
-
     public void setBorderColor(int borderColor) {
         this.borderColor = borderColor;
-    }
-
-    public int getLineWidth() {
-        return lineWidth;
     }
 
     public void setLineWidth(int lineWidth) {
@@ -49,5 +38,13 @@ public class MapObjectStyle {
         if(lineWidth != -1){
             paint.setStrokeWidth(lineWidth);
         }
+    }
+
+    public boolean isDrawn() {
+        return isDrawn;
+    }
+
+    public void setDrawn(boolean isDrawn) {
+        this.isDrawn = isDrawn;
     }
 }
