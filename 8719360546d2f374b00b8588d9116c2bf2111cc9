@@ -1,0 +1,169 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_adf77cf4",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryRenderer.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-08T08:15:05Z",
+      "side": 1,
+      "message": "wiem, ze macie w tej chwili calkowite przedzialy zoomow, ale moze lepiej byloby przechowywac go jako float?\n\nsetZoomLevel(float) ?",
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_8d83a055",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-08T08:15:05Z",
+      "side": 1,
+      "message": "brakuje stworzenia instancji pola \u0027offset\u0027?",
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_2db54c31",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-08T08:15:05Z",
+      "side": 1,
+      "message": "brakuje stworzenia instancji pola \u0027offset\u0027?",
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_4d91a898",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-08T08:15:05Z",
+      "side": 1,
+      "message": "logika jest taka: zoomin\u003dprzyblizenie. zoomout\u003doddalenie. czy ty czasem nie masz zrobione na odwort?",
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_ed91749b",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-08T08:15:05Z",
+      "side": 1,
+      "message": "A moze by tak uzyc PointF zamiast Vector2d? Ma kilka prostych metod ktore moze sie przydadza.",
+      "range": {
+        "startLine": 93,
+        "startChar": 8,
+        "endLine": 93,
+        "endChar": 16
+      },
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_0dde906d",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/RendererTestActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-08T08:15:05Z",
+      "side": 1,
+      "message": "klasa testowa? fajnie!\n+1",
+      "range": {
+        "startLine": 17,
+        "startChar": 13,
+        "endLine": 17,
+        "endChar": 33
+      },
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_edd85481",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/Vector2d.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-08T08:15:05Z",
+      "side": 1,
+      "message": "Jesli uzywasz tylko Vector2d\u003cFloat\u003e to rozwaz uzycie gotowej klasy PointF",
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_4de88810",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/style/StyleManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-08T08:15:05Z",
+      "side": 1,
+      "message": "czy tworzenie nowej instancji zoomstyleparser\u0027a za kazdym razem ma sens? Moze lepiej przechowywac go jako pole?",
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_8dd1e059",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/style/StyleMatcher.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-08T08:15:05Z",
+      "side": 1,
+      "message": "dla mnie to za trudne, wiec nie bede sie zastanawial, czy to ma sens :)\n\nnie wiem tylko czy nie lepiej/latwiej/pewniej byloby w \u0027equals\u0027 porownywac wartosci wprost, zamiast za pomoca hash\u0027a.",
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
