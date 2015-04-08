@@ -201,6 +201,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_8d0600cd",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-08T08:29:37Z",
+      "side": 1,
+      "message": "nie jestem pewien czy to powinno być final. Znaczy na razie może być, ale serwerów overpass jest kilka i zostawienie możliwości zmiany gdyby jeden nie odpowiedał na ping jest całkiem fajne.",
+      "parentUuid": "1a106d94_0b8fa5cd",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 90
+      },
+      "revId": "2ba6d241c1098ababf879a2d7631a85db2eb7f24",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_a74e87bf",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Parser.java",
         "patchSetId": 1
