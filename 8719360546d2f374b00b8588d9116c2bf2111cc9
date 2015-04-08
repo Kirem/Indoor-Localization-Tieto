@@ -111,6 +111,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_ad5c9cee",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-08T08:32:58Z",
+      "side": 1,
+      "message": "Myślałem nad PointF, ale to co my przechowujemy nie jest punktem, tylko wektorem. To nie będzie jakoś brzydko, kiedy będziemy wektor jako punkt przechowywać?",
+      "parentUuid": "1a106d94_ed91749b",
+      "range": {
+        "startLine": 93,
+        "startChar": 8,
+        "endLine": 93,
+        "endChar": 16
+      },
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_0dde906d",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/RendererTestActivity.java",
         "patchSetId": 1
