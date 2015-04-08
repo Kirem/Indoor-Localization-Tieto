@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_431cd9c1",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryRenderer.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-08T15:23:15Z",
+      "side": 1,
+      "message": "Przyszlo mi do glowy, ze moze warto byloby uzyc Math.round, ale zakladam, ze to co robisz teraz jest oczekiwanym zachowaniem.",
+      "range": {
+        "startLine": 60,
+        "startChar": 53,
+        "endLine": 60,
+        "endChar": 67
+      },
+      "revId": "b5498ce55d01762829c5568aa79efc03644a4d54",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
