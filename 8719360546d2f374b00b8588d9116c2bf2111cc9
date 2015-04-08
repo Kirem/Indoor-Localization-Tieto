@@ -70,6 +70,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_8d5f20e5",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-08T08:21:59Z",
+      "side": 1,
+      "message": "+1. Zoom 0 lub 1 to często widok na cały świat (w standardzie TFS) potem kolejne numery to jest powiększenie *2. Dzięki temu nie ma limitu powiększenia.",
+      "parentUuid": "1a106d94_4d91a898",
+      "revId": "8719360546d2f374b00b8588d9116c2bf2111cc9",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_ed91749b",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
         "patchSetId": 1
