@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_88d42e48",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/Vector2d.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-04-08T11:40:00Z",
+      "side": 1,
+      "message": "Jeśli nie używasz już tego tylko zgodnie z sugestiami PointF, to chyba musisz się pozbyć stąd żeby nie commitować :)",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 0
+      },
+      "revId": "d1d243a6580f948dfafd2a6ad6968dafdf31d052",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
