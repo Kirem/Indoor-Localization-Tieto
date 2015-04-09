@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_c03f1a24",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-09T11:38:01Z",
+      "side": 1,
+      "message": "Nie musisz w komentarzu pisać co naprawiłeś w drugim patchset ponieważ pierwszy zostanie tajemnicą ;-)",
+      "revId": "a599db6d9010c0be21476ea664a4b7a6bfc91dec",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
