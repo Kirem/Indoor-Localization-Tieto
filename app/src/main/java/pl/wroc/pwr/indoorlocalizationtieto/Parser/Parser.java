@@ -1,144 +1,114 @@
 package pl.wroc.pwr.indoorlocalizationtieto.Parser;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.Map;
+
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.LineString;
+import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Multipolygon;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Polygon;
+import pl.wroc.pwr.indoorlocalizationtieto.map.Door;
+import pl.wroc.pwr.indoorlocalizationtieto.map.Elevator;
+import pl.wroc.pwr.indoorlocalizationtieto.map.Level;
+import pl.wroc.pwr.indoorlocalizationtieto.map.POI;
 import pl.wroc.pwr.indoorlocalizationtieto.map.Road;
 import pl.wroc.pwr.indoorlocalizationtieto.map.Room;
 
 public class Parser {
 
-    // URL to get contacts JSON
-    private static String url;
-
-    // JSON Node names
-    private static final String TAG_ELEMENTS = "elements";
-    private static final String TAG_NODES = "nodes";
-    private static final String TAG_TYPE = "type";
-    private static final String TAG_ID = "id";
-    private static final String TAG_LAT = "lat";
-    private static final String TAG_LON = "lon";
-    private static final String TAG_TAGS = "tags";
-    private static final String TAG_TAGS_BUILDINGPART = "buildingpart";
-    private static final String TAG_TAGS_HIGHWAY = "highway";
-
-    // elements JSONArray
-    private JSONArray elements = null;
-    private JSONArray JArray = null;
-
-    private ArrayList<Node> nodesList = new ArrayList<>();
-    private ArrayList<Way> waysList = new ArrayList<>();
-
     public Parser() {
-        url = "http://www.overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%3B+%28+++node%28poly%3A%2251.0955288+17.0194662+51.094649+17.0215236+51.0933816+17.0200614+51.094052+17.0174978%22%29%3B+++way%28poly%3A%2251.0955288+17.0194662+51.094649+17.0215236+51.0933816+17.0200614+51.094052+17.0174978%22%29%3B+%29%3B+out+body%3B+%3E%3B+out+skel+qt%3B";
     }
 
-    public Parser(String s) {
-        url = s;
-    }
-
-    public void GetElements() {
-            // Creating service handler class instance
-            ServiceHandler sh = new ServiceHandler();
-
-            // Making a request to url and getting response
-            String jsonStr = sh.makeServiceCall(url, ServiceHandler.GET);
-
-            Log.d("Response: ", "> " + jsonStr);
-
-            if (jsonStr != null) {
-                try {
-                    JSONObject jsonObj = new JSONObject(jsonStr);
-
-                    // Getting JSON Array node
-                    elements = jsonObj.getJSONArray(TAG_ELEMENTS);
-
-                    // looping through All elements
-                    for (int i = 0; i < elements.length(); i++) {
-                        JSONObject c = elements.getJSONObject(i);
-
-                        String type = c.getString(TAG_TYPE);
-
-                        if(type.equals("way"))
-                        {
-                            JArray = c.getJSONArray(TAG_NODES);
-                            ArrayList<Long> idList = new ArrayList<>();
-                            for (int j=0; j <JArray.length(); j++) {
-                                idList.add(Long.parseLong(JArray.get(j).toString()));
-                            }
-                            long id = c.getLong(TAG_ID);
-
-                            JSONObject jObjTags = c.getJSONObject(TAG_TAGS);
-                            Map<String, String> tagMap = new HashMap<>();
-                            tagMap.put(TAG_TAGS_BUILDINGPART, jObjTags.getString(TAG_TAGS_BUILDINGPART));
-                            tagMap.put(TAG_TAGS_BUILDINGPART, jObjTags.getString(TAG_TAGS_HIGHWAY));
-
-                            waysList.add(new Way(id, idList, tagMap));
-                        }
-                        else if(type.equals("node"))
-                        {
-                            long id = c.getLong(TAG_ID);
-                            double lat = c.getDouble(TAG_LAT);
-                            double lon = c.getDouble(TAG_LON);
-                            Point point = new Point(lat, lon);
-
-                            JSONObject jObjTags = c.getJSONObject(TAG_TAGS);
-                            Map<String, String> tagMap = new HashMap<>();
-                            /*
-                            TODO uzupelnic tagi node'ow
-                             */
-                            nodesList.add(new Node(id, point, tagMap));
-                        }
-
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                Log.e("ServiceHandler", "Couldn't get any data from the url");
-            }
-    }
-
-    public void ParseData() {
-        /*
-        TODO - uwzględnić relacje (rekurencja?)
-         */
+    public void parseRegion() {
         ArrayList<Point> pointArr = new ArrayList<>();
-        for (Way way : waysList) {
-            for (Long nodeId : way.getNodesList()) {
-                for (Node node : nodesList) {
-                    if(nodeId == node.getId()) {
-                        pointArr.add(node.getPoint());
+
+        /*
+        Parsing Relations (Levels, romms, corridors etc.)
+         */
+        for (Map.Entry<Long, Relation> relationEntry : Elements.getRelationsList().entrySet()) {
+            for (Members member : relationEntry.getValue().getMembers()) {
+                ArrayList<Room> roomsList = new ArrayList<>();
+                ArrayList<Door> doorsList = new ArrayList<>();
+                ArrayList<Polygon> shapesList = new ArrayList<>();
+                if (member.getType().equals("way")) {
+                    Way way = Elements.getWaysList().get(member.getRef());
+                    ArrayList<Point> points = new ArrayList<>();
+                    for (Long nodeId : way.getNodesList()) {
+                        Elements.getNodesList().get(nodeId);
+                        points.add(Elements.getNodesList().get(nodeId).getPoint());
+                    }
+
+                    if (way.getTags().get(Tags.TAG_TAGS_BUILDINGPART).equals("room")) {
+                        Polygon polygon = new Polygon(points);
+                        Room room = new Room(way.getId(), polygon, false);
+                        roomsList.add(room);
+                        shapesList.add(polygon);
+
+                        pl.wroc.pwr.indoorlocalizationtieto.map.Map.getInstance().addObject(room);
+                    }
+
+                    if (way.getTags().get(Tags.TAG_TAGS_BUILDINGPART).equals("corridor")) {
+                        Polygon polygon = new Polygon(points);
+                        Room room = new Room(way.getId(), polygon, true);
+                        roomsList.add(room);
+                        shapesList.add(polygon);
+
+                        pl.wroc.pwr.indoorlocalizationtieto.map.Map.getInstance().addObject(room);
+                    }
+
+                    if (way.getTags().get(Tags.TAG_TAGS_HIGHWAY).equals("elevator")) {
+                        /*
+                        TODO MapObject Elevator do zmiany - jest bez sensu przy parsowaniu
+                         */
+                    }
+
+                    if (way.getTags().get(Tags.TAG_TAGS_HIGHWAY).equals("steps")) {
+                        /*
+                        TODO tak samo jak winda
+                         */
                     }
                 }
-            }
-            /*
-            warunek tagow
-             */
-            if(way.getTags().get(TAG_TAGS_BUILDINGPART).equals("room")) {
-                Polygon polygon = new Polygon(pointArr);
-                Room room = new Room(way.getId(), polygon, false);
-            } else if (way.getTags().get(TAG_TAGS_BUILDINGPART).equals("corridor")) {
-                Polygon polygon = new Polygon(pointArr);
-                Room room = new Room(way.getId(), polygon, true);
-            } else if (way.getTags().containsKey(TAG_TAGS_HIGHWAY)) {
-                LineString lineString = new LineString(pointArr);
-                Road road = new Road(way.getId(), lineString);
+                Level level = new Level(relationEntry.getValue().getId(),
+                        new Multipolygon(shapesList),
+                        Integer.parseInt(relationEntry.getValue().getTags().get(Tags.TAG_LEVEL)),
+                        roomsList,
+                        doorsList);
+                pl.wroc.pwr.indoorlocalizationtieto.map.Map.getInstance().addObject(level);
             }
         }
 
         /*
-        TODO zrobic to samo dla listy nodeList - sprawdzac czy node ma tagi - teśli ma to albo drzwi albo POI
+        Parsing Ways (highways)
          */
+        for (Map.Entry<Long, Way> wayEntry : Elements.getWaysList().entrySet()) {
+            if (wayEntry.getValue().getTags().get(Tags.TAG_TAGS_HIGHWAY).equals("residential") ||
+                    wayEntry.getValue().getTags().get(Tags.TAG_TAGS_HIGHWAY).equals("service") ||
+                    wayEntry.getValue().getTags().get(Tags.TAG_TAGS_HIGHWAY).equals("footway")) {
+
+                /*
+                TODO dodac tagi http://wiki.openstreetmap.org/wiki/Key:highway
+                 */
+                ArrayList<Point> points = new ArrayList<>();
+                for (Long nodeId : wayEntry.getValue().getNodesList()) {
+                    Elements.getNodesList().get(nodeId);
+                    points.add(Elements.getNodesList().get(nodeId).getPoint());
+                }
+                LineString lineString = new LineString(points);
+                Road road = new Road(wayEntry.getValue().getId(), lineString);
+                pl.wroc.pwr.indoorlocalizationtieto.map.Map.getInstance().addObject(road);
+            }
+        }
+
+        /*
+        Parsing Nodes (POI's)
+         */
+        for (Map.Entry<Long, Node> nodeEntry : Elements.getNodesList().entrySet()) {
+            if (nodeEntry.getValue().getTags().get(Tags.TAG_TAGS_POI).equals("yes")) {
+                POI poi = new POI(nodeEntry.getValue().getId(), nodeEntry.getValue().getPoint());
+                pl.wroc.pwr.indoorlocalizationtieto.map.Map.getInstance().addObject(poi);
+            }
+        }
     }
 }
