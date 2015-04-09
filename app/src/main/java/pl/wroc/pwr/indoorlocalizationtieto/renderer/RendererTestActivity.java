@@ -15,7 +15,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.map.MapObject;
 import pl.wroc.pwr.indoorlocalizationtieto.map.Road;
 
 public class RendererTestActivity extends Activity {
-    private MapView mapView;
+    /*private MapView mapView;
     private Renderer renderer;
 
     @Override
@@ -72,5 +72,5 @@ public class RendererTestActivity extends Activity {
         objects.add(road);
 
         return objects;
-    }
+    }*/
 }
