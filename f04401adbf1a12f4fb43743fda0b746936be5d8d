@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_e0b97616",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/MapTest/TestBuilding.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-04-09T09:37:04Z",
+      "side": 1,
+      "message": "Faktycznie. getLevel() wyrzuca exception już wtedy, jeśli pierwszy element arraylisty nie pasuje",
+      "parentUuid": "1a106d94_e294f538",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_a29cbd6a",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Building.java",
         "patchSetId": 1
@@ -105,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_e05056d6",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossing.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-04-09T09:37:04Z",
+      "side": 1,
+      "message": "Można tak zrobić.",
+      "parentUuid": "1a106d94_22e3ad08",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_e2d87555",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossing.java",
         "patchSetId": 1
@@ -122,6 +158,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_405faae5",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossing.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-04-09T09:37:04Z",
+      "side": 1,
+      "message": "zmienna roads jest już do arraylisty przypisana, i brzydko to by wyglądało.\nCoś wymyślę tutaj i zmienię nazwy",
+      "parentUuid": "1a106d94_e2d87555",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_b62fdba0",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Level.java",
         "patchSetId": 1
@@ -133,6 +187,24 @@
       "writtenOn": "2015-04-03T09:54:00Z",
       "side": 1,
       "message": "Nie wiem czy INT jest tutaj najlepszy.",
+      "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_605c66ee",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Level.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-04-09T09:37:04Z",
+      "side": 1,
+      "message": "Problem z półpiętrami, zgadzam się.",
+      "parentUuid": "1a106d94_b62fdba0",
       "revId": "f04401adbf1a12f4fb43743fda0b746936be5d8d",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
