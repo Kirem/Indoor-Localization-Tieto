@@ -16,6 +16,29 @@
       "revId": "a599db6d9010c0be21476ea664a4b7a6bfc91dec",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_a04f7ebd",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Door.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-04-09T11:58:31Z",
+      "side": 1,
+      "message": "W parserze mogą być z ustaleniem tego problemy :)\nMyślę, żeby dodać konstruktor bez tych pokoi na chwilę obecną, i przy dalszej pracy nad parserem znaleźć najwyżej rozwiązanie na ten temat.",
+      "range": {
+        "startLine": 11,
+        "startChar": 4,
+        "endLine": 11,
+        "endChar": 36
+      },
+      "revId": "a599db6d9010c0be21476ea664a4b7a6bfc91dec",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
