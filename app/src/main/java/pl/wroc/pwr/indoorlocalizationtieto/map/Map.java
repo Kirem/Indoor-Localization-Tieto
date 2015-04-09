@@ -5,19 +5,19 @@ import java.util.ArrayList;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 
 public class Map {
-    private static Map singleton = null;
+//    private static Map singleton = null;
     ArrayList<MapObject> objects;
     public Map() {
         objects = new ArrayList<>();
     }
 
 
-    public static Map getInstance() {
+/*    public static Map getInstance() {
         if(singleton==null){
             singleton = new Map();
         }
         return singleton;
-    }
+    }*/
     public void addObject(MapObject object){
         objects.add(object);
     }
