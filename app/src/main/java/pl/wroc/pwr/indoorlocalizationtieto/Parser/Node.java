@@ -2,29 +2,24 @@ package pl.wroc.pwr.indoorlocalizationtieto.Parser;
 
 import java.util.Map;
 
-import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 
-public class Node {
+public class Node extends OSMElement {
 
-    private long id;
-    private Point point;
-    private Map<String, String> tags;
+    private double latitude;
+    private double longitude;
 
-    public Node(long id, Point point, Map<String, String> tags) {
-        this.id = id;
-        this.point = point;
-        this.tags = tags;
+    public Node(long id, double latitude, double longitude, Map<String, String> tags) {
+        super("node", id, tags);
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
-    public long getId() {
-        return id;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public Point getPoint() {
-        return point;
+    public double getLongitude() {
+        return longitude;
     }
 
-    public Map<String, String> getTags() {
-        return tags;
-    }
 }

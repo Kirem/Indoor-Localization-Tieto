@@ -1,31 +1,18 @@
 package pl.wroc.pwr.indoorlocalizationtieto.Parser;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
-public class Way {
+public class Way extends OSMElement {
 
-    private long id;
-    private ArrayList<Long> nodesList;
-    private Map<String, String> tags;
+    private ArrayList<Node> nodesList;
 
-    public Way(long id, ArrayList<Long> nodesList, Map<String, String> tags) {
-        this.id = id;
+    public Way(long id, ArrayList<Node> nodesList, Map<String, String> tags) {
+        super("way", id, tags);
         this.nodesList = nodesList;
-        this.tags = tags;
-
+        for (Node node : this.nodesList) {
+            node.addPartOf(this);
+        }
     }
-
-    public long getId() {
-        return id;
-    }
-
-    public ArrayList<Long> getNodesList() {
-        return nodesList;
-    }
-
-    public Map<String, String> getTags() {
-        return tags;
-    }
-
 }
