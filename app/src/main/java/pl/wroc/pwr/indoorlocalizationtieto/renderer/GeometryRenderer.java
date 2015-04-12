@@ -36,6 +36,11 @@ public class GeometryRenderer implements Renderer {
         zoomLevel = 1;
     }
 
+    public void setMapObjects(ArrayList<MapObject> mapObjects){
+        renderedMapObjects.clear();
+        renderedMapObjects = new ArrayList<>(mapObjects);
+    }
+
     @Override
     public void setStyle(int id) {
         styleManager.loadStyle(id);
@@ -49,8 +54,9 @@ public class GeometryRenderer implements Renderer {
     @Override
     public void draw(Canvas canvas, PointF offset) {
         canvas.save();
-        canvas.scale(zoomLevel, zoomLevel);
-        canvas.translate(offset.x, offset.y);
+//        canvas.scale(zoomLevel, zoomLevel);
+        canvas.translate(offset.x*zoomLevel, offset.y*zoomLevel);
+
 
         for (MapObject object : renderedMapObjects) {
             ArrayMap<String, String> options = object.getOptions();
@@ -88,12 +94,12 @@ public class GeometryRenderer implements Renderer {
     }
 
     private void drawPoint(Canvas canvas, Point point) {
-        canvas.drawPoint((float) point.getX(), (float) point.getY(), activePaint);
+        canvas.drawPoint((float) point.getX()*zoomLevel, (float) point.getY()*zoomLevel, activePaint);
     }
 
     private void drawLine(Canvas canvas, Point startingPoint, Point endingPoint) {
-        canvas.drawLine((float) startingPoint.getX(), (float) startingPoint.getY(),
-                (float) endingPoint.getX(), (float) endingPoint.getY(), activePaint);
+        canvas.drawLine((float) startingPoint.getX()*zoomLevel, (float) startingPoint.getY()*zoomLevel,
+                (float) endingPoint.getX()*zoomLevel, (float) endingPoint.getY()*zoomLevel, activePaint);
     }
 
     private void drawLine(Canvas canvas, Line line) {
@@ -132,12 +138,12 @@ public class GeometryRenderer implements Renderer {
         Path path = new Path();
         path.setFillType(Path.FillType.EVEN_ODD);
         Point first = pointList.get(0);
-        path.moveTo((float) first.getX(), (float) first.getY());
+        path.moveTo((float) first.getX()*zoomLevel, (float) first.getY()*zoomLevel);
         for (int i = 1; i < pointList.size(); i++) {
             point = pointList.get(i);
-            path.lineTo((float) point.getX(), (float) point.getY());
+            path.lineTo((float) point.getX()*zoomLevel, (float) point.getY()*zoomLevel);
         }
-        path.lineTo((float) first.getX(), (float) first.getY());
+        path.lineTo((float) first.getX()*zoomLevel, (float) first.getY()*zoomLevel);
         return path;
     }
 }
