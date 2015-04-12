@@ -4,7 +4,9 @@ import android.graphics.Canvas;
 import android.graphics.PointF;
 
 public interface Renderer {
-    public void draw(Canvas canvas, PointF offset);
+    void draw(Canvas canvas, PointF offset);
+
     void setStyle(int id);
+
     void setZoomLevel(float zoomLevel);
 }
