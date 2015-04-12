@@ -345,7 +345,6 @@
 							"type":"university",
 							"style":{
 								"draw":1,
-								"background_color":"#E3D26F",
 								"border_color":"#7B1E7A"
 							}
 						},

@@ -84,22 +84,43 @@ public class MapView extends View {
         if (zoomLevel > 1) {
             zoomLevel--;
             renderer.setZoomLevel(zoomLevel);
+            invalidate();
 
         }
     }
+
 
     public void zoomIn() {
         if (zoomLevel < MAX_ZOOM_LEVEL) {
             zoomLevel++;
             renderer.setZoomLevel(zoomLevel);
+            invalidate();
+
         }
+    }
+
+    public void setPosition(float x, float y) {
+        if (mapSize.x < x && mapSize.y < y) {
+            offset.x = x;
+            offset.y = y;
+        }
+    }
+
+    public void lowerLevel() {
+
+    }
+
+    public void higherLevel() {
+
     }
 
     private class MapMoveListener implements OnTouchListener {
         PointF lastPosition;
-        MapMoveListener(){
+
+        MapMoveListener() {
             lastPosition = new PointF();
         }
+
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             if (v.getId() == getId()) {
@@ -111,12 +132,12 @@ public class MapView extends View {
                     float moveY = event.getY() - lastPosition.y;
                     lastPosition.x = event.getX();
                     lastPosition.y = event.getY();
-                    if(offset.x + moveX < 0
-                            && offset.x + moveX > (viewSize.x - mapSize.x*zoomLevel) ){
+                    if (offset.x + moveX < 0
+                            && offset.x + moveX > (viewSize.x - mapSize.x * zoomLevel)) {
                         offset.x += moveX;
                     }
-                    if(offset.y + moveY < 0
-                            && offset.y + moveY > (viewSize.y - mapSize.y*zoomLevel) ){
+                    if (offset.y + moveY < 0
+                            && offset.y + moveY > (viewSize.y - mapSize.y * zoomLevel)) {
                         offset.y += moveY;
                     }
                     invalidate();
