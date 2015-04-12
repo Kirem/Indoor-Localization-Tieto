@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_5a2caa02",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-04-12T22:57:05Z",
+      "side": 1,
+      "message": "Nie pomyliłeś tu przypadkiem kierunków znaków?! Teraz jest chyba, że jeśli wykracza poza mapSize. :D",
+      "range": {
+        "startLine": 103,
+        "startChar": 8,
+        "endLine": 103,
+        "endChar": 43
+      },
+      "revId": "f9ca52949b80d0a29d151757fcbbccf0b0d4a9fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
