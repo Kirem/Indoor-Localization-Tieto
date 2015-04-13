@@ -140,6 +140,29 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_afc47d5f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-13T22:16:15Z",
+      "side": 1,
+      "message": "zmienic na cos w tym stylu : \n   private static Map\u003cString, String\u003e buildMap(JSONObject c, String name, String ... tags) throws JSONException {\n        JSONObject jObjTags \u003d c.getJSONObject(name);\n        Map\u003cString, String\u003e tagMap \u003d new HashMap\u003c\u003e();\n\n        for (String tag : tags) {\n            String val \u003d jObjTags.optString(tag);\n            if (val.isEmpty()) {\n                tagMap.put(tag, val);\n            }\n        }\n\n        return tagMap;\n    }\ni zamiast tych waszych \u0027redundancji\u0027\n    map \u003d buildMap(c, Tags.TAG_TAGS, Tags.TAG_TAGS_POI, Tags.TAG_TAGS_DOOR);\n    map \u003d buildMap(c, Tags.TAG_TAGS, Tags.TAG_TAGS_BUILDINGPART, Tags.TAG_TAGS_HIGHWAY);",
+      "range": {
+        "startLine": 121,
+        "startChar": 24,
+        "endLine": 121,
+        "endChar": 69
+      },
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_0f9dd1bc",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
         "patchSetId": 3
