@@ -183,6 +183,30 @@
       "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_cfba9922",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/RendererTestActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-04-13T20:50:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a106d94_4f7069a5",
+      "range": {
+        "startLine": 49,
+        "startChar": 8,
+        "endLine": 49,
+        "endChar": 64
+      },
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
