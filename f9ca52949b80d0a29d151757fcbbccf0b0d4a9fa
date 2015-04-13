@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a106d94_9559d500",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-13T06:53:10Z",
+      "side": 1,
+      "message": "Dodatkowy enter. Płacą Ci za linijkę kodu?",
+      "revId": "f9ca52949b80d0a29d151757fcbbccf0b0d4a9fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_3562a1ad",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-13T06:53:10Z",
+      "side": 1,
+      "message": "Wygląda na zbędny enter",
+      "revId": "f9ca52949b80d0a29d151757fcbbccf0b0d4a9fa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_5a2caa02",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
         "patchSetId": 2
