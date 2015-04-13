@@ -22,6 +22,30 @@
       "revId": "5b2c0a8406dfed601e06eeb4668c1548122b254f",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_2f0ecd34",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/RendererTestActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-13T19:19:04Z",
+      "side": 1,
+      "message": "Trochę bałagan się zrobił jak chcieliśmy to wrzucić na gerrita i po prostu poszła wersja z zakomentowanym, trzeba by też było Helińskiego spytać, bo to on mowil zeby zakomentować.",
+      "parentUuid": "1a106d94_1a3512da",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 30
+      },
+      "revId": "5b2c0a8406dfed601e06eeb4668c1548122b254f",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
