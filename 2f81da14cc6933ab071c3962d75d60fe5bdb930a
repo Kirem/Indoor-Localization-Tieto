@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_af5e3d10",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-13T20:49:02Z",
+      "side": 1,
+      "message": "moze by to wyciagnac gdzies na zewnatrz, do stalej? chociaz nie upieram sie",
+      "range": {
+        "startLine": 112,
+        "startChar": 36,
+        "endLine": 112,
+        "endChar": 41
+      },
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_0f9dd1bc",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
         "patchSetId": 3
@@ -41,6 +64,98 @@
         "startChar": 72,
         "endLine": 123,
         "endChar": 81
+      },
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_4fa7c90c",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-13T20:49:02Z",
+      "side": 1,
+      "message": "nie rozumiem co ten kod robi, ale nie powinno tu byc Tags.TAG_TAGS_HIGHWAY?\n\nNo i moze lepiej pozbyc sie tego pierwszego TAG_*?",
+      "range": {
+        "startLine": 126,
+        "startChar": 34,
+        "endLine": 126,
+        "endChar": 61
+      },
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_cf63b9da",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-13T20:49:02Z",
+      "side": 1,
+      "message": "od Javy 1.7 mozna uzywac stringow w switch-case. wygladaloby to duzo lepiej niz te if-else",
+      "range": {
+        "startLine": 131,
+        "startChar": 20,
+        "endLine": 131,
+        "endChar": 53
+      },
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_8f69c1c0",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-13T20:49:02Z",
+      "side": 1,
+      "message": "poprawic wciecia?",
+      "range": {
+        "startLine": 139,
+        "startChar": 24,
+        "endLine": 141,
+        "endChar": 25
+      },
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_6f6445e5",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-13T20:49:02Z",
+      "side": 1,
+      "message": "optString zamiast getString?",
+      "range": {
+        "startLine": 143,
+        "startChar": 64,
+        "endLine": 143,
+        "endChar": 73
       },
       "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
