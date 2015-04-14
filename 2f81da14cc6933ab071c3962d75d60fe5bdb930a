@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a106d94_927d661f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-14T07:31:04Z",
+      "side": 1,
+      "message": "Nazwa klasy trochę z dupy. Może OSMDataFetcher?",
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_7278aa2b",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-14T07:31:04Z",
+      "side": 1,
+      "message": "Ten parametr w konstruktor i jako domyslna wartość to co teraz macie.",
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_af8c7d80",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
         "patchSetId": 3
@@ -71,6 +105,40 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_b2722247",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-14T07:31:04Z",
+      "side": 1,
+      "message": "To nie ma sensu",
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_12917647",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-14T07:31:04Z",
+      "side": 1,
+      "message": "Zamiast konstruktora uzylbym funkcji. Przykład użycia:\nOSMDataFetcher fetcher \u003d new OSMDataFetcher(server);\nfetcher.fetchDataForRadius(lat,lon,rad);",
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_ef9f95b2",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
         "patchSetId": 3
@@ -88,6 +156,47 @@
         "endLine": 65,
         "endChar": 39
       },
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_92a446a7",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-14T07:31:04Z",
+      "side": 1,
+      "message": "Query może być spokojnie w funckji fetchDataForRadius",
+      "parentUuid": "1a106d94_ef9f95b2",
+      "range": {
+        "startLine": 65,
+        "startChar": 26,
+        "endLine": 65,
+        "endChar": 39
+      },
+      "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_b2a9827d",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Elements.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-14T07:31:04Z",
+      "side": 1,
+      "message": "Straszna sieka się robi. Powinno być:\nfetchData(query,handler?);\n\nhandler(query) \u003d parseOSMDataFromJSON",
       "revId": "2f81da14cc6933ab071c3962d75d60fe5bdb930a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
