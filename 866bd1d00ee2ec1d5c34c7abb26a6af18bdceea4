@@ -1,0 +1,193 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_75c0822a",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMData.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-17T23:22:32Z",
+      "side": 1,
+      "message": "ja chyba nazwalbym to Map, ale sie nie upieram",
+      "range": {
+        "startLine": 11,
+        "startChar": 45,
+        "endLine": 11,
+        "endChar": 49
+      },
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_95c53e3e",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMData.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-17T23:22:32Z",
+      "side": 1,
+      "message": "jesli to jest pytanie o dorobienie getRelation / getWay, to moim zdaniem dorobic",
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_b5e15ad2",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMElement.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-17T23:22:32Z",
+      "side": 1,
+      "message": "te wielkie litery sa brzydkie troche... to mi sie ze stala kojarzy, a nie z polem.",
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_f5a3d24c",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-17T23:22:32Z",
+      "side": 1,
+      "message": "zamiast tego czysciej bedzie jak zrobisz\n\nthis(\"http://www.overpass-api.de/api/interpreter?data\u003d\");",
+      "range": {
+        "startLine": 32,
+        "startChar": 8,
+        "endLine": 32,
+        "endChar": 65
+      },
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_5503c641",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-17T23:22:32Z",
+      "side": 1,
+      "message": "moze by ta metode statyczna zrobic?\nja wiem, ze z tymi statycznymi jest ostatnio zamieszanie (raz w dodac, raz usunac, teraz znowu dodac) ale wtedy juz na pierwszy rzut oka widac, ze ta metoda nie ma zadnych \u0027side effectow\u0027 dla instancji.",
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_b5995a21",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-17T23:22:32Z",
+      "side": 1,
+      "message": "Within",
+      "range": {
+        "startLine": 56,
+        "startChar": 28,
+        "endLine": 56,
+        "endChar": 32
+      },
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_3573aae8",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-17T23:22:32Z",
+      "side": 1,
+      "message": "wywalic to",
+      "range": {
+        "startLine": 107,
+        "startChar": 0,
+        "endLine": 107,
+        "endChar": 75
+      },
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_757d22b1",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-17T23:22:32Z",
+      "side": 1,
+      "message": "wywalic to",
+      "range": {
+        "startLine": 109,
+        "startChar": 0,
+        "endLine": 109,
+        "endChar": 95
+      },
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_95825e92",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1004374
+      },
+      "writtenOn": "2015-04-17T23:22:32Z",
+      "side": 1,
+      "message": "wywal to\n\nnajwyzej dodasz kiedys w kolejnym commitcie jak teraz nie chcesz tego robic",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 130,
+        "endChar": 36
+      },
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
