@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_21b254e6",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-17T07:50:44Z",
+      "side": 1,
+      "message": "Unikajcie nadmiernych wcięć. Lepiej napisać\nif(jsonStr\u003d\u003dnull) return null; lub osmData",
+      "revId": "529269b472ff535b046e3083311d821bd58ee31a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_61cbac53",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Tags.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-17T07:50:44Z",
+      "side": 1,
+      "message": "To wszystko to są wartości const więc nie ma sensu robić z tego osobnej klasy. Połącz to z parserem/fetcherem",
+      "revId": "529269b472ff535b046e3083311d821bd58ee31a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
