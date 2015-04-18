@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a106d94_10a15c47",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T17:53:03Z",
+      "side": 1,
+      "message": "nie musisz tego pisać. Gdy wyląduje na githube to stare patchsety będą nieistotne.",
+      "revId": "d5b38cd8c436568008d5f4a80fbb598a507cf097",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_f0a3e04c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T17:53:03Z",
+      "side": 1,
+      "message": "Chyba usuwasz coś więcej :-)",
+      "revId": "d5b38cd8c436568008d5f4a80fbb598a507cf097",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_f0ec8091",
         "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/ParserTest/TestParser.java",
         "patchSetId": 8
@@ -19,6 +53,40 @@
         "endLine": 10,
         "endChar": 13
       },
+      "revId": "d5b38cd8c436568008d5f4a80fbb598a507cf097",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_508ab4bf",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T17:53:03Z",
+      "side": 1,
+      "message": "To tudu chyba jest już niepotrzebne",
+      "revId": "d5b38cd8c436568008d5f4a80fbb598a507cf097",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_d0bd046a",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T17:53:03Z",
+      "side": 1,
+      "message": "Ogólnie fajnie i myślę, że tak możesz zostawić. Boję się tylko pewnej sytuacji. Wydaje mi się, że overpass zwraca dane w formie posortowanej wg ID czyli jeśli relacja ma membera relacje z większym ID to może go jeszcze nie być w osmData. Ale sądzę, że możesz to naprawić później.",
       "revId": "d5b38cd8c436568008d5f4a80fbb598a507cf097",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
