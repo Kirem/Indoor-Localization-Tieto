@@ -94,6 +94,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_506e3430",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMElement.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-18T15:30:53Z",
+      "side": 1,
+      "message": "a final w Javie nie przyjęto, że duża litera i koniec?",
+      "parentUuid": "1a106d94_b5e15ad2",
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_10df9c3c",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMElement.java",
         "patchSetId": 6
