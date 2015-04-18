@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a106d94_d0bb44e3",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Member.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T08:10:09Z",
+      "side": 1,
+      "message": "Albo usuwasz tę klasę albo zmieniasz long ref na OsmElement",
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_75c0822a",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMData.java",
         "patchSetId": 6
@@ -42,6 +59,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_b0d7a822",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMData.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T08:10:09Z",
+      "side": 1,
+      "message": "Spokojnie można dodać funkcje nawet jeśli fetcher jeszcze nie parsuje relacji",
+      "parentUuid": "1a106d94_95c53e3e",
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_b5e15ad2",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMElement.java",
         "patchSetId": 6
@@ -53,6 +88,40 @@
       "writtenOn": "2015-04-17T23:22:32Z",
       "side": 1,
       "message": "te wielkie litery sa brzydkie troche... to mi sie ze stala kojarzy, a nie z polem.",
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_10df9c3c",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMElement.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T08:10:09Z",
+      "side": 1,
+      "message": "Te dodatkowe entery nie mają sensu",
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_30e3b806",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T08:10:09Z",
+      "side": 1,
+      "message": "Jeśli będzie wrzucać wszystkie tagi to te 3 zmienne są zbędne",
       "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
@@ -122,6 +191,23 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_50e8f4e1",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T08:10:09Z",
+      "side": 1,
+      "message": "Myślę, że na tym etapie lepiej kopiować wszystkie tagi, a dopiero niech parser sobie wyciąga co chce",
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_3573aae8",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
         "patchSetId": 6
@@ -168,6 +254,23 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_f0e120ff",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T08:10:09Z",
+      "side": 1,
+      "message": "Myślę, że na tym etapie lepiej kopiować wszystkie tagi, a dopiero niech parser sobie wyciąga co chce",
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_95825e92",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
         "patchSetId": 6
@@ -185,6 +288,47 @@
         "endLine": 130,
         "endChar": 36
       },
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_90f26cd0",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T08:10:09Z",
+      "side": 1,
+      "message": "+1. Komentarze są od komentowania, a nieużywane rzeczy są w historii w patchsetach",
+      "parentUuid": "1a106d94_95825e92",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 130,
+        "endChar": 36
+      },
+      "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_70ed30ef",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/Relation.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T08:10:09Z",
+      "side": 1,
+      "message": "Jeśli jest cała do przerobienia to lepiej usunąć i dodać w przyszłości.",
       "revId": "866bd1d00ee2ec1d5c34c7abb26a6af18bdceea4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
