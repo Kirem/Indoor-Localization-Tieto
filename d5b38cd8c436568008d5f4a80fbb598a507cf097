@@ -22,6 +22,23 @@
       "revId": "d5b38cd8c436568008d5f4a80fbb598a507cf097",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_90fd4c3d",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/RendererTestActivity.java.orig",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-04-18T17:12:16Z",
+      "side": 1,
+      "message": "tego pliku chyba tu nie powinno być...",
+      "revId": "d5b38cd8c436568008d5f4a80fbb598a507cf097",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
