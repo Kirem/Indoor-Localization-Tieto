@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_f0ec8091",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/ParserTest/TestParser.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-18T15:45:25Z",
+      "side": 1,
+      "message": "Tak na dobra sprawe tego tu w ogole na razie nie powinno być, uzywam tego lokalnie do debugowania, przypadkiem wrzucilem na gerrita :v",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 10,
+        "endChar": 13
+      },
+      "revId": "d5b38cd8c436568008d5f4a80fbb598a507cf097",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
