@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_5b3bf5d0",
+        "filename": "app/app.iml",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T20:51:09Z",
+      "side": 1,
+      "message": "Nie znam się, ale czy na pewno powinieneś to usunąć?",
+      "revId": "c295e9902c3626646cead635c14de8d033eeb27d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_3b36f9e7",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T20:51:09Z",
+      "side": 1,
+      "message": "Parser mogłeś zostawić na następny commit",
+      "revId": "c295e9902c3626646cead635c14de8d033eeb27d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_9b356ddc",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Map.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-18T20:51:09Z",
+      "side": 1,
+      "message": "Modyfikacja średnio związana z fetcherem",
+      "revId": "c295e9902c3626646cead635c14de8d033eeb27d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
