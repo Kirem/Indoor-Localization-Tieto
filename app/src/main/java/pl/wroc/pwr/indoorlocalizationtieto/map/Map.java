@@ -1,7 +1,6 @@
 package pl.wroc.pwr.indoorlocalizationtieto.map;
 
 import java.util.ArrayList;
-
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 
 public class Map {
@@ -21,6 +20,8 @@ public class Map {
     public void addObject(MapObject object){
         objects.add(object);
     }
+
+    public ArrayList<MapObject> getObjects () { return this.objects;}
 
     public ArrayList<Geometry> getGeometries(){
         ArrayList<Geometry> geometries = new ArrayList<>();
