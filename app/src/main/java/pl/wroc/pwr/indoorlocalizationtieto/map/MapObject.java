@@ -23,9 +23,7 @@ public abstract class MapObject {
         return objectGeometry;
     }
 
-    public void setObjectGeometry(Geometry objectGeometry) {
-        this.objectGeometry = objectGeometry;
-    }
+    public Long getId() { return this.id; }
 
     abstract ArrayList<Geometry> getGeometries();
 
@@ -35,6 +33,10 @@ public abstract class MapObject {
 
     public void setOptions(ArrayMap<String, String> options) {
         this.options = options;
+    }
+
+    public void setObjectGeometry(Geometry objectGeometry) {
+        this.objectGeometry = objectGeometry;
     }
 
     @Override
