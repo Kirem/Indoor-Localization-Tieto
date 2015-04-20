@@ -5,25 +5,15 @@ import java.util.ArrayList;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 
-public class Crossing extends MapObject {
-    private boolean isCrossing;
+/**
+ * Created by Mateusz on 2015-04-22.
+ */
+public class Crossroad extends MapObject{
     private ArrayList<Road> roads;
-    //stworzyc klase nadrzedna opisujaca obiekty pozwalajace na poruszanie sie?
 
-    public Crossing(long id, Point p, boolean isCrossing) {
-        super(id, p);
-        roads = new ArrayList<>();
-        this.isCrossing = isCrossing;
-    }
-
-    public Crossing(long id, ArrayList<Road> roadsList, Point crossPoint, boolean isCrossing) {
+    public Crossroad(long id, ArrayList<Road> roadsList, Point crossPoint) {
         super(id, crossPoint);
         roads = new ArrayList<>(roadsList);
-        this.isCrossing = isCrossing;
-    }
-
-    public boolean isCrossing() {
-        return isCrossing;
     }
 
     public ArrayList<Road> getRoads() {
@@ -31,14 +21,14 @@ public class Crossing extends MapObject {
     }
 
 
-    public void addRoad(Road road) {
+    public void addRoad(Road road){
         roads.add(road);
     }
 
 
     public ArrayList<Geometry> getGeometries() {
         ArrayList<Geometry> geometries = new ArrayList<>();
-        for (MapObject object : roads)
+        for(MapObject object:roads)
             geometries.add(object.getObjectGeometry());
         return geometries;
     }
