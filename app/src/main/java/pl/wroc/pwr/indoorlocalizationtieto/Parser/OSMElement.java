@@ -1,7 +1,6 @@
 package pl.wroc.pwr.indoorlocalizationtieto.Parser;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,11 +23,37 @@ public class OSMElement {
         return this.TYPE;
     }
 
-    protected long getId() { return id; }
+    protected long getId() {
+        return id;
+    }
 
     protected void addPartOf(OSMElement osmElement) {
         this.partOf.add(osmElement);
     }
 
-    public Map<String, String> getTags() {return tags; }
+    protected List<OSMElement> getPartOf() {
+        return this.partOf;
+    }
+
+    public Map<String, String> getTags() {
+        return tags;
+    }
+
+    protected boolean containsKey(String key) {
+        return this.getTags().containsKey(key);
+    }
+
+    protected boolean checkTag(String key, String value) {
+        return this.getTags().get(key).equals(value);
+    }
+
+    //TODO zwracac false gdy klucz nie istnieje
+    protected boolean checkTagFromArray(String key, String[] values) {
+        for (String value : values) {
+            if (this.checkTag(key, value)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
