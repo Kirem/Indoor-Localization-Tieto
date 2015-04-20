@@ -71,7 +71,7 @@ public class OSMDataParser {
             Node tempNode = tempNodesMap.get(nodesKey);
             if (tempNode.containsKey("highway")) {
                 if (tempNode.checkTag("highway", "crossing")) {
-                    //TODO dokończyć parsowanie POI
+                    //TODO dokończyć parsowanie POI.
                 }
             }
         }
