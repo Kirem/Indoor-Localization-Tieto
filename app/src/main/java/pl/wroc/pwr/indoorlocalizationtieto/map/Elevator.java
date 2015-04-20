@@ -7,7 +7,11 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 
 public class Elevator extends MapObject {
     ArrayList<Room> rooms;
-    //TODO czym jest winda?
+
+    public Elevator(long id, Point point) {
+        super(id, point);
+    }
+
     public Elevator(long id, Point point, ArrayList<Room> rooms) {
         super(id, point);
         this.rooms = new ArrayList<>(rooms);
@@ -17,14 +21,14 @@ public class Elevator extends MapObject {
         return rooms;
     }
 
-    public void addRoom(Room room){
+    public void addRoom(Room room) {
         rooms.add(room);
     }
 
 
     public ArrayList<Geometry> getGeometries() {
         ArrayList<Geometry> geometries = new ArrayList<>();
-        for(MapObject object:rooms)
+        for (MapObject object : rooms)
             geometries.add(object.getObjectGeometry());
         return geometries;
     }

@@ -5,10 +5,10 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PointF;
-import android.support.v4.util.ArrayMap;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Line;
@@ -59,7 +59,7 @@ public class GeometryRenderer implements Renderer {
 
 
         for (MapObject object : renderedMapObjects) {
-            ArrayMap<String, String> options = object.getOptions();
+            Map<String, String> options = object.getOptions();
             String objectClass = options.get(MapObject.OBJECT_CLASS);
             String objectType = options.get(MapObject.OBJECT_TYPE);
             List<MapObjectStyle> styles =

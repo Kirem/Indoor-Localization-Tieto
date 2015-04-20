@@ -41,7 +41,7 @@ public class TestCrossing extends InstrumentationTestCase {
         roads.add(roadB);
 
         point = new Point(0.0, 50.0);
-        crossing = new Crossing(3, roads, point);
+        crossing = new Crossing(3, roads, point, true);
     }
 
     public void testGetRoads() throws Exception {
