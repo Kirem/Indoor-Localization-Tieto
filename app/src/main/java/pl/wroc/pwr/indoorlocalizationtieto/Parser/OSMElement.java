@@ -31,4 +31,21 @@ public class OSMElement {
     }
 
     public Map<String, String> getTags() {return tags; }
+
+    protected boolean containsKey(String key) {
+        return this.getTags().containsKey(key);
+    }
+
+    protected boolean checkTag(String key, String value) {
+        return this.getTags().get(key).equals(value);
+    }
+
+    protected boolean checkTagFromArray(String key, String[] values) {
+        for (String value : values) {
+            if (this.getTags().get(key).equals(value)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
