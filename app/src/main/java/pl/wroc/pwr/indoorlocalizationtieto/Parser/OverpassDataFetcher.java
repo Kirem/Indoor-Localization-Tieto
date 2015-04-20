@@ -83,6 +83,7 @@ public class OverpassDataFetcher {
 
     private OSMData parseFromJSON(String jsonStr) {
         OSMData osmData = new OSMData();
+        OSMDataParser tempParser = new OSMDataParser();
         // elements JSONArray
         JSONArray JElements;
         if (jsonStr == null) return null;
@@ -152,6 +153,7 @@ public class OverpassDataFetcher {
             e.printStackTrace();
             Log.d("Exception: ", "> " + e.toString());
         }
+        tempParser.parseOSMData(osmData);
         return osmData;
     }
 }

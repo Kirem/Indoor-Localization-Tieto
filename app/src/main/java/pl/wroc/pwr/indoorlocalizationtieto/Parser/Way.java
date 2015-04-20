@@ -16,7 +16,7 @@ public class Way extends OSMElement {
         }
     }
 
-    public ArrayList<Node> getNodesList(){
+    public ArrayList<Node> getNodesList() {
         return nodesList;
     }
 }
