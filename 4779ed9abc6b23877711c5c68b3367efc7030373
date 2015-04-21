@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_19ab40d7",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1004391
+      },
+      "writtenOn": "2015-04-21T21:25:54Z",
+      "side": 1,
+      "message": "Rzeczywiście, będzie lepiej jeśli będzie osobna funkcja, w kolejnym commicie postaram się zmienić.",
+      "parentUuid": "1a106d94_5e2bde93",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 21
+      },
+      "revId": "4779ed9abc6b23877711c5c68b3367efc7030373",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_3e5f0243",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMElement.java",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2015-04-21T20:12:31Z",
       "side": 1,
       "message": "jak już zrobiłeś funkcję checkTag() to możesz z niej skorzystać",
+      "range": {
+        "startLine": 45,
+        "startChar": 16,
+        "endLine": 45,
+        "endChar": 53
+      },
+      "revId": "4779ed9abc6b23877711c5c68b3367efc7030373",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_39b0bc42",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMElement.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1004391
+      },
+      "writtenOn": "2015-04-21T21:25:54Z",
+      "side": 1,
+      "message": "już poprawione, dzięki :)",
+      "parentUuid": "1a106d94_3e5f0243",
       "range": {
         "startLine": 45,
         "startChar": 16,
