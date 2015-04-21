@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_5e2bde93",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-21T20:12:31Z",
+      "side": 1,
+      "message": "Może to wydzielić jako osobną funkcję? \nList\u003cPoint\u003e tempPointList \u003d getPointArray(...);\n\nTen blok powtarza się w każdym ifie",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 21
+      },
+      "revId": "4779ed9abc6b23877711c5c68b3367efc7030373",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_3e5f0243",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMElement.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-21T20:12:31Z",
+      "side": 1,
+      "message": "jak już zrobiłeś funkcję checkTag() to możesz z niej skorzystać",
+      "range": {
+        "startLine": 45,
+        "startChar": 16,
+        "endLine": 45,
+        "endChar": 53
+      },
+      "revId": "4779ed9abc6b23877711c5c68b3367efc7030373",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
