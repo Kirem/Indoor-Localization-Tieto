@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_f6b2ae04",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-22T21:34:08Z",
+      "side": 1,
+      "message": "Wywalaj takie rzeczy, albo rób TODO - tak według mnie, bo na chwile obecną jakbym pobrał ten kod nie wiedziałbym co z tym sie dzieje?",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 7
+      },
+      "revId": "76cc10a62668bc013e8a04b6b72c52f7e06b4cb3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_36d0c61e",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMElement.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-22T21:34:08Z",
+      "side": 1,
+      "message": "protected long getId() { return id;}\n\nNie jestem ekspertem, ale ja bym to tak zostawiał :)",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 5
+      },
+      "revId": "76cc10a62668bc013e8a04b6b72c52f7e06b4cb3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_16cdca85",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-22T21:34:08Z",
+      "side": 1,
+      "message": "a to co to ?",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 55
+      },
+      "revId": "76cc10a62668bc013e8a04b6b72c52f7e06b4cb3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
