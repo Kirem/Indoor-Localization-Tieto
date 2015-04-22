@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_145ae74f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1004391
+      },
+      "writtenOn": "2015-04-22T09:45:58Z",
+      "side": 1,
+      "message": "Poprawię to w kolejnym patchset",
+      "parentUuid": "1a106d94_54729f49",
+      "range": {
+        "startLine": 43,
+        "startChar": 12,
+        "endLine": 43,
+        "endChar": 14
+      },
+      "revId": "7e9501a065880dae55dcef0d0e0967a27930e64a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_7477db3a",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
         "patchSetId": 2
@@ -77,6 +101,24 @@
       "writtenOn": "2015-04-22T07:54:29Z",
       "side": 1,
       "message": "highway crossing to przejście dla pieszych, a nie skrzyżowanie",
+      "revId": "7e9501a065880dae55dcef0d0e0967a27930e64a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_74599b59",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1004391
+      },
+      "writtenOn": "2015-04-22T09:45:58Z",
+      "side": 1,
+      "message": "W kolejnym patchset zostaną zrobione skrzyżowania",
+      "parentUuid": "1a106d94_b4903344",
       "revId": "7e9501a065880dae55dcef0d0e0967a27930e64a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
