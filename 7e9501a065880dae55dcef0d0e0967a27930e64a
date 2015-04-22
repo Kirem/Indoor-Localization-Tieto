@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_b63956a6",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-04-22T20:13:31Z",
+      "side": 1,
+      "message": "tempWay.checkTag(\"buildingpart\", \"corridor\" || \"room\") (sprawdzić czy zadziała) i później wstawiać false albo true przy tworzeniu obiektu Room",
+      "parentUuid": "1a106d94_7477db3a",
+      "revId": "7e9501a065880dae55dcef0d0e0967a27930e64a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_b4903344",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
         "patchSetId": 2
