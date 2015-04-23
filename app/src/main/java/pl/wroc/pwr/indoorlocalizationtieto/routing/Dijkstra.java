@@ -28,10 +28,10 @@ public class Dijkstra {
         while(!pending.isEmpty()){
             for(double neighbour: graph.getNeighboursForVertex(justAdded)){
                 if(pending.containsKey(neighbour)) {
-                   double newPath = path.get(justAdded) + graph.getEdgeDistance(justAdded, neighbour);
-                   if(path.get(neighbour)> newPath){
-                       setShorterPath(neighbour, newPath);
-                   }
+                    double newPath = path.get(justAdded) + graph.getEdgeDistance(justAdded, neighbour);
+                    if(path.get(neighbour)> newPath){
+                        setShorterPath(neighbour, newPath);
+                    }
                 }
             }
             addNextVertex();

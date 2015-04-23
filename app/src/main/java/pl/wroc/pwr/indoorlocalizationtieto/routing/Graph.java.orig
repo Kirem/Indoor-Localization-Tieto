@@ -54,9 +54,15 @@ public class Graph {
 
     public ArrayList<Vertex> getVertexes(){ return vertexes; }
 
-    public double getEdgeDistance(double vertex1ID, double vertex2ID) {
-        Vertex v1 = getVertexById(vertex1ID); //new Vertex(vertex1);
-        Vertex v2 = getVertexById(vertex2ID); //new Vertex(vertex2);
+<<<<<<< HEAD
+    public double getEdgeDistance(double vertex1Id, double vertex2Id){
+        Vertex v1 = new Vertex(vertex1Id);
+        Vertex v2 = new Vertex(vertex2Id);
+=======
+    public double getEdgeDistance(int vertex1ID, int vertex2ID) {
+        Vertex v1 = getVertex(vertex1ID); //new Vertex(vertex1);
+        Vertex v2 = getVertex(vertex2ID); //new Vertex(vertex2);
+>>>>>>> Fixed GraphBuilder
         Edge e = new Edge(v1, v2, 0);
         for(Edge edge: edges){
             if(edge.equals(e)){
@@ -80,9 +86,8 @@ public class Graph {
     }
 
     public List<Double> getNeighboursForVertex(double vertexId){
-        //Vertex tem = new Vertex(vertexId);
-        //return vertexes.get(vertexes.indexOf(tem)).getNeighbours();
-        return getVertexById(vertexId).getNeighbours();
+        Vertex tem = new Vertex(vertexId);
+        return vertexes.get(vertexes.indexOf(tem)).getNeighbours();
     }
 
     public String toString(){
