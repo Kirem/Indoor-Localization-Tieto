@@ -6,6 +6,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PointF;
 import android.support.v4.util.ArrayMap;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,6 @@ public class GeometryRenderer implements Renderer {
     public GeometryRenderer(ArrayList<MapObject> objects, Context context) {
         renderedMapObjects = new ArrayList<>(objects);
         styleManager = new StyleManager(context);
-
         activePaint = new Paint();
         defaultPaint = new Paint();
         zoomLevel = 1;
@@ -48,16 +48,19 @@ public class GeometryRenderer implements Renderer {
 
     @Override
     public void setZoomLevel(float zoomLevel) {
-        this.zoomLevel = zoomLevel;
+        if(zoomLevel < 1){
+            this.zoomLevel = 1;
+        }else if(zoomLevel > 3){
+            this.zoomLevel = 3;
+        }else{
+            this.zoomLevel = zoomLevel;
+        }
     }
 
     @Override
     public void draw(Canvas canvas, PointF offset) {
         canvas.save();
-//        canvas.scale(zoomLevel, zoomLevel);
         canvas.translate(offset.x*zoomLevel, offset.y*zoomLevel);
-
-
         for (MapObject object : renderedMapObjects) {
             ArrayMap<String, String> options = object.getOptions();
             String objectClass = options.get(MapObject.OBJECT_CLASS);
@@ -135,6 +138,7 @@ public class GeometryRenderer implements Renderer {
     private Path getClosedPath(Polygon polygon) {
         List<Point> pointList = polygon.getPolygon();
         Point point;
+
         Path path = new Path();
         path.setFillType(Path.FillType.EVEN_ODD);
         Point first = pointList.get(0);
