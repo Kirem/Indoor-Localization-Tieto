@@ -3,6 +3,7 @@ package pl.wroc.pwr.indoorlocalizationtieto.RoutingTest;
 import android.test.InstrumentationTestCase;
 import java.util.ArrayList;
 
+import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 import pl.wroc.pwr.indoorlocalizationtieto.routing.Dijkstra;
 import pl.wroc.pwr.indoorlocalizationtieto.routing.Graph;
 import pl.wroc.pwr.indoorlocalizationtieto.routing.Vertex;
@@ -13,8 +14,9 @@ public class TestDijkstra extends InstrumentationTestCase{
 
     @Override
     public void setUp() throws Exception{
+        Point point = new Point(0, 0);
         for(int i=0; i<6; i++){
-            Vertex v = new Vertex(i);
+            Vertex v = new Vertex(i, point);
             graph.addVertex(v);
         }
 
