@@ -95,6 +95,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_c776dea3",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-23T12:52:04Z",
+      "side": 1,
+      "message": "Chyba powinieneś sprawdzać tylko czy należą do przynajmniej dwóch highway (tak jak teraz) i nie patrzyć w ogóle na tagi.",
+      "parentUuid": "1a106d94_9cc1d956",
+      "revId": "76cc10a62668bc013e8a04b6b72c52f7e06b4cb3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_36d0c61e",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMElement.java",
         "patchSetId": 3
