@@ -7,25 +7,33 @@ import android.graphics.PointF;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.View;
-
-import java.util.Vector;
-
-import pl.wroc.pwr.indoorlocalizationtieto.R;
 
 public class MapView extends View {
     public static final String MAP_VIEW_TAG = "MAP_VIEW_TAG";
     public static final int MAX_ZOOM_LEVEL = 3;
+    private static final float ZOOM_SPAN_SCALE = 0.05f;
     private Renderer renderer = null;
     private float zoomLevel = 1;
     private PointF offset;
     private PointF viewSize;
     private PointF mapSize;
+    private MoveGestureListener moveListener;
+    private ScaleGestureListener scaleListener;
+    private GestureDetector gestureDetector;
+    private ScaleGestureDetector scalegestureDetector;
+    private boolean isScaling = false;
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public MapView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
+        this(context, attrs);
+    }
+
+    public MapView(Context context, AttributeSet attrs, int defStyleAttr) {
+        this(context, attrs);
         setOnTouchListener(new MapMoveListener());
         offset = new PointF();
         offset.x = 0.0f;
@@ -33,18 +41,18 @@ public class MapView extends View {
         measureView();
     }
 
-    public MapView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        setOnTouchListener(new MapMoveListener());
-        offset = new PointF();
-        offset.x = 0.0f;
-        offset.y = 0.0f;
-        measureView();
+    public MapView(Context context) {
+        this(context, null);
     }
 
     public MapView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setOnTouchListener(new MapMoveListener());
+        moveListener = new MoveGestureListener();
+        gestureDetector = new GestureDetector(context, moveListener);
+        scaleListener = new ScaleGestureListener();
+        scalegestureDetector = new ScaleGestureDetector(context, scaleListener);
+
         offset = new PointF();
         offset.x = 0.0f;
         offset.y = 0.0f;
@@ -79,23 +87,6 @@ public class MapView extends View {
         return renderer;
     }
 
-    public void zoomOut() {
-        if (zoomLevel > 1) {
-            zoomLevel--;
-            renderer.setZoomLevel(zoomLevel);
-            invalidate();
-        }
-    }
-
-
-    public void zoomIn() {
-        if (zoomLevel < MAX_ZOOM_LEVEL) {
-            zoomLevel++;
-            renderer.setZoomLevel(zoomLevel);
-            invalidate();
-        }
-    }
-
     public void setPosition(float x, float y) {
         if (x < mapSize.x && y < mapSize.y) {
             offset.x = x;
@@ -112,28 +103,88 @@ public class MapView extends View {
 
         @Override
         public boolean onTouch(View v, MotionEvent event) {
-            if (v.getId() == getId()) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    lastPosition.x = event.getX();
-                    lastPosition.y = event.getY();
-                } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
-                    float moveX = event.getX() - lastPosition.x;
-                    float moveY = event.getY() - lastPosition.y;
-                    lastPosition.x = event.getX();
-                    lastPosition.y = event.getY();
-                    if (offset.x + moveX < 0
-                            && offset.x + moveX > (viewSize.x - mapSize.x * zoomLevel)) {
-                        offset.x += moveX;
-                    }
-                    if (offset.y + moveY < 0
-                            && offset.y + moveY > (viewSize.y - mapSize.y * zoomLevel)) {
-                        offset.y += moveY;
-                    }
-                    invalidate();
-                }
+            if (gestureDetector.onTouchEvent(event)) {
+                return true;
+            }
+
+            if (scalegestureDetector.onTouchEvent(event)) {
                 return true;
             }
             return false;
+        }
+    }
+
+    public void setZoomLevel(float zoomLevel) {
+        if (zoomLevel > MAX_ZOOM_LEVEL) {
+            zoomLevel = MAX_ZOOM_LEVEL;
+        } else if (zoomLevel < 1) {
+            zoomLevel = 1;
+        }
+        renderer.setZoomLevel(zoomLevel);
+        this.zoomLevel = zoomLevel;
+    }
+
+    private class MoveGestureListener extends GestureDetector.SimpleOnGestureListener {
+        int updateCount = 0;
+
+        public MoveGestureListener() {
+            super();
+        }
+
+        @Override
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            if (isScaling)
+                return true;
+
+            if (updateCount++ > 2) {
+                invalidate();
+                updateCount = 0;
+                offset.y -= distanceY;
+                offset.x -= distanceX;
+            }
+            return super.onScroll(e1, e2, distanceX, distanceY);
+        }
+    }
+
+    private class ScaleGestureListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
+        int updateCount = 0;
+
+        public ScaleGestureListener() {
+            super();
+        }
+
+        @Override
+        public boolean onScale(ScaleGestureDetector detector) {
+
+            float spanDelta = (detector.getCurrentSpan() - detector.getPreviousSpan()) * ZOOM_SPAN_SCALE;
+            if (spanDelta > 1) {
+                spanDelta = 1;
+            } else if (spanDelta < -1) {
+                spanDelta = -1;
+            }
+
+            if ((zoomLevel + spanDelta) <= 4
+                    && (zoomLevel + spanDelta) > 0) {
+                if (updateCount++ > 2) {
+                    zoomLevel += spanDelta;
+                    renderer.setZoomLevel(zoomLevel);
+                    invalidate();
+                    updateCount = 0;
+                }
+            }
+            return true;
+        }
+
+        @Override
+        public boolean onScaleBegin(ScaleGestureDetector detector) {
+            isScaling = true;
+            return true;
+        }
+
+        @Override
+        public void onScaleEnd(ScaleGestureDetector detector) {
+            isScaling = false;
+            super.onScaleEnd(detector);
         }
     }
 }

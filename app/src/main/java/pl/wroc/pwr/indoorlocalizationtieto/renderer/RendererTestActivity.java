@@ -22,8 +22,6 @@ import pl.wroc.pwr.indoorlocalizationtieto.map.Room;
 public class RendererTestActivity extends Activity implements View.OnClickListener{
     private MapView mapView;
     private GeometryRenderer renderer;
-    private ImageButton butPlus;
-    private ImageButton butMinus;
     private ImageButton butUp;
     private ImageButton butDown;
     private int mapLevel = 0;
@@ -36,13 +34,9 @@ public class RendererTestActivity extends Activity implements View.OnClickListen
         mapView = (MapView) findViewById(R.id.mapView);
         renderer = new GeometryRenderer(SetupDummyMapObjects(), this);
         renderer.setStyle(R.raw.mapjsonzoom);
-        butPlus = (ImageButton) findViewById(R.id.butPlus);
-        butMinus = (ImageButton) findViewById(R.id.butMinus);
         butUp = (ImageButton) findViewById(R.id.butUp);
         butDown = (ImageButton) findViewById(R.id.butDown);
 
-        butPlus.setOnClickListener(this);
-        butMinus.setOnClickListener(this);
         butUp.setOnClickListener(this);
         butDown.setOnClickListener(this);
 
@@ -53,11 +47,7 @@ public class RendererTestActivity extends Activity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if(id == R.id.butMinus){
-            mapView.zoomOut();
-        }else if(id == R.id.butPlus){
-            mapView.zoomIn();
-        }else if(id == R.id.butDown && mapLevel > 0){
+        if(id == R.id.butDown && mapLevel > 0){
             mapLevel--;
             //TODO change to take mapObjects from Map when map is ready.
             renderer.setMapObjects(SetupDummyMapObjects());
