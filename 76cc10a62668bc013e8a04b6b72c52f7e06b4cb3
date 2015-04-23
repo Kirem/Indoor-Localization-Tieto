@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_7cefbde9",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1004391
+      },
+      "writtenOn": "2015-04-23T10:36:41Z",
+      "side": 1,
+      "message": "Tak, widziałem w ostatnim patchsecie, że już o tym mówiłeś ale nie zdążyłem poprawić, dodałem w klasie OSMElement TODO przy tej metodzie.",
+      "parentUuid": "1a106d94_fc6c4dd2",
+      "revId": "76cc10a62668bc013e8a04b6b72c52f7e06b4cb3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_3c6a65b3",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
         "patchSetId": 3
@@ -53,6 +71,24 @@
       "writtenOn": "2015-04-23T09:54:21Z",
       "side": 1,
       "message": "Nie wiem czy nie przesadzasz z elsami. Co jeśli akurat na skrzyżowaniu będzie jakieś POI? Może to jest graniczny przypadek, ale nie zakładałbym, że nigdy nie wystąpi.",
+      "revId": "76cc10a62668bc013e8a04b6b72c52f7e06b4cb3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_9cc1d956",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1004391
+      },
+      "writtenOn": "2015-04-23T10:36:41Z",
+      "side": 1,
+      "message": "No ale niektóre nody, które są skrzyżowaniami dróg nie mają w ogóle tagów, to co miałbym wpisać w tym ifie, żeby one się pobierały? Wydawało mi się, że dalsze ify wykluczą możliwość pobrania nieodpowiednich tagów...",
+      "parentUuid": "1a106d94_3c6a65b3",
       "revId": "76cc10a62668bc013e8a04b6b72c52f7e06b4cb3",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
