@@ -16,6 +16,24 @@
       "revId": "4ec1f3e4535715007d4897d7c86d5582b0c9a3b3",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_1543f76c",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossroad.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1004391
+      },
+      "writtenOn": "2015-04-24T20:39:25Z",
+      "side": 1,
+      "message": "Zrezygnowałem z tej klasy po chyba 6 patchsecie ale Mateusz Heliński jak zaczynał robić graphbuildera pobrał wersję parsera jeszcze z tą klasą i nie zdążyliśmy tego zmienić. Docelowo tej klasy nie będzie bo dodałem zmienną boolean do klasy crossing po której będziemy oceniać, czy jest to przejście dla pieszych czy skrzyżowanie.",
+      "parentUuid": "1a106d94_1faf967e",
+      "revId": "4ec1f3e4535715007d4897d7c86d5582b0c9a3b3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
