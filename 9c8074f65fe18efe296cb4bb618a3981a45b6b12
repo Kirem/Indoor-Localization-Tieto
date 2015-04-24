@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_7ca5f845",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/ParserTest/TestParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-24T10:24:29Z",
+      "side": 1,
+      "message": "Jaki jest związnek usuwanie testu dla parsera, a dodanie graphbuildera?",
+      "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_bc6ad0eb",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossroad.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-24T10:24:29Z",
+      "side": 1,
+      "message": "A to?",
+      "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_1c6cc407",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Vertex.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-24T10:24:29Z",
+      "side": 1,
+      "message": "Po co to?",
+      "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
