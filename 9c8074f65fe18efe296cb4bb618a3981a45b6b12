@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_ff443a1c",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/ParserTest/TestParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-04-24T12:29:50Z",
+      "side": 1,
+      "message": "Ten test ciągle \"wisi\" na githubie, a jest nieużywany, tj. był testem do tego starego parsera.",
+      "parentUuid": "1a106d94_7ca5f845",
+      "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_bc6ad0eb",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossroad.java",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_5f4d8e3d",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossroad.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-04-24T12:29:50Z",
+      "side": 1,
+      "message": "nie mam pojęcia, dlaczego to znalazło się tutaj, a nie w commicie parsera (bo to Piotrek i Mateusz usuwali). Ale myślę że to za wielkim problemem nie jest chyba",
+      "parentUuid": "1a106d94_bc6ad0eb",
+      "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_1c6cc407",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Vertex.java",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2015-04-24T10:24:29Z",
       "side": 1,
       "message": "Po co to?",
+      "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_df397ea5",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Vertex.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-04-24T12:29:50Z",
+      "side": 1,
+      "message": "Wyznaczyć odległość pomiędzy dwoma wierzchołkami grafu\nGłówne liczenie jest w Point, a tu taki wrapper tego dla dwóch vertexów",
+      "parentUuid": "1a106d94_1c6cc407",
       "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
