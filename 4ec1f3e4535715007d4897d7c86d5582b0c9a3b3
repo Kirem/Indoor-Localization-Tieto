@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_1faf967e",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossroad.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-24T12:53:59Z",
+      "side": 1,
+      "message": "Czy ta klasa jest używana?",
+      "revId": "4ec1f3e4535715007d4897d7c86d5582b0c9a3b3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
