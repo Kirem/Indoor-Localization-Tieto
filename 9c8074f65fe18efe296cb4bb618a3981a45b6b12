@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_5f974e48",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/ParserTest/TestParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-24T12:51:40Z",
+      "side": 1,
+      "message": "Mogłeś to wrzucić jako osobny commit. Ale spoko teraz już zostaw.",
+      "parentUuid": "1a106d94_ff443a1c",
+      "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_bc6ad0eb",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossroad.java",
         "patchSetId": 1
@@ -72,6 +90,41 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_9f9d4669",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossroad.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-24T12:51:40Z",
+      "side": 1,
+      "message": "Nie będzie konfliktu potem?",
+      "parentUuid": "1a106d94_5f4d8e3d",
+      "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_df917e48",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/GraphBuilder.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-24T12:51:40Z",
+      "side": 1,
+      "message": "Graf zawsze powstaje jako droga pomiędzy skrzyżowaniami, a nie punkt po punkcie. Czyli jeśli droga ma 20 punktów to używasz pierwszego i ostatniego oraz te, które są skrzyżowaniami.\nPrzykład http://pl.wikipedia.org/wiki/Zagadnienie_most%C3%B3w_kr%C3%B3lewieckich",
+      "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_1c6cc407",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Vertex.java",
         "patchSetId": 1
@@ -101,6 +154,24 @@
       "side": 1,
       "message": "Wyznaczyć odległość pomiędzy dwoma wierzchołkami grafu\nGłówne liczenie jest w Point, a tu taki wrapper tego dla dwóch vertexów",
       "parentUuid": "1a106d94_1c6cc407",
+      "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_5f7e2e1a",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Vertex.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-04-24T12:51:40Z",
+      "side": 1,
+      "message": "ale to jest odległość w linii prostej. Nie bardzo widzę sens, ale skoro uważasz, że jest potrzebne.",
+      "parentUuid": "1a106d94_df397ea5",
       "revId": "9c8074f65fe18efe296cb4bb618a3981a45b6b12",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
