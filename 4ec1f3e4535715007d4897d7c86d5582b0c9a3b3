@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a106d94_47d5b7b7",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-04-28T20:06:36Z",
+      "side": 1,
+      "message": "mógłbyś to zrobić w formie: \n   options.put(MapObject.OBJECT_CLASS,\"highway\");\n   options.put(MapObject.OBJECT_TYPE,\n                 tempWay.getTags().get(\"highway\"));\n   tempRoad.setOptions(options);\n   options \u003d new android.support.v4.util.ArrayMap();\n\nitd.\n? \nW taki sposób nie musiałbym renderera zmieniać.",
+      "range": {
+        "startLine": 60,
+        "startChar": 16,
+        "endLine": 60,
+        "endChar": 55
+      },
+      "revId": "4ec1f3e4535715007d4897d7c86d5582b0c9a3b3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_1faf967e",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossroad.java",
         "patchSetId": 8
