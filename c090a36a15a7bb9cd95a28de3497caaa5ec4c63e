@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_c7a4d94c",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-01T12:55:41Z",
+      "side": 1,
+      "message": "bzdura, ale linia chyba za dużo",
+      "range": {
+        "startLine": 127,
+        "startChar": 0,
+        "endLine": 127,
+        "endChar": 0
+      },
+      "revId": "c090a36a15a7bb9cd95a28de3497caaa5ec4c63e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_2767ad27",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/RendererTestActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-01T12:55:41Z",
+      "side": 1,
+      "message": "mapa powinna być gotowa jezeli pchniemy Podolaka commit + dorzuci sie to co wymeczlismy z asynctaskiem",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 72
+      },
+      "revId": "c090a36a15a7bb9cd95a28de3497caaa5ec4c63e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
