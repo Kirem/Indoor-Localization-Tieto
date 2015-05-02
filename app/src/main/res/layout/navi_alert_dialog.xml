@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/navi_dialog">
+
+    <TextView
+        android:id="@+id/tvFromWhere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skąd: "
+        android:layout_margin="5dp" />
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:editable="false"
+        android:id="@+id/fromWhereCoord" />
+    <TextView
+        android:id="@+id/tvToWhere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dokąd: "
+        android:layout_margin="5dp" />
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:editable="false"
+        android:id="@+id/toWhereCoord" />
+
+</LinearLayout>

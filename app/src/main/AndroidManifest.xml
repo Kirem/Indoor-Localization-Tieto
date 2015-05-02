@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".UI.SettingsActivity"/>
         <activity android:name=".renderer.RendererTestActivity"/>
         <!-- Single List Item Activity -->
         <activity
