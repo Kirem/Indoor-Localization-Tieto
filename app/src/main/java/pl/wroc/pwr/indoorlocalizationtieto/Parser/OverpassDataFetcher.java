@@ -11,6 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.os.AsyncTask;
 import android.util.Log;
 import android.util.Pair;
 
@@ -56,7 +57,13 @@ public class OverpassDataFetcher {
         return tagMap;
     }
 
-    public OSMData fetchDataWithinRadius(double latitude, double longitude, double radius) {
+    public void startFetching(String[] unreconizedQuery, JsonLoadedListener listener) {
+        UrlAsker urlAsyncAsker = new UrlAsker(listener);
+        urlAsyncAsker.execute(unreconizedQuery);
+    }
+
+    public String fetchDataWithinRadius(double latitude, double longitude,
+                                        double radius) {
         StringBuilder strBuilder = new StringBuilder();
         strBuilder.append("[out:json];" +
                 "rel(around:" + radius + "," + latitude + "," + longitude + ");(._;>;);out;" +
@@ -66,7 +73,7 @@ public class OverpassDataFetcher {
         return fetchData(query);
     }
 
-    public OSMData fetchData(String query) {
+    public String fetchData(String query) {
         String encodedQuery = new String();
         try {
             encodedQuery = URLEncoder.encode(query, "UTF-8");
@@ -78,7 +85,7 @@ public class OverpassDataFetcher {
         ServiceHandler sh = new ServiceHandler();
         // Making a request to url and getting response
         String jsonStr = sh.makeServiceCall(url, ServiceHandler.GET);
-        return parseFromJSON(jsonStr);
+        return jsonStr;
     }
 
     private OSMData parseFromJSON(String jsonStr) {
@@ -154,4 +161,28 @@ public class OverpassDataFetcher {
         }
         return osmData;
     }
+
+    private class UrlAsker extends AsyncTask<String, Void, String> {
+        private JsonLoadedListener listener;
+
+        UrlAsker(JsonLoadedListener listener) {
+            this.listener = listener;
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            if (params.length == 1)
+                return fetchData(params[0]);
+            else
+                return fetchDataWithinRadius(Double.parseDouble(params[0]), Double.parseDouble(params[1]),
+                        Double.parseDouble(params[2]));
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            OSMData data = parseFromJSON(result);
+            listener.onJsonLoaded(data);
+        }
+    }
+
 }
