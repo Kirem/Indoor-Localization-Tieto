@@ -27,6 +27,11 @@ public class GeometryRenderer implements Renderer {
     private Paint defaultPaint;
     private Paint activePaint;
     private float zoomLevel;
+    private MapObjectPointCalculator positionCalculator;
+    Map<String, String> options;
+    List<MapObjectStyle> styles;
+    String objectClass;
+    String objectType;
 
     public GeometryRenderer(ArrayList<MapObject> objects, Context context) {
         renderedMapObjects = new ArrayList<>(objects);
@@ -36,9 +41,9 @@ public class GeometryRenderer implements Renderer {
         zoomLevel = 1;
     }
 
-    public void setMapObjects(ArrayList<MapObject> mapObjects){
+    public void setMapObjects(ArrayList<MapObject> mapObjects) {
         renderedMapObjects.clear();
-        renderedMapObjects = new ArrayList<>(mapObjects);
+        renderedMapObjects.addAll(mapObjects);
     }
 
     @Override
@@ -48,25 +53,27 @@ public class GeometryRenderer implements Renderer {
 
     @Override
     public void setZoomLevel(float zoomLevel) {
-        if(zoomLevel < 1){
+        if (zoomLevel < 1) {
             this.zoomLevel = 1;
-        }else if(zoomLevel > 3){
+        } else if (zoomLevel > 3) {
             this.zoomLevel = 3;
-        }else{
+        } else {
             this.zoomLevel = zoomLevel;
         }
     }
 
     @Override
     public void draw(Canvas canvas, PointF offset) {
+
         canvas.save();
-        canvas.translate(offset.x*zoomLevel, offset.y*zoomLevel);
+        canvas.translate(offset.x * zoomLevel, offset.y * zoomLevel);
         for (MapObject object : renderedMapObjects) {
-            Map<String, String> options = object.getOptions();
-            String objectClass = options.get(MapObject.OBJECT_CLASS);
-            String objectType = options.get(MapObject.OBJECT_TYPE);
-            List<MapObjectStyle> styles =
-                    styleManager.getStyleSetForData((int) zoomLevel, objectClass, objectType);
+            options = object.getOptions();
+            objectClass = options.get(MapObject.OBJECT_CLASS);
+            objectType = options.get(MapObject.OBJECT_TYPE);
+            if (objectClass == null || objectType == null) continue;
+//            Log.i("objects", "class: " + objectClass + " type: " + objectType);
+            styles = styleManager.getStyleSetForData((int) zoomLevel, objectClass, objectType);
             drawObject(canvas, object, styles);
         }
         canvas.restore();
@@ -77,7 +84,8 @@ public class GeometryRenderer implements Renderer {
             for (MapObjectStyle style : styles) {
                 activePaint.set(defaultPaint);
                 style.stylise(activePaint);
-                drawGeometry(canvas, object.getObjectGeometry());
+                if (object.getObjectGeometry() != null)
+                    drawGeometry(canvas, object.getObjectGeometry());
             }
         }
     }
@@ -97,18 +105,28 @@ public class GeometryRenderer implements Renderer {
     }
 
     private void drawPoint(Canvas canvas, Point point) {
-        canvas.drawPoint((float) point.getX()*zoomLevel, (float) point.getY()*zoomLevel, activePaint);
+        canvas.drawPoint(scaleX(point.getX()), scaleY(point.getY()), activePaint);
+    }
+
+    private float scaleX(double point) {
+        return (float) positionCalculator.calibrateX(point);
+//        return (float) (point - xOffset) * zoomLevel * scale;
+    }
+
+    private float scaleY(double point) {
+        return (float) positionCalculator.calibrateY(point);
+//        return (float) (point - yOffset) * zoomLevel * scale;
     }
 
     private void drawLine(Canvas canvas, Point startingPoint, Point endingPoint) {
-        canvas.drawLine((float) startingPoint.getX()*zoomLevel, (float) startingPoint.getY()*zoomLevel,
-                (float) endingPoint.getX()*zoomLevel, (float) endingPoint.getY()*zoomLevel, activePaint);
+        canvas.drawLine(scaleX(startingPoint.getX()), scaleY(startingPoint.getY()),
+                scaleX(endingPoint.getX()), scaleY(endingPoint.getY()), activePaint);
     }
 
     private void drawLine(Canvas canvas, Line line) {
-        Point startingPoint = line.getP1();
-        Point endingPoint = line.getP2();
-        drawLine(canvas, startingPoint, endingPoint);
+//        Point startingPoint = line.getP1();
+//        Point endingPoint = line.getP2();
+        drawLine(canvas, line.getP1(), line.getP2());
     }
 
     private void drawLineString(Canvas canvas, LineString lineString) {
@@ -123,8 +141,8 @@ public class GeometryRenderer implements Renderer {
     }
 
     private void drawPolygon(Canvas canvas, Polygon polygon) {
-        Path path = getClosedPath(polygon);
-        canvas.drawPath(path, activePaint);
+//        Path path = getClosedPath(polygon);
+        canvas.drawPath(getClosedPath(polygon), activePaint);
     }
 
     //TODO fix multipolygon drawing
@@ -142,12 +160,20 @@ public class GeometryRenderer implements Renderer {
         Path path = new Path();
         path.setFillType(Path.FillType.EVEN_ODD);
         Point first = pointList.get(0);
-        path.moveTo((float) first.getX()*zoomLevel, (float) first.getY()*zoomLevel);
+        path.moveTo(scaleX(first.getX()), scaleY(first.getY()));
         for (int i = 1; i < pointList.size(); i++) {
             point = pointList.get(i);
-            path.lineTo((float) point.getX()*zoomLevel, (float) point.getY()*zoomLevel);
+            path.lineTo(scaleX(point.getX()), scaleY(point.getY()));
         }
-        path.lineTo((float) first.getX()*zoomLevel, (float) first.getY()*zoomLevel);
+        path.lineTo(scaleX(first.getX()), scaleY(first.getY()));
         return path;
+    }
+
+    public MapObjectPointCalculator getPositionCalculator() {
+        return positionCalculator;
+    }
+
+    public void setPositionCalculator(MapObjectPointCalculator positionCalculator) {
+        this.positionCalculator = positionCalculator;
     }
 }

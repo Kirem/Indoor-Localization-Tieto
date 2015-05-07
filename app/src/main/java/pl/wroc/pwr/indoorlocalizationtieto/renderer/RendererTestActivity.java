@@ -3,6 +3,7 @@ package pl.wroc.pwr.indoorlocalizationtieto.renderer;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.util.ArrayMap;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -12,6 +13,10 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.LineString;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Multipolygon;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Polygon;
+import pl.wroc.pwr.indoorlocalizationtieto.Parser.JsonLoadedListener;
+import pl.wroc.pwr.indoorlocalizationtieto.Parser.OSMData;
+import pl.wroc.pwr.indoorlocalizationtieto.Parser.OSMDataParser;
+import pl.wroc.pwr.indoorlocalizationtieto.Parser.OverpassDataFetcher;
 import pl.wroc.pwr.indoorlocalizationtieto.R;
 import pl.wroc.pwr.indoorlocalizationtieto.map.Building;
 import pl.wroc.pwr.indoorlocalizationtieto.map.Map;
@@ -19,8 +24,9 @@ import pl.wroc.pwr.indoorlocalizationtieto.map.MapObject;
 import pl.wroc.pwr.indoorlocalizationtieto.map.Road;
 import pl.wroc.pwr.indoorlocalizationtieto.map.Room;
 
-public class RendererTestActivity extends Activity implements View.OnClickListener{
+public class RendererTestActivity extends Activity implements View.OnClickListener, JsonLoadedListener {
     private MapView mapView;
+    Map map;
     private GeometryRenderer renderer;
     private ImageButton butUp;
     private ImageButton butDown;
@@ -44,21 +50,30 @@ public class RendererTestActivity extends Activity implements View.OnClickListen
         mapView.setMapSize(1200f, 1200f);
     }
 
+    private void createMap() {
+        OverpassDataFetcher fetcher = new OverpassDataFetcher();
+        String string[] = new String[]{"51.09408", "17.018144", "100"};
+//                "way(51.093080041725514,17.017144203186035,51.09557045813361336,17.023221015930172);(._;>;);out;" +
+//                "node(51.093080041725514,17.017144203186035,51.0955704581336,17.023221015930172);out;"};
+        fetcher.startFetching(string, this);
+//                "way(51.093080041725514,17.017144203186035,51.0955704581336,17.023221015930172);(._;>;);out;" +
+//                "node(51.093080041725514,17.017144203186035,51.0955704581336,17.023221015930172);out;", this);
+    }
+
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if(id == R.id.butDown && mapLevel > 0){
+        if (id == R.id.butDown && mapLevel > 0) {
             mapLevel--;
             //TODO change to take mapObjects from Map when map is ready.
             renderer.setMapObjects(SetupDummyMapObjects());
             mapView.invalidate();
-        }else if(id == R.id.butUp && mapLevel < 1){
+        } else if (id == R.id.butUp && mapLevel < 1) {
             mapLevel++;
             renderer.setMapObjects(SetupDummyMapObjects1());
             mapView.invalidate();
         }
     }
-
 
 
     public static ArrayList<MapObject> SetupDummyMapObjects() {
@@ -143,4 +158,12 @@ public class RendererTestActivity extends Activity implements View.OnClickListen
     }
 
 
+    @Override
+    public void onJsonLoaded(OSMData data) {
+        OSMDataParser parser = new OSMDataParser();
+        map = parser.parseOSMData(data);
+        Log.i("OBJECTS", "objects loaded: " + map.getObjects().size());
+        renderer.setMapObjects(map.getObjects());
+        mapView.invalidate();
+    }
 }

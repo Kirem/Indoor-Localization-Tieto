@@ -34,11 +34,6 @@ public class MapView extends View {
 
     public MapView(Context context, AttributeSet attrs, int defStyleAttr) {
         this(context, attrs);
-        setOnTouchListener(new MapMoveListener());
-        offset = new PointF();
-        offset.x = 0.0f;
-        offset.y = 0.0f;
-        measureView();
     }
 
     public MapView(Context context) {
@@ -183,8 +178,8 @@ public class MapView extends View {
 
         @Override
         public void onScaleEnd(ScaleGestureDetector detector) {
-            isScaling = false;
             super.onScaleEnd(detector);
+            isScaling = false;
         }
     }
 }
