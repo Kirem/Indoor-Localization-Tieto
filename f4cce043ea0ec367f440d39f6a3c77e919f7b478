@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_8505a212",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Geometry/Point.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-08T22:08:40Z",
+      "side": 1,
+      "message": "Rozbij na wiecej lini",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 181
+      },
+      "revId": "f4cce043ea0ec367f440d39f6a3c77e919f7b478",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_e508d629",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Crossroad.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-08T22:08:40Z",
+      "side": 1,
+      "message": "Skasuj ten plik z commita, tego już nie ma na gicie.",
+      "revId": "f4cce043ea0ec367f440d39f6a3c77e919f7b478",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_c50b1a22",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/routing/Graph.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-08T22:08:40Z",
+      "side": 1,
+      "message": "Naprawdę wszystkie metody muszą być public?",
+      "revId": "f4cce043ea0ec367f440d39f6a3c77e919f7b478",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
