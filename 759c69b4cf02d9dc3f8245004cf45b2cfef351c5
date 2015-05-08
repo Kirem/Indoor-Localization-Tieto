@@ -158,6 +158,29 @@
       "revId": "759c69b4cf02d9dc3f8245004cf45b2cfef351c5",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_821e386e",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/RendererTestActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-08T21:32:25Z",
+      "side": 1,
+      "message": "To chyba jest już gotowe ?",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 72
+      },
+      "revId": "759c69b4cf02d9dc3f8245004cf45b2cfef351c5",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
