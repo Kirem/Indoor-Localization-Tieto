@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_856922fb",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-09T23:29:03Z",
+      "side": 1,
+      "message": "Przydałoby się tutaj przemyśleć całą sturkture przechowywania mapy na z listy na hasMape gdzie kluczem byłoby ID, ale biorąc pod uwagę termin i możliwość scachowania mapy odpuścmy to na razie",
+      "range": {
+        "startLine": 148,
+        "startChar": 24,
+        "endLine": 148,
+        "endChar": 67
+      },
+      "revId": "fe42d284a00f69e76d8d8d59bd02b39887908135",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
