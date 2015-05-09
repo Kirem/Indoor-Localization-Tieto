@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_e543b669",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/MapActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-09T23:54:50Z",
+      "side": 1,
+      "message": "Podobno lepszą opcję jest stworzenie enum\u0027a",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 47
+      },
+      "revId": "a649254b9faab8ad16ad403832cb43ff648faccc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_85500233",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/MapActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-09T23:54:50Z",
+      "side": 1,
+      "message": "Wyrzuć do stałej na początek klasy",
+      "range": {
+        "startLine": 52,
+        "startChar": 29,
+        "endLine": 52,
+        "endChar": 34
+      },
+      "revId": "a649254b9faab8ad16ad403832cb43ff648faccc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_c5467a7a",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/MapActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-09T23:54:50Z",
+      "side": 1,
+      "message": "Jak juz jest wczytywanie mapy to dalej chcemy wyświetlać?",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 85
+      },
+      "revId": "a649254b9faab8ad16ad403832cb43ff648faccc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_055c124a",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/MapActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-09T23:54:50Z",
+      "side": 1,
+      "message": "używasz to menu?",
+      "range": {
+        "startLine": 163,
+        "startChar": 0,
+        "endLine": 168,
+        "endChar": 5
+      },
+      "revId": "a649254b9faab8ad16ad403832cb43ff648faccc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_e53a96e5",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/UI/MapFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-09T23:54:50Z",
+      "side": 1,
+      "message": "Zawsze robiłem/widziałem tak to zrobione:\nint id \u003d v.getId();\nif(id \u003d\u003d R.id.butPlus)",
+      "range": {
+        "startLine": 42,
+        "startChar": 11,
+        "endLine": 42,
+        "endChar": 23
+      },
+      "revId": "a649254b9faab8ad16ad403832cb43ff648faccc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
