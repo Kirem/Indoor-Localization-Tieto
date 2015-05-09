@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_a5bd3eda",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/UI/MapFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-09T15:01:15Z",
+      "side": 1,
+      "message": "else if (butMinus \u003d\u003d) itp... ?",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 30
+      },
+      "revId": "b0c097c8a19f18c180ec22d25a7c2efc9c01cabd",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
