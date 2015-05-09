@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_a507fe80",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/MapActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-05-09T19:40:47Z",
+      "side": 1,
+      "message": "ups...zapomniałam o tym jak coś, nie hejcić...-.-",
+      "range": {
+        "startLine": 157,
+        "startChar": 0,
+        "endLine": 157,
+        "endChar": 8
+      },
+      "revId": "b8606ac153ca1ad1613569fbcbae05699ca2b277",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_e5fd766f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/UI/SettingsActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-05-09T19:40:47Z",
+      "side": 1,
+      "message": "widzę jakby co ^^",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 8
+      },
+      "revId": "b8606ac153ca1ad1613569fbcbae05699ca2b277",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
