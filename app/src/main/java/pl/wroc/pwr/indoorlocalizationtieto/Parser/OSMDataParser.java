@@ -7,10 +7,13 @@ import java.util.HashMap;
 import java.util.List;
 
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.LineString;
+import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Multipolygon;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Point;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Polygon;
 import pl.wroc.pwr.indoorlocalizationtieto.map.Crossing;
+import pl.wroc.pwr.indoorlocalizationtieto.map.Door;
 import pl.wroc.pwr.indoorlocalizationtieto.map.Elevator;
+import pl.wroc.pwr.indoorlocalizationtieto.map.Level;
 import pl.wroc.pwr.indoorlocalizationtieto.map.Map;
 import pl.wroc.pwr.indoorlocalizationtieto.map.MapObject;
 import pl.wroc.pwr.indoorlocalizationtieto.map.POI;
@@ -26,7 +29,7 @@ public class OSMDataParser {
             "secondary", "tertiary", "service", "trunk", "unclassified", "footway", "cycleway", "path"};
     //TODO tablica tagów POI zostanie uzupełniona w trakcie mapowania budynku,
     //TODO trzeba ustalić jakie poi będą nas interesować
-    private static final String POI_TAGS[] = new String[]{"router"};
+    private static final String POI_TAGS[] = new String[]{"router", "wc"};
     private static final String ROOM_TAGS[] = new String[]{"room", "corridor"};
     private static final String NODES_TAGS[] = new String[]{"crossing"};
     private static java.util.Map<String, String> crossroadTags = new HashMap<>();
@@ -87,8 +90,6 @@ public class OSMDataParser {
                 if (!addedRoom) {
                     Elevator tempElevator = new Elevator(tempWay.getNodesList().get(0).getId(), tempPointsList.get(0),
                             tempElevatorsRoom);
-                    //TODO Nie mam co do tego pewnosci (co tu ma byc), poniewaz winda to
-                    //TODO builpart:verticalpassage oraz buildingpart:verticalpassage
                     tempElevator.setOptions(getOptions(tempWay, "buildingpart:verticalpassage"));
                     parsedMap.addObject(tempElevator);
                 }
@@ -114,11 +115,9 @@ public class OSMDataParser {
                         }
                     }
                     if (tempRoadList.size() > 1) {
-                        //TODO przemyslec jak znaleźć referencję na punkt
                         Crossing tempCrossing = new Crossing(tempNode.getId(), tempRoadList,
                                 new Point(tempNode.getLatitude(), tempNode.getLongitude()),
                                 tempNode.checkTag("highway", "crossing"));
-                        //Co tu za string wrzucic highway czy crossing
                         tempCrossing.setOptions(getOptions(tempNode, "highway"));
                         parsedMap.addObject(tempCrossing);
                     }
@@ -142,31 +141,27 @@ public class OSMDataParser {
                         new Point(tempNode.getLatitude(), tempNode.getLongitude()));
                 tempElevator.setOptions(getOptions(tempNode, "elevator"));
                 parsedMap.addObject(tempElevator);
-            } else { //parsowanie skrzyżowań dróg
+            } else if (tempNode.getPartOf().size() > 1) {        //parsowanie skrzyzowan
                 ArrayList<Road> tempRoadList = new ArrayList<>();
-                if (tempNode.getPartOf().size() > 1) {
-                    for (OSMElement father : tempNode.getPartOf()) {
+                for (OSMElement father : tempNode.getPartOf()) {
+                    if (father.getType().equals("way") && father.getTags().containsKey("highway")) {
                         for (MapObject map : parsedMap.getObjects()) {
-                            if (father.getType().equals("way")
-                                    && father.getTags().containsKey("highway")) {
-                                if (father.getId() == map.getId()) {
-                                    tempRoadList.add((Road) map);
-                                }
+                            if (father.getId() == map.getId()) {
+                                tempRoadList.add((Road) map);
                             }
                         }
                     }
-                    if (tempRoadList.size() > 1) {
-                        Crossing tempCrossroad = new Crossing(tempNode.getId(), tempRoadList,
-                                new Point(tempNode.getLatitude(), tempNode.getLongitude()),
-                                tempNode.checkTag("highway", "crossing"));
-                        //poniewaz nody, ktore sa skrzyzowaniami nie musza miec specjalnych tagow, wrzucam z palca tagi highway crossroad
-                        //Mozliwe uzycie getOptions - aczkolwiek nie lapie sie jak - Piotrek
-                        tempCrossroad.setOptions(crossroadTags);
-                        parsedMap.addObject(tempCrossroad);
-                    }
+                }
+                if (tempRoadList.size() > 1) {
+                    Crossing tempCrossroad = new Crossing(tempNode.getId(), tempRoadList,
+                            new Point(tempNode.getLatitude(), tempNode.getLongitude()),
+                            tempNode.checkTag("highway", "crossing"));
+                    tempCrossroad.setOptions(crossroadTags);
+                    parsedMap.addObject(tempCrossroad);
                 }
             }
         }
+
         return parsedMap;
     }
 }
