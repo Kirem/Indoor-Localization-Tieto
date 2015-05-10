@@ -1,0 +1,48 @@
+{
+	"RefPoints": [
+	  {
+		"lat":10,
+		"lon":10,
+		"level":0,
+		"access_points": [
+		  {
+			"mac_address":"8c:04:ff:7e:db:e3",
+			"min_rssi":-55,
+			"max_rssi":-48
+		  },
+		  {
+			"mac_address":"64:7c:34:3e:29:24",
+			"min_rssi":-80,
+			"max_rssi":-70
+		  },
+		  {
+			"mac_address":"80:c6:ab:2c:f8:f0",
+			"min_rssi":-75,
+			"max_rssi":-65
+		  }
+		]
+	  },
+	  {
+		"lat":30,
+		"lon":30,
+		"level":0,
+		"access_points": [
+		  {
+			"mac_address":"8c:04:ff:7e:db:e3",
+			"min_rssi":-72,
+			"max_rssi":-60
+		  },
+		  {
+			"mac_address":"64:7c:34:3e:29:24",
+			"min_rssi":-80,
+			"max_rssi":-70
+		  },
+		  {
+			"mac_address":"80:c6:ab:2c:f8:f0",
+			"min_rssi":-85,
+			"max_rssi":-80
+		  }
+		]
+	  }
+	]
+}
