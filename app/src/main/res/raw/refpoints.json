@@ -1,0 +1,590 @@
+{
+  "RefPoints": [
+    {
+      "access_points": [
+        {
+          "mac_address": "06:7c:34:36:b6:85",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "28:be:9b:d7:96:2f",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "00:12:2a:8a:ec:da",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "c6:27:95:75:33:e5",
+          "max_rssi": 2,
+          "min_rssi": 2
+        },
+        {
+          "mac_address": "44:32:c8:fe:84:63",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "c6:27:95:75:74:9d",
+          "max_rssi": 2,
+          "min_rssi": 2
+        },
+        {
+          "mac_address": "44:32:c8:2f:72:c4",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "80:c6:ab:1d:ea:69",
+          "max_rssi": 3,
+          "min_rssi": 3
+        },
+        {
+          "mac_address": "00:23:cd:d1:6e:24",
+          "max_rssi": 8,
+          "min_rssi": 8
+        },
+        {
+          "mac_address": "00:12:2a:de:24:5a",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "82:c6:ab:2c:f8:f2",
+          "max_rssi": 12,
+          "min_rssi": 12
+        },
+        {
+          "mac_address": "82:c6:ab:1d:ea:6b",
+          "max_rssi": 2,
+          "min_rssi": 2
+        },
+        {
+          "mac_address": "8e:04:ff:02:46:79",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "46:32:c8:fe:84:65",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "06:7c:34:4e:49:3f",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "64:7c:34:40:43:21",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "00:1d:0f:c6:ac:2c",
+          "max_rssi": 3,
+          "min_rssi": 3
+        },
+        {
+          "mac_address": "4c:72:b9:10:38:a2",
+          "max_rssi": 2,
+          "min_rssi": 2
+        },
+        {
+          "mac_address": "64:7c:34:36:b6:85",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "00:16:b6:01:58:d9",
+          "max_rssi": 9,
+          "min_rssi": 9
+        },
+        {
+          "mac_address": "00:12:2a:cb:93:08",
+          "max_rssi": 9,
+          "min_rssi": 9
+        },
+        {
+          "mac_address": "06:7c:34:3e:29:24",
+          "max_rssi": 10,
+          "min_rssi": 10
+        },
+        {
+          "mac_address": "8c:04:ff:7e:db:e3",
+          "max_rssi": 17,
+          "min_rssi": 17
+        },
+        {
+          "mac_address": "8c:04:ff:02:46:77",
+          "max_rssi": 3,
+          "min_rssi": 3
+        },
+        {
+          "mac_address": "fc:94:e3:28:bf:c0",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "64:7c:34:3e:28:84",
+          "max_rssi": 2,
+          "min_rssi": 2
+        },
+        {
+          "mac_address": "fc:94:e3:0b:ac:1a",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "80:c6:ab:2c:f8:f0",
+          "max_rssi": 11,
+          "min_rssi": 11
+        },
+        {
+          "mac_address": "2a:be:9b:d7:96:21",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "00:4f:81:05:ce:f4",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "00:12:2a:de:24:58",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "8e:04:ff:7e:db:e5",
+          "max_rssi": 18,
+          "min_rssi": 18
+        },
+        {
+          "mac_address": "c8:3a:35:0c:62:f0",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "c4:27:95:75:74:9b",
+          "max_rssi": 10,
+          "min_rssi": 10
+        },
+        {
+          "mac_address": "64:7c:34:4e:49:3f",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "64:7c:34:3e:29:24",
+          "max_rssi": 11,
+          "min_rssi": 11
+        },
+        {
+          "mac_address": "02:0c:42:63:51:0f",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "46:32:c8:2f:72:c6",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "00:12:2a:8a:ec:d8",
+          "max_rssi": 3,
+          "min_rssi": 3
+        },
+        {
+          "mac_address": "00:12:2a:cb:93:0a",
+          "max_rssi": 2,
+          "min_rssi": 2
+        }
+      ],
+      "lon": 1,
+      "lat": 1,
+      "level": 0
+    },
+    {
+      "access_points": [
+        {
+          "mac_address": "06:7c:34:36:b6:85",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "28:be:9b:d7:96:2f",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "fe:94:e3:0b:ac:1c",
+          "max_rssi": 8,
+          "min_rssi": 8
+        },
+        {
+          "mac_address": "00:12:2a:8a:ec:da",
+          "max_rssi": 3,
+          "min_rssi": 3
+        },
+        {
+          "mac_address": "00:12:2a:dc:56:68",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "44:32:c8:fe:84:63",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "c6:27:95:75:74:9d",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "44:32:c8:2f:72:c4",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "80:c6:ab:1d:ea:69",
+          "max_rssi": 3,
+          "min_rssi": 3
+        },
+        {
+          "mac_address": "e8:cc:18:60:1c:0b",
+          "max_rssi": 9,
+          "min_rssi": 9
+        },
+        {
+          "mac_address": "00:23:cd:d1:6e:24",
+          "max_rssi": 2,
+          "min_rssi": 2
+        },
+        {
+          "mac_address": "00:12:2a:de:24:5a",
+          "max_rssi": 8,
+          "min_rssi": 8
+        },
+        {
+          "mac_address": "82:c6:ab:2c:f8:f2",
+          "max_rssi": 13,
+          "min_rssi": 13
+        },
+        {
+          "mac_address": "82:c6:ab:1d:ea:6b",
+          "max_rssi": 2,
+          "min_rssi": 2
+        },
+        {
+          "mac_address": "8e:04:ff:02:46:79",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "46:32:c8:fe:84:65",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "06:7c:34:4e:49:3f",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "64:7c:34:36:b6:85",
+          "max_rssi": 11,
+          "min_rssi": 11
+        },
+        {
+          "mac_address": "00:16:b6:01:58:d9",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "06:7c:34:3e:29:24",
+          "max_rssi": 9,
+          "min_rssi": 9
+        },
+        {
+          "mac_address": "8c:04:ff:7e:db:e3",
+          "max_rssi": 18,
+          "min_rssi": 18
+        },
+        {
+          "mac_address": "8c:04:ff:02:46:77",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "fc:94:e3:28:bf:c0",
+          "max_rssi": 3,
+          "min_rssi": 3
+        },
+        {
+          "mac_address": "fc:94:e3:0b:ac:1a",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "80:c6:ab:2c:f8:f0",
+          "max_rssi": 13,
+          "min_rssi": 13
+        },
+        {
+          "mac_address": "2a:be:9b:d7:96:21",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "00:4f:81:05:ce:f4",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "00:12:2a:de:24:58",
+          "max_rssi": 8,
+          "min_rssi": 8
+        },
+        {
+          "mac_address": "8e:04:ff:7e:db:e5",
+          "max_rssi": 18,
+          "min_rssi": 18
+        },
+        {
+          "mac_address": "00:12:2a:dc:56:6a",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "c8:3a:35:0c:62:f0",
+          "max_rssi": 8,
+          "min_rssi": 8
+        },
+        {
+          "mac_address": "64:7c:34:4e:49:3f",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "64:7c:34:3e:29:24",
+          "max_rssi": 10,
+          "min_rssi": 10
+        },
+        {
+          "mac_address": "90:84:0d:dc:1d:f1",
+          "max_rssi": 2,
+          "min_rssi": 2
+        },
+        {
+          "mac_address": "02:0c:42:63:51:0f",
+          "max_rssi": 8,
+          "min_rssi": 8
+        },
+        {
+          "mac_address": "46:32:c8:2f:72:c6",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "00:12:2a:8a:ec:d8",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "00:12:2a:cb:93:0a",
+          "max_rssi": 2,
+          "min_rssi": 2
+        }
+      ],
+      "lon": 2,
+      "lat": 2,
+      "level": 0
+    },
+    {
+      "access_points": [
+        {
+          "mac_address": "06:7c:34:36:b6:85",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "fe:94:e3:0b:ac:1c",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "c4:27:95:75:33:e3",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "64:7c:34:40:49:43",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "c6:27:95:75:33:e5",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "00:12:2a:dc:56:68",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "fc:94:e3:11:08:d3",
+          "max_rssi": 3,
+          "min_rssi": 3
+        },
+        {
+          "mac_address": "fe:94:e3:11:08:d5",
+          "max_rssi": 3,
+          "min_rssi": 3
+        },
+        {
+          "mac_address": "44:32:c8:2f:72:c4",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "e8:cc:18:60:1c:0b",
+          "max_rssi": 11,
+          "min_rssi": 11
+        },
+        {
+          "mac_address": "00:23:cd:d1:6e:24",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "00:12:2a:de:24:5a",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "82:c6:ab:2c:f8:f2",
+          "max_rssi": 8,
+          "min_rssi": 8
+        },
+        {
+          "mac_address": "06:7c:34:4e:49:3f",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "64:7c:34:40:43:21",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "64:7c:34:36:b6:85",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "00:16:b6:01:58:d9",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "06:7c:34:3e:29:24",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "8c:04:ff:7e:db:e3",
+          "max_rssi": 15,
+          "min_rssi": 15
+        },
+        {
+          "mac_address": "fc:94:e3:28:bf:c0",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "94:44:52:c2:96:f9",
+          "max_rssi": 8,
+          "min_rssi": 8
+        },
+        {
+          "mac_address": "fc:94:e3:0b:ac:1a",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "80:c6:ab:2c:f8:f0",
+          "max_rssi": 7,
+          "min_rssi": 7
+        },
+        {
+          "mac_address": "00:4f:81:05:ce:f4",
+          "max_rssi": 5,
+          "min_rssi": 5
+        },
+        {
+          "mac_address": "00:12:2a:de:24:58",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "8e:04:ff:7e:db:e5",
+          "max_rssi": 15,
+          "min_rssi": 15
+        },
+        {
+          "mac_address": "8e:04:ff:f3:ff:af",
+          "max_rssi": 8,
+          "min_rssi": 8
+        },
+        {
+          "mac_address": "00:12:2a:dc:56:6a",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "c8:3a:35:0c:62:f0",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "64:7c:34:4e:49:3f",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "06:7c:34:40:49:43",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "64:7c:34:3e:29:24",
+          "max_rssi": 6,
+          "min_rssi": 6
+        },
+        {
+          "mac_address": "90:84:0d:dc:1d:f1",
+          "max_rssi": 2,
+          "min_rssi": 2
+        },
+        {
+          "mac_address": "02:0c:42:63:51:0f",
+          "max_rssi": 4,
+          "min_rssi": 4
+        },
+        {
+          "mac_address": "46:32:c8:2f:72:c6",
+          "max_rssi": 5,
+          "min_rssi": 5
+        }
+      ],
+      "lon": 3,
+      "lat": 3,
+      "level": 0
+    }
+  ]
+}
