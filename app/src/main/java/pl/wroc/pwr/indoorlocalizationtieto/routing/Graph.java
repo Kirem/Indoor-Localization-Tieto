@@ -1,6 +1,7 @@
 package pl.wroc.pwr.indoorlocalizationtieto.routing;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Graph {
     private ArrayList<Vertex> vertexes;
@@ -48,9 +49,9 @@ public class Graph {
 
     public ArrayList<Vertex> getVertexes(){ return vertexes; }
 
-    public double getEdgeDistance(int vertex1, int vertex2){
-        Vertex v1 = new Vertex(vertex1);
-        Vertex v2 = new Vertex(vertex2);
+    public double getEdgeDistance(double vertex1Id, double vertex2Id){
+        Vertex v1 = new Vertex(vertex1Id);
+        Vertex v2 = new Vertex(vertex2Id);
         Edge e = new Edge(v1, v2, 0);
         for(Edge edge: edges){
             if(edge.equals(e)){
@@ -64,6 +65,20 @@ public class Graph {
         return vertexes.get(which);
     }
 
+    public Vertex getVertexById(double id) {
+        for(Vertex vertex : vertexes){
+            if(vertex.getId() == id){
+                return vertex;
+            }
+        }
+        return null;
+    }
+
+    public List<Double> getNeighboursForVertex(double vertexId){
+        Vertex tem = new Vertex(vertexId);
+        return vertexes.get(vertexes.indexOf(tem)).getNeighbours();
+    }
+
     public String toString(){
         String str = new String();
         for(Edge e: edges){
@@ -71,6 +86,4 @@ public class Graph {
         }
         return str;
     }
-
-
 }

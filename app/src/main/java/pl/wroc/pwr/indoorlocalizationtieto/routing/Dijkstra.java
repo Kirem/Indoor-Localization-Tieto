@@ -1,31 +1,33 @@
 package pl.wroc.pwr.indoorlocalizationtieto.routing;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Dijkstra {
-    private ArrayList<Integer> pending;
-    private ArrayList<Integer> precursor;
-    private ArrayList<Double> path;
-    private ArrayList<Integer> result;
+    private Map<Double, Integer> pending;
+    private Map<Double, Double> precursor;
+    private Map<Double, Double> path;
+    private ArrayList<Double> result;
     private Graph graph;
-    private int justAdded, goal;
+    private double justAdded, goal;
 
 
     public Dijkstra(Graph g){
         setGraph(g);
-        precursor = new ArrayList<>();
-        path = new ArrayList<>();
-        pending = new ArrayList<>();
         result = new ArrayList<>();
+        precursor = new HashMap<>();
+        pending = new HashMap<>();
+        path = new HashMap<>();
     }
 
-    public ArrayList<Integer> findShortestPath(int start, int end){
+    public ArrayList<Double> findShortestPath(double start, double end){
         clearIfExist();
         setLists();
         setTarget(start, end);
         while(!pending.isEmpty()){
-            for(int neighbour: graph.getVertexes().get(justAdded).getNeighbours()){
-                if(pending.contains(neighbour)) {
+            for(double neighbour: graph.getNeighboursForVertex(justAdded)){
+                if(pending.containsKey(neighbour)) {
                    double newPath = path.get(justAdded) + graph.getEdgeDistance(justAdded, neighbour);
                    if(path.get(neighbour)> newPath){
                        setShorterPath(neighbour, newPath);
@@ -51,34 +53,34 @@ public class Dijkstra {
 
     private void setLists(){
         for(int i=0 ; i < graph.getNumberOfVertexes() ; i++){
-            precursor.add(-1);
-            pending.add(i);
-            path.add(Double.MAX_VALUE);
+            precursor.put(graph.getVertex(i).getId(), -1.0);
+            pending.put(graph.getVertex(i).getId(), i);
+            path.put(graph.getVertex(i).getId(), Double.MAX_VALUE);
         }
     }
 
-    private void setTarget(int start, int end){
-        pending.remove(pending.indexOf(start));
-        path.set(start, 0.0);
-        justAdded=start;
+    private void setTarget(double start, double end){
+        pending.remove(start);
+        path.put(start, 0.0);
+        justAdded = start;
         goal = end;
     }
 
-    private void setShorterPath(int neighbour, double newPath){
-        path.set(neighbour, newPath);
-        precursor.set(neighbour, justAdded);
+    private void setShorterPath(double neighbour, double newPath){
+        path.put(neighbour, newPath);
+        precursor.put(neighbour, justAdded);
     }
 
     private void addNextVertex(){
-        int smallest = findSmallestValue();
-        pending.remove(pending.indexOf(smallest));
+        double smallest = findSmallestValue();
+        pending.remove(smallest);
         justAdded = smallest;
     }
 
-    private int findSmallestValue(){
+    private double findSmallestValue(){
         double smallestValue = Double.MAX_VALUE;
-        int index = -1;
-        for(int next: pending) {
+        double index = -1;
+        for(double next: pending.keySet()) {
             if (path.get(next) < smallestValue) {
                 smallestValue = path.get(next);
                 index = next;
@@ -88,7 +90,7 @@ public class Dijkstra {
     }
 
     private void createSolution(){
-        int previous = goal;
+        double previous = goal;
         while(precursor.get(previous) != -1){
             result.add(precursor.get(previous));
             previous = precursor.get(previous);

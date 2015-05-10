@@ -14,37 +14,37 @@ public class TestDijkstra extends InstrumentationTestCase{
     @Override
     public void setUp() throws Exception{
         for(int i=0; i<6; i++){
-            Vertex v = new Vertex(i);
+            Vertex v = new Vertex(i+5.5);
             graph.addVertex(v);
         }
 
-        graph.addEdge(graph.getVertex(0), graph.getVertex(1), 3);
-        graph.addEdge(graph.getVertex(0), graph.getVertex(4), 3);
-        graph.addEdge(graph.getVertex(1), graph.getVertex(2), 10);
-        graph.addEdge(graph.getVertex(2), graph.getVertex(5), 1);
-        graph.addEdge(graph.getVertex(3), graph.getVertex(1), 3);
-        graph.addEdge(graph.getVertex(4), graph.getVertex(5), 20);
-        graph.addEdge(graph.getVertex(5), graph.getVertex(0), 6);
-        graph.addEdge(graph.getVertex(5), graph.getVertex(3), 1);
+        graph.addEdge(graph.getVertexById(5.5), graph.getVertexById(6.5), 3);
+        graph.addEdge(graph.getVertexById(5.5), graph.getVertexById(9.5), 3);
+        graph.addEdge(graph.getVertexById(6.5), graph.getVertexById(7.5), 10);
+        graph.addEdge(graph.getVertexById(7.5), graph.getVertexById(10.5), 1);
+        graph.addEdge(graph.getVertexById(8.5), graph.getVertexById(6.5), 3);
+        graph.addEdge(graph.getVertexById(9.5), graph.getVertexById(10.5), 20);
+        graph.addEdge(graph.getVertexById(10.5), graph.getVertexById(5.5), 6);
+        graph.addEdge(graph.getVertexById(10.5), graph.getVertexById(8.5), 1);
     }
 
     public void testFindShortestPath() throws Exception{
-        ArrayList<Integer> expected = new ArrayList<>();
-        expected.add(0);
-        expected.add(5);
-        expected.add(2);
-        assertEquals(expected, dijkstra.findShortestPath(2,4));
+        ArrayList<Double> expected = new ArrayList<>();
+        expected.add(5.5);
+        expected.add(10.5);
+        expected.add(7.5);
+        assertEquals(expected, dijkstra.findShortestPath(7.5,9.5));
 
         expected.clear();
-        expected.add(3);
-        expected.add(1);
-        assertEquals(expected, dijkstra.findShortestPath(1,5));
+        expected.add(8.5);
+        expected.add(6.5);
+        assertEquals(expected, dijkstra.findShortestPath(6.5,10.5));
 
-        graph.setEdgeMultiplier(graph.getVertex(1), graph.getVertex(3), 3);
+        graph.setEdgeMultiplier(graph.getVertexById(6.5), graph.getVertexById(8.5), 3);
         dijkstra = new Dijkstra(graph);
         expected.clear();
-        expected.add(0);
-        expected.add(1);
-        assertEquals(expected, dijkstra.findShortestPath(1,5));
+        expected.add(5.5);
+        expected.add(6.5);
+        assertEquals(expected, dijkstra.findShortestPath(6.5,10.5));
     }
 }

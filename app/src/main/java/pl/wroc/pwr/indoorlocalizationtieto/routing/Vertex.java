@@ -3,10 +3,10 @@ package pl.wroc.pwr.indoorlocalizationtieto.routing;
 import java.util.ArrayList;
 
 public class Vertex {
-    private int id;
-    private ArrayList<Integer> neighbours;
+    private double id;
+    private ArrayList<Double> neighbours;
 
-    public Vertex(int id) {
+    public Vertex(double id) {
         this.id = id;
         neighbours = new ArrayList<>();
     }
@@ -15,11 +15,11 @@ public class Vertex {
         neighbours.add(neighbour.getId());
     }
 
-    public int getId() {
+    public double getId() {
         return id;
     }
 
-    public ArrayList<Integer> getNeighbours(){
+    public ArrayList<Double> getNeighbours(){
         return neighbours;
     }
 

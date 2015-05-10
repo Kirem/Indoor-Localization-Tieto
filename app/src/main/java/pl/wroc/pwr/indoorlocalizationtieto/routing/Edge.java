@@ -15,11 +15,11 @@ public class Edge {
         return distance*edgeMultiplier;
     }
 
-    public int getVertex1Id() {
+    public double getVertex1Id() {
         return vertex1.getId();
     }
 
-    public int getVertex2Id() {
+    public double getVertex2Id() {
         return vertex2.getId();
     }
 
