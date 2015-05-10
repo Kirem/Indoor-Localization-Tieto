@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_28576359",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/localization/Localization.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-05-10T17:46:48Z",
+      "side": 1,
+      "message": "a tu już dodatkowo skoro piszę to kosmetycznie zbędny enter, ale to ofc uwaga wagi nijakiej ;P",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 0
+      },
+      "revId": "66b79c84f5c07376cfb169839965d0bf588c1d48",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_c85ccf7f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/localization/Localization.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-05-10T17:46:48Z",
+      "side": 1,
+      "message": "w sensie \"receiver\"!? ;)",
+      "range": {
+        "startLine": 19,
+        "startChar": 23,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "66b79c84f5c07376cfb169839965d0bf588c1d48",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
