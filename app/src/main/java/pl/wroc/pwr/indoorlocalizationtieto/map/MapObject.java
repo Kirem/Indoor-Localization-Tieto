@@ -2,7 +2,7 @@ package pl.wroc.pwr.indoorlocalizationtieto.map;
 
 import android.annotation.TargetApi;
 import android.os.Build;
-import android.util.ArrayMap;
+import android.support.v4.util.ArrayMap;
 
 import java.util.Map;
 import java.util.ArrayList;
