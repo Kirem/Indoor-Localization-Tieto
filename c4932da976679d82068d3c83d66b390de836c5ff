@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_930a0888",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-05-11T09:18:27Z",
+      "side": 1,
+      "message": "Nadal to troszkę długaśne, kosmetycznie lepiej uciąć wcześniej chyba, skoro już to zrobiłeś.",
+      "range": {
+        "startLine": 177,
+        "startChar": 0,
+        "endLine": 177,
+        "endChar": 120
+      },
+      "revId": "c4932da976679d82068d3c83d66b390de836c5ff",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
