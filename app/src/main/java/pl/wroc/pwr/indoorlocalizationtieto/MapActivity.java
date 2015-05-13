@@ -1,6 +1,8 @@
 package pl.wroc.pwr.indoorlocalizationtieto;
 
 import android.app.AlertDialog;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -45,7 +47,7 @@ public class MapActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
-        mapFragment = new MapFragment();
+        mapFragment = new MapFragment(this);
         searchFragment = new SearchFragment();
         specificationFragment = new SpecificationFragment();
         intent = new Intent(this, SettingsActivity.class);
@@ -63,7 +65,7 @@ public class MapActivity extends ActionBarActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
     }
 
-    private void addDrawerItems(){
+    private void addDrawerItems() {
         ArrayAdapter<String> mAdapter;
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, ITEMS_ARRAY);
         mDrawerList.setAdapter(mAdapter);
@@ -71,12 +73,10 @@ public class MapActivity extends ActionBarActivity {
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch(position){
+                switch (position) {
                     case CURRENT_LOCALIZATION:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                                 mapFragment, MAP_TAG).addToBackStack(null).commit();
-                        Toast.makeText(MapActivity.this, "TODO: Wyswietla mape z obecna " +
-                                "lokalizacja i markerem", Toast.LENGTH_SHORT).show();
                         mDrawerLayout.closeDrawers();
                         break;
                     case NAVIGATION:
@@ -86,7 +86,7 @@ public class MapActivity extends ActionBarActivity {
                         mDrawerLayout.closeDrawers();
                         break;
                     case SEARCH:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        MapActivity.this.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                                 searchFragment).commit();
                         mDrawerLayout.closeDrawers();
                         break;
@@ -95,7 +95,7 @@ public class MapActivity extends ActionBarActivity {
                         mDrawerLayout.closeDrawers();
                         break;
                     case SPECIFICATION:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        MapActivity.this.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                                 specificationFragment).commit();
                         mDrawerLayout.closeDrawers();
                         break;
@@ -104,7 +104,7 @@ public class MapActivity extends ActionBarActivity {
         });
     }
 
-    private void openAlertDialog(View view){
+    private void openAlertDialog(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Nawigacja:");
         builder.setMessage("Aby ustawić lokalizację kliknij, które " +
@@ -113,15 +113,15 @@ public class MapActivity extends ActionBarActivity {
         View layout = inflater.inflate(R.layout.navi_alert_dialog,
                 (ViewGroup) findViewById(R.id.navi_dialog));
         builder.setView(layout);
-        builder.setPositiveButton(R.string.ok_but, new DialogInterface.OnClickListener(){
+        builder.setPositiveButton(R.string.ok_but, new DialogInterface.OnClickListener() {
 
-            public void onClick(DialogInterface dialog, int which){
+            public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(MapActivity.this, "TODO: Okresla nawigacje na podstawie " +
                         "ustawionych miejsc", Toast.LENGTH_SHORT).show();
             }
         });
-        builder.setNegativeButton(R.string.cancel_but, new DialogInterface.OnClickListener(){
-            public void onClick(DialogInterface dialog, int which){
+        builder.setNegativeButton(R.string.cancel_but, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
             }
         });
 
@@ -131,9 +131,9 @@ public class MapActivity extends ActionBarActivity {
 
     private void setupDrawer() {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-                R.string.drawer_open, R.string.drawer_close){
+                R.string.drawer_open, R.string.drawer_close) {
 
-            public void onDrawerOpened(View drawerView){
+            public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
                 getSupportActionBar().setTitle("Menu");
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
@@ -150,8 +150,8 @@ public class MapActivity extends ActionBarActivity {
     }
 
     @Override
-    public void onBackPressed(){
-        if(getSupportFragmentManager().findFragmentByTag(MAP_TAG) == null) {
+    public void onBackPressed() {
+        if (getSupportFragmentManager().findFragmentByTag(MAP_TAG) == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     mapFragment, MAP_TAG).commit();
             Toast.makeText(MapActivity.this, "TODO: Wyswietla mape z obecna " +
@@ -181,7 +181,7 @@ public class MapActivity extends ActionBarActivity {
     }
 
     @Override
-    protected void onPostCreate(Bundle savedInstanceState){
+    protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         mDrawerToggle.syncState();
     }

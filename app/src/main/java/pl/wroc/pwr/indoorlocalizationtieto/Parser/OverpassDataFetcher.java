@@ -162,7 +162,7 @@ public class OverpassDataFetcher {
         return osmData;
     }
 
-    private class UrlAsker extends AsyncTask<String, Void, String> {
+    private class UrlAsker extends AsyncTask<String, Void, OSMData> {
         private JsonLoadedListener listener;
 
         UrlAsker(JsonLoadedListener listener) {
@@ -170,18 +170,17 @@ public class OverpassDataFetcher {
         }
 
         @Override
-        protected String doInBackground(String... params) {
+        protected OSMData doInBackground(String... params) {
             if (params.length == 1)
-                return fetchData(params[0]);
+                return parseFromJSON(fetchData(params[0]));
             else
-                return fetchDataWithinRadius(Double.parseDouble(params[0]), Double.parseDouble(params[1]),
-                        Double.parseDouble(params[2]));
+                return parseFromJSON(fetchDataWithinRadius(Double.parseDouble(params[0]), Double.parseDouble(params[1]),
+                        Double.parseDouble(params[2])));
         }
 
         @Override
-        protected void onPostExecute(String result) {
-            OSMData data = parseFromJSON(result);
-            listener.onJsonLoaded(data);
+        protected void onPostExecute(OSMData result) {
+            listener.onJsonLoaded(result);
         }
     }
 
