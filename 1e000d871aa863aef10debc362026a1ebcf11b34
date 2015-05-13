@@ -22,6 +22,53 @@
       "revId": "1e000d871aa863aef10debc362026a1ebcf11b34",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_6b8b031f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/localization/LocalizeByRefPointsThread.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-05-13T19:28:43Z",
+      "side": 1,
+      "message": "Done\nzmiana poleci w następnym patchu",
+      "parentUuid": "1a106d94_8bdf5f39",
+      "range": {
+        "startLine": 12,
+        "startChar": 13,
+        "endLine": 12,
+        "endChar": 38
+      },
+      "revId": "1e000d871aa863aef10debc362026a1ebcf11b34",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_4b0ba7d5",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/localization/WifiScanReciever.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1004266
+      },
+      "writtenOn": "2015-05-13T19:28:43Z",
+      "side": 1,
+      "message": "Ta literówka poprawi się w nastepnym patchu",
+      "range": {
+        "startLine": 15,
+        "startChar": 24,
+        "endLine": 15,
+        "endChar": 26
+      },
+      "revId": "1e000d871aa863aef10debc362026a1ebcf11b34",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
