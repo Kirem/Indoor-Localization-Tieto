@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_8bdf5f39",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/localization/LocalizeByRefPointsThread.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-13T19:13:25Z",
+      "side": 1,
+      "message": "nie Thread tylko Runnable w takim razie",
+      "range": {
+        "startLine": 12,
+        "startChar": 13,
+        "endLine": 12,
+        "endChar": 38
+      },
+      "revId": "1e000d871aa863aef10debc362026a1ebcf11b34",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
