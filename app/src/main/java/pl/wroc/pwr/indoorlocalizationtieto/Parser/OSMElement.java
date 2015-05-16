@@ -39,6 +39,10 @@ public class OSMElement {
         return tags;
     }
 
+    public String getTagValue(String tag) {
+        return this.getTags().get(tag);
+    }
+
     protected boolean checkTag(String key, String value) {
         return this.getTags().containsKey(key) && this.getTags().get(key).equals(value);
     }
