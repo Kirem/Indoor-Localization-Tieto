@@ -1,6 +1,7 @@
 package pl.wroc.pwr.indoorlocalizationtieto.Parser;
 
 import android.support.v4.util.ArrayMap;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,6 +32,7 @@ public class OSMDataParser {
     //TODO trzeba ustalić jakie poi będą nas interesować
     private static final String POI_TAGS[] = new String[]{"router", "wc"};
     private static final String ROOM_TAGS[] = new String[]{"room", "corridor"};
+    private static final String DOOR_TAGS[] = new String[]{"door", "entrance"};
     private static final String NODES_TAGS[] = new String[]{"crossing"};
     private static java.util.Map<String, String> crossroadTags = new HashMap<>();
 
@@ -52,6 +54,10 @@ public class OSMDataParser {
     }
 
     public Map parseOSMData(OSMData osmData) {
+        Log.i("OBJECTS TO PARSE" ,"WAYE " +osmData.getWaysMap().size());
+        Log.i("OBJECTS TO PARSE" ,"NODEY " +osmData.getNodesMap().size());
+        Log.i("OBJECTS TO PARSE" ,"RELACJE "+ osmData.getRelationsMap().size());
+
         crossroadTags.put("highway", "crossroad");
         Map parsedMap = new Map();
         HashMap<Long, Way> tempWaysMap = osmData.getWaysMap();
@@ -70,7 +76,8 @@ public class OSMDataParser {
                 tempRoom.setOptions(getOptions(tempWay, "buildingpart"));
                 parsedMap.addObject(tempRoom);
             } else if (tempWay.checkTag("buildingpart:verticalpassage", "elevator")
-                    || tempWay.checkTag("builpart:verticalpassage", "elevator")) {
+                    || tempWay.checkTag("builpart:verticalpassage", "elevator")
+                    || tempWay.checkTag("buildingpart:verticalpassage", "stairs")) {
                 List<Point> tempPointsList = addPoints(tempWay.getNodesList());
                 Polygon tempPolygon = new Polygon(tempPointsList);
                 Room tempRoom = new Room(tempWay.getId(), tempPolygon, false);
@@ -89,7 +96,7 @@ public class OSMDataParser {
                 }
                 if (!addedRoom) {
                     Elevator tempElevator = new Elevator(tempWay.getNodesList().get(0).getId(), tempPointsList.get(0),
-                            tempElevatorsRoom);
+                            tempElevatorsRoom, tempWay.checkTag("buildingpart:verticalpassage", "stairs"));
                     tempElevator.setOptions(getOptions(tempWay, "buildingpart:verticalpassage"));
                     parsedMap.addObject(tempElevator);
                 }
@@ -138,10 +145,25 @@ public class OSMDataParser {
                 parsedMap.addObject(tempPoi);
             } else if (tempNode.checkTag("elevator", "yes")) {
                 Elevator tempElevator = new Elevator(tempNode.getId(),
-                        new Point(tempNode.getLatitude(), tempNode.getLongitude()));
+                        new Point(tempNode.getLatitude(), tempNode.getLongitude()),false);
                 tempElevator.setOptions(getOptions(tempNode, "elevator"));
                 parsedMap.addObject(tempElevator);
-            } else if (tempNode.getPartOf().size() > 1) {        //parsowanie skrzyzowan
+            }else if (tempNode.checkTag("buildingpart", "door")
+                    || tempNode.checkTag("buildingpart", "entrance")) {
+                Door tempDoor = new Door(tempNode.getId(), new Point(tempNode.getLatitude(),
+                        tempNode.getLongitude()), null, null);
+                if (tempNode.getTags().containsKey("door:safearea")) {
+                    for (MapObject tempRooms : parsedMap.getObjects()) {
+                        if (tempRooms.getId().equals(tempNode.getTagValue("door:saferea"))) {
+                            tempDoor.setFirstRoom((Room) tempRooms);
+                        } else if (tempRooms.getId().equals(tempNode.getTagValue("door:unsaferea"))) {
+                            tempDoor.setSecondRoom((Room) tempRooms);
+                        }
+                    }
+                }
+                tempDoor.setOptions(getOptions(tempNode, "buildingpart"));
+                parsedMap.addObject(tempDoor);
+            }  else if (tempNode.getPartOf().size() > 1) {        //parsowanie skrzyzowan
                 ArrayList<Road> tempRoadList = new ArrayList<>();
                 for (OSMElement father : tempNode.getPartOf()) {
                     if (father.getType().equals("way") && father.getTags().containsKey("highway")) {
@@ -161,7 +183,56 @@ public class OSMDataParser {
                 }
             }
         }
+        Log.i("OBJECTS", "BEZ REALCJI: " + parsedMap.getObjects().size());
 
+        //Parsowanie relacji
+        HashMap<Long, Relation> tempRelationsMap = osmData.getRelationsMap();
+        List<OSMElement> osmWaysElements, osmNodesElements, osmRelsElements;
+        for (Long relationsKey : tempRelationsMap.keySet()) {
+            Relation tempRelation = tempRelationsMap.get(relationsKey);
+            osmWaysElements = tempRelation.getMembersList("way");
+            osmNodesElements = tempRelation.getMembersList("node");
+            osmRelsElements = tempRelation.getMembersList("relation");
+            List<Polygon> tempPolygons = new ArrayList<>();
+            ArrayList<Room> tempRooms = new ArrayList<>();
+            ArrayList<Door> tempDoors = new ArrayList<>();
+            //Parsowanie pięter
+            if (tempRelation.checkTag("type", "level")) {
+                //Szukanie elementów piętra ( przeglad po wayach danej relacji)
+                for (OSMElement element : osmWaysElements) {
+                    for (MapObject object : parsedMap.getObjects()) {
+                        if (element.checkTagFromArray("buildingpart", ROOM_TAGS)) {
+                            if (element.getId() == object.getId()) {
+                                tempPolygons.add((Polygon) object.getObjectGeometry());
+                                if (object.getOptions().containsValue("room")
+                                        || object.getOptions().containsValue("corridor")) {
+                                    tempRooms.add((Room) object);
+                                }
+                            }
+                        }
+                    }
+                }
+                //Szukanie drzwi dla danego pietra
+
+                for (OSMElement element : osmNodesElements) {
+                    for (MapObject object : parsedMap.getObjects()) {
+                        if (element.checkTagFromArray("buildingpart", DOOR_TAGS)) {
+                            if (element.getId() == object.getId()) {
+                                if (object.getOptions().containsValue("door")
+                                        || object.getOptions().containsValue("entrance")) {
+                                    tempDoors.add((Door) object);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Multipolygon tempMultipolygon = new Multipolygon(tempPolygons);
+                Level tempLevel = new Level(tempRelation.getId(), tempMultipolygon,
+                        Integer.parseInt(tempRelation.getTagValue("level")), tempRooms, tempDoors);
+                parsedMap.addObject(tempLevel);
+            } 
+        }
         return parsedMap;
     }
 }

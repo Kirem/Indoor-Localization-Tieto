@@ -14,6 +14,10 @@ public class Door extends MapObject {
         connectedRooms = new Pair<>(room1, room2);
     }
 
+    public void addRooms(Room room1, Room room2) {
+        connectedRooms = new Pair<>(room1, room2);
+    }
+
     public Room getFirstRoom(){
         return connectedRooms.first;
     }
@@ -31,7 +35,13 @@ public class Door extends MapObject {
     }
 
     public void setFirstRoom(Room room){
-//        connectedRooms.
+        Pair tempPair = new Pair(room, connectedRooms.second);
+        this.connectedRooms = tempPair;
+    }
+
+    public void setSecondRoom(Room room){
+        Pair tempPair = new Pair(connectedRooms.first, room);
+        this.connectedRooms = tempPair;
     }
 
     @Override
