@@ -19,6 +19,15 @@ public class Building extends MapObject{
         levels = new ArrayList<>(l);
     }
 
+    public Building(long id, Polygon buildingShape) {
+        super(id, buildingShape);
+    }
+
+    public Building(long id, Polygon buildingShape, ArrayList<Level> l) {
+        super(id, buildingShape);
+        levels = new ArrayList<>(l);
+    }
+
     public Level getLevel(float floor){
         for(Level lev : levels) {
             if(lev.getCurrentLevel() == floor){
