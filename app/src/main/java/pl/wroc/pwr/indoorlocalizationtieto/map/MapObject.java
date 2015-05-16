@@ -1,5 +1,9 @@
 package pl.wroc.pwr.indoorlocalizationtieto.map;
 
+import android.annotation.TargetApi;
+import android.os.Build;
+import android.util.ArrayMap;
+
 import java.util.Map;
 import java.util.ArrayList;
 
@@ -12,9 +16,12 @@ public abstract class MapObject {
     private Map<String, String> options;
     private String name;
     private long id;
+
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     MapObject(long n, Geometry geometry) {
         id = n;
         objectGeometry = geometry;
+        options = new ArrayMap<>();
     }
 
     public Geometry getObjectGeometry() {

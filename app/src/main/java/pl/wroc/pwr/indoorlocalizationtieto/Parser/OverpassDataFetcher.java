@@ -62,6 +62,7 @@ public class OverpassDataFetcher {
         urlAsyncAsker.execute(unreconizedQuery);
     }
 
+
     public String fetchDataWithinRadius(double latitude, double longitude,
                                         double radius) {
         StringBuilder strBuilder = new StringBuilder();
@@ -82,6 +83,7 @@ public class OverpassDataFetcher {
         }
         url = url + encodedQuery;
         // Creating service handler class instance
+        Log.i("QUERY", "TO JEST QUERY" + url);
         ServiceHandler sh = new ServiceHandler();
         // Making a request to url and getting response
         String jsonStr = sh.makeServiceCall(url, ServiceHandler.GET);
