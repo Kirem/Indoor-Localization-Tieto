@@ -11,14 +11,13 @@ public class MapObjectPointCalculator {
 
     private final float latitude;
     private final float longitude;
-    private double mapHeight;
-    private double mapWidth;
     //radius in meters
     private final float radius;
-
-    private double scale;
     double centerX;
     double centerY;
+    private double mapHeight;
+    private double mapWidth;
+    private double scale;
 
     public MapObjectPointCalculator(float latitude, float longitude, int vHeight, int vWidth, float radius) {
         this.latitude = latitude;
@@ -44,6 +43,8 @@ public class MapObjectPointCalculator {
     }
 
     public PointF calibrate(double latDis, double lonDis) {
+//        Log.i("POSITION", "user x = " + latDis + " user y = " + lonDis);
+
         PointF position = new PointF(0.0f, 0.0f);
         double x;
         double y;

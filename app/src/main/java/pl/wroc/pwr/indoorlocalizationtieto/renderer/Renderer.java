@@ -9,4 +9,6 @@ public interface Renderer {
     void setStyle(int id);
 
     void setZoomLevel(float zoomLevel);
+
+    void setDrawnArea(int width, int height);
 }

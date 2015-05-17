@@ -2,11 +2,9 @@ package pl.wroc.pwr.indoorlocalizationtieto.renderer;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PointF;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +32,8 @@ public class GeometryRenderer implements Renderer {
     private String objectClass;
     private String objectType;
     private float zoomScale = 1;
-
+    private int width;
+    private int height;
 
     public GeometryRenderer(ArrayList<MapObject> objects, Context context) {
         renderedMapObjects = new ArrayList<>(objects);
@@ -58,29 +57,29 @@ public class GeometryRenderer implements Renderer {
     public void setZoomLevel(float zoomLevel) {
         if (zoomLevel < 1) {
             this.zoomLevel = 1;
-        } else if (zoomLevel > 3) {
-            this.zoomLevel = 3;
+        } else if (zoomLevel > 5) {
+            this.zoomLevel = 5;
         } else {
             this.zoomLevel = zoomLevel;
         }
     }
 
     @Override
+    public void setDrawnArea(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
     public void draw(Canvas canvas, PointF offset) {
-
-        canvas.save();
-        canvas.translate(offset.x * zoomLevel * zoomScale, offset.y * zoomLevel * zoomScale);
-
         for (MapObject object : renderedMapObjects) {
             options = object.getOptions();
             objectClass = options.get(MapObject.OBJECT_CLASS);
             objectType = options.get(MapObject.OBJECT_TYPE);
             if (objectClass == null || objectType == null) continue;
-//            Log.i("objects", "class: " + objectClass + " type: " + objectType);
             styles = styleManager.getStyleSetForData((int) zoomLevel, objectClass, objectType);
             drawObject(canvas, object, styles);
         }
-        canvas.restore();
     }
 
     private void drawObject(Canvas canvas, MapObject object, List<MapObjectStyle> styles) {
@@ -97,16 +96,26 @@ public class GeometryRenderer implements Renderer {
 
     private void drawGeometry(Canvas canvas, Geometry geometry) {
         if (geometry instanceof Point) {
-            drawPoint(canvas, (Point) geometry);
+            Point point = (Point) geometry;
+            if (shouldPointBeDrawn(point)) {
+                drawPoint(canvas, point);
+            }
         } else if (geometry instanceof Line) {
             drawLine(canvas, (Line) geometry);
+
         } else if (geometry instanceof LineString) {
-            drawLineString(canvas, (LineString) geometry);
+            LineString lines = (LineString) geometry;
+            drawLineString(canvas, lines);
         } else if (geometry instanceof Polygon) {
             drawPolygon(canvas, (Polygon) geometry);
         } else if (geometry instanceof Multipolygon) {
             drawMultiPolygon(canvas, (Multipolygon) geometry);
         }
+    }
+
+    private boolean shouldPointBeDrawn(Point point) {
+        return !(point.getX() < -10 || point.getY() < -10 || point.getX() > width
+                || point.getY() > height);
     }
 
     private void drawPoint(Canvas canvas, Point point) {

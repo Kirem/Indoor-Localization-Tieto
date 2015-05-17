@@ -1,15 +1,18 @@
 package pl.wroc.pwr.indoorlocalizationtieto;
 
 import android.app.AlertDialog;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarDrawerToggle;
+import android.provider.Settings;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
-import android.text.Selection;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,13 +29,6 @@ import pl.wroc.pwr.indoorlocalizationtieto.UI.SpecificationFragment;
 
 
 public class MapActivity extends ActionBarActivity {
-    private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
-    private String mActivityTitle;
-    private ActionBarDrawerToggle mDrawerToggle;
-    private MapFragment mapFragment;
-    private SearchFragment searchFragment;
-    private SpecificationFragment specificationFragment;
     private static final String[] ITEMS_ARRAY = {"OBECNA LOKALIZACJA", "NAWIGUJ", "SZUKAJ", "OPCJE", "OPIS"};
     private static final String MAP_TAG = "map";
     private static final int CURRENT_LOCALIZATION = 0;
@@ -40,13 +36,35 @@ public class MapActivity extends ActionBarActivity {
     private static final int SEARCH = 2;
     private static final int SETTINGS = 3;
     private static final int SPECIFICATION = 4;
+    private DrawerLayout mDrawerLayout;
+    private ListView mDrawerList;
+    private String mActivityTitle;
+    private ActionBarDrawerToggle mDrawerToggle;
+    private MapFragment mapFragment;
+    private SearchFragment searchFragment;
+    private SpecificationFragment specificationFragment;
     private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "NETWORK NOT AVAILABLE!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+            ComponentName receiver = new ComponentName(this, ConectivityReceiver.class);
+            PackageManager pm = this.getPackageManager();
 
+            pm.setComponentEnabledSetting(receiver,
+                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                    PackageManager.DONT_KILL_APP);
+            finish();
+        } else {
+            init();
+        }
+    }
+
+    private void init() {
         mapFragment = new MapFragment(this);
         searchFragment = new SearchFragment();
         specificationFragment = new SpecificationFragment();
@@ -129,6 +147,12 @@ public class MapActivity extends ActionBarActivity {
         alertDialog.show();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
     private void setupDrawer() {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
                 R.string.drawer_open, R.string.drawer_close) {
@@ -183,6 +207,17 @@ public class MapActivity extends ActionBarActivity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        mDrawerToggle.syncState();
+        if (mDrawerToggle != null) {
+            mDrawerToggle.syncState();
+        }
     }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+
 }
