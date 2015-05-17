@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_5787bcd7",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-17T12:16:35Z",
+      "side": 1,
+      "message": "JA bym poprawił trochę wygląd tego pliku -\u003e na pierwszym poziomie if\u0027ow wyciągnąć ten kod jako funkcje prywatne -\u003e będzie się zdecydowanie lepiej czytało. Może się da jakieś kawałki nawet razem połączyć jedną funkcją? Na początek nie widzę na szybko, ale można przeanalizoać głębiej.",
+      "revId": "17ceab99f39f67e4577635340a39bf63677e6f03",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_d7728c10",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-17T12:16:35Z",
+      "side": 1,
+      "message": "Używając jednego TAG\u0027a dla całej logiki którą sprawdzacie może ułatwić potem odfiltrowanie potrzebnych tagów \u003c- luźna sugestia :)",
+      "range": {
+        "startLine": 86,
+        "startChar": 14,
+        "endLine": 86,
+        "endChar": 21
+      },
+      "revId": "17ceab99f39f67e4577635340a39bf63677e6f03",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
