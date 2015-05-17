@@ -29,6 +29,8 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
     public static final String LATITUDE = "51.09408";
     public static final String LONGITUDE = "17.018144";
     public static final String RADIUS = "100";
+//    public static final String LATITUDE_PWR = "51.10897";
+//    public static final String LONGITUDE_PWR = "17.06019";
     private MapView mapView;
     private GeometryRenderer renderer;
     private ImageButton butPlus;
@@ -40,12 +42,12 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
     public MapFragment() {
     }
 
+
+
     public MapFragment(Context context) {
         createMap();
         renderer = new GeometryRenderer(new ArrayList<MapObject>(), context);
         renderer.setStyle(R.raw.mapjsonzoom);
-
-
     }
 
     @Override
@@ -70,7 +72,6 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
                                 Float.valueOf(LONGITUDE), mapView.getHeight(), Float.valueOf(RADIUS)/**10*/));
                 mapView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 Log.i("OnCreateView", "calculator set:" + mapView.getHeight());
-
             }
         });
         mapView.setRenderer(renderer);
@@ -78,21 +79,21 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
         return rootView;
     }
 
-
     private void createMap() {
         OverpassDataFetcher fetcher = new OverpassDataFetcher();
         String string[] = new String[]{LATITUDE, LONGITUDE, RADIUS};
         Log.i("OBJECTS", "startedloading: ");
         fetcher.startFetching(string, this);
+//        mapView.setPosition(Float.valueOf(LONGITUDE), Float.valueOf(LATITUDE));
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.butPlus) {
-
+            mapView.zoomIn();
         } else if (id == R.id.butMinus) {
-
+            mapView.zoomOut();
         } else if (id == R.id.butUp) {
 
         } else if (id == R.id.butDown) {
@@ -113,6 +114,7 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
                     public void run() {
                         Toast.makeText(getActivity(), "objects loaded: " + map.getObjects().size(), Toast.LENGTH_SHORT).show();
                         renderer.setMapObjects(map.getObjects());
+                        Log.i("OBJECTS", "parsed: ");
                         mapView.invalidate();
                     }
                 });

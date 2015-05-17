@@ -22,16 +22,18 @@ import pl.wroc.pwr.indoorlocalizationtieto.renderer.style.MapObjectStyle;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.style.StyleManager;
 
 public class GeometryRenderer implements Renderer {
-    ArrayList<MapObject> renderedMapObjects;
-    StyleManager styleManager;
+    private ArrayList<MapObject> renderedMapObjects;
+    private StyleManager styleManager;
     private Paint defaultPaint;
     private Paint activePaint;
     private float zoomLevel;
     private MapObjectPointCalculator positionCalculator;
-    Map<String, String> options;
-    List<MapObjectStyle> styles;
-    String objectClass;
-    String objectType;
+    private Map<String, String> options;
+    private List<MapObjectStyle> styles;
+    private String objectClass;
+    private String objectType;
+    private int width;
+    private int height;
 
     public GeometryRenderer(ArrayList<MapObject> objects, Context context) {
         renderedMapObjects = new ArrayList<>(objects);
@@ -55,24 +57,31 @@ public class GeometryRenderer implements Renderer {
     public void setZoomLevel(float zoomLevel) {
         if (zoomLevel < 1) {
             this.zoomLevel = 1;
-        } else if (zoomLevel > 3) {
-            this.zoomLevel = 3;
+        } else if (zoomLevel > 5) {
+            this.zoomLevel = 5;
         } else {
             this.zoomLevel = zoomLevel;
         }
     }
 
     @Override
+    public void setDrawnArea(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
     public void draw(Canvas canvas, PointF offset) {
 
         canvas.save();
-        canvas.translate(offset.x * zoomLevel, offset.y * zoomLevel);
+        canvas.translate(offset.x * zoomLevel, offset.y*zoomLevel);
+
         for (MapObject object : renderedMapObjects) {
             options = object.getOptions();
             objectClass = options.get(MapObject.OBJECT_CLASS);
             objectType = options.get(MapObject.OBJECT_TYPE);
             if (objectClass == null || objectType == null) continue;
-//            Log.i("objects", "class: " + objectClass + " type: " + objectType);
+//            Log.i("OBJECT_DRAW", "CLASS: " + objectClass + " TYPE: " + objectType);
             styles = styleManager.getStyleSetForData((int) zoomLevel, objectClass, objectType);
             drawObject(canvas, object, styles);
         }
@@ -81,6 +90,8 @@ public class GeometryRenderer implements Renderer {
 
     private void drawObject(Canvas canvas, MapObject object, List<MapObjectStyle> styles) {
         if (styles != null && styles.size() > 0) {
+//            Log.i("OBJECT_DRAW", "style: " + styles.size());
+
             for (MapObjectStyle style : styles) {
                 activePaint.set(defaultPaint);
                 style.stylise(activePaint);
@@ -92,16 +103,55 @@ public class GeometryRenderer implements Renderer {
 
     private void drawGeometry(Canvas canvas, Geometry geometry) {
         if (geometry instanceof Point) {
-            drawPoint(canvas, (Point) geometry);
+            Point point = (Point) geometry;
+            if (shouldPointBeDrawn(point)) {
+                drawPoint(canvas, point);
+            }
         } else if (geometry instanceof Line) {
-            drawLine(canvas, (Line) geometry);
+            Line line = (Line) geometry;
+            if (shouldLineBeDrawn(line)) {
+                drawLine(canvas, (Line) geometry);
+            }
         } else if (geometry instanceof LineString) {
-            drawLineString(canvas, (LineString) geometry);
+            LineString lines = (LineString) geometry;
+            if(shouldLineStringBeDrawn(lines)) {
+                drawLineString(canvas, lines);
+            }
         } else if (geometry instanceof Polygon) {
-            drawPolygon(canvas, (Polygon) geometry);
+            Polygon polygon = (Polygon) geometry;
+            //if(shouldPolygonBeDrawn(polygon)) {
+                drawPolygon(canvas, (Polygon) geometry);
+           // }
         } else if (geometry instanceof Multipolygon) {
             drawMultiPolygon(canvas, (Multipolygon) geometry);
         }
+    }
+
+    private boolean shouldPolygonBeDrawn(Polygon polygon) {
+        for(Point point : polygon.getPolygon()){
+//            if(shouldPointBeDrawn(point)){
+                return true;
+//            }
+        }
+        return false;
+    }
+
+    private boolean shouldLineStringBeDrawn(LineString lines) {
+        for(Point point : lines.getLineString()){
+//            if(shouldPointBeDrawn(point)){
+                return true;
+//            }
+        }
+        return false;
+    }
+
+    private boolean shouldLineBeDrawn(Line line) {
+        return shouldPointBeDrawn(line.getP1()) || shouldPointBeDrawn(line.getP2());
+    }
+
+    private boolean shouldPointBeDrawn(Point point) {
+        return !(point.getX() < -10 || point.getY() < -10 || point.getX() > width
+                || point.getY() > height);
     }
 
     private void drawPoint(Canvas canvas, Point point) {
@@ -109,13 +159,11 @@ public class GeometryRenderer implements Renderer {
     }
 
     private float scaleX(double point) {
-        return (float) positionCalculator.calibrateX(point);
-//        return (float) (point - xOffset) * zoomLevel * scale;
+        return (float) positionCalculator.calibrateX(point) * zoomLevel;
     }
 
     private float scaleY(double point) {
-        return (float) positionCalculator.calibrateY(point);
-//        return (float) (point - yOffset) * zoomLevel * scale;
+        return (float) positionCalculator.calibrateY(point) * zoomLevel;
     }
 
     private void drawLine(Canvas canvas, Point startingPoint, Point endingPoint) {
@@ -124,8 +172,6 @@ public class GeometryRenderer implements Renderer {
     }
 
     private void drawLine(Canvas canvas, Line line) {
-//        Point startingPoint = line.getP1();
-//        Point endingPoint = line.getP2();
         drawLine(canvas, line.getP1(), line.getP2());
     }
 
@@ -141,7 +187,6 @@ public class GeometryRenderer implements Renderer {
     }
 
     private void drawPolygon(Canvas canvas, Polygon polygon) {
-//        Path path = getClosedPath(polygon);
         canvas.drawPath(getClosedPath(polygon), activePaint);
     }
 
