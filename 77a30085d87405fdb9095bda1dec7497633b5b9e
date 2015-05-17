@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_d7f72c58",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/UI/MapFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-05-17T14:13:14Z",
+      "side": 1,
+      "message": "Fajnie, że gdzieś tam entery czyścisz, ale zawsze musisz w zamian gdzieś dodać? :P",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 0
+      },
+      "revId": "77a30085d87405fdb9095bda1dec7497633b5b9e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_d78e0cd0",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryRenderer.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-05-17T14:13:14Z",
+      "side": 1,
+      "message": "no i właśnie co z tym począć... ;D",
+      "range": {
+        "startLine": 132,
+        "startChar": 0,
+        "endLine": 132,
+        "endChar": 44
+      },
+      "revId": "77a30085d87405fdb9095bda1dec7497633b5b9e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a106d94_57a33c4f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1004337
+      },
+      "writtenOn": "2015-05-17T14:13:14Z",
+      "side": 1,
+      "message": "to tu potrzebne bezpośrednio?",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 30
+      },
+      "revId": "77a30085d87405fdb9095bda1dec7497633b5b9e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
