@@ -1,5 +1,5 @@
 {
-	"zoom_cnt":3,
+	"zoom_cnt":5,
 	"zoom":[
 		{
 			"zoom_level":1,
@@ -7,113 +7,185 @@
 			"class_array":[
 				{
 					"class":"highway",
-					"cnt":6,
+					"cnt":10,
 					"types":[
 						{
 							"type":"primary",
 							"style":{
 								"draw":1,
-								"width":7,
-								"background_color":"#EC4E20"
+								"width":14,
+								"background_color":"#e46d71"
 							}
 						},
 						{
 							"type":"secondary",
 							"style":{
 								"draw":1,
-								"width":4,
-								"background_color":"#ff6400"
+								"width":12,
+								"background_color":"#FDBF6F"
 							}
 						},
 						{
 							"type":"unclassified",
 							"style":{
 								"draw":1,
-								"width":2,
-								"background_color":"#969590"
+								"width":10,
+								"background_color":"#ffffff"
 							}
 						},
 						{
 							"type":"residental",
 							"style":{
 								"draw":1,
-								"width":3,
-								"background_color":"#E4E4E4"
+								"width":12,
+								"background_color":"#bbbbbb"
 							}
 						},
 						{
 							"type":"pedestrian",
 							"style":{
 								"draw":1,
-								"width":2,
-								"background_color":"#EC4E20"
+								"width":10,
+								"background_color":"#eeeeee"
 							}
 						},
 						{
 							"type":"footway",
 							"style":{
 								"draw":1,
-								"width":1,
-								"background_color":"#b4c696"
+								"width":5,
+								"background_color":"#d79331"
+							}
+						},
+						{
+							"type":"road",
+							"style":{
+								"draw":1,
+								"width":12,
+								"background_color":"#d0d0d0"
+							}
+						},
+						{
+							"type":"tertiary",
+							"style":{
+								"draw":1,
+								"width":10,
+								"background_color":"#f7f496"
+							}
+						},
+						{
+							"type":"cycleway",
+							"style":{
+								"draw":1,
+								"width":5,
+								"background_color":"#008102"
+							}
+						},
+						{
+							"type":"byway",
+							"style":{
+								"draw":1,
+								"width":10,
+								"background_color":"#ef7771"
+							}
+						},
+						{
+							"type":"motorway",
+							"style":{
+								"draw":1,
+								"width":20,
+								"background_color":"#809BC0"
 							}
 						}
 					]
 				},
 				{
 					"class":"building",
-					"cnt":3,
+					"cnt":7,
 					"types":[
 						{
 							"type":"university",
 							"style":{
 								"draw":1,
-								"background_color":"#E3D26F",
-								"border_color":"#7B1E7A"
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
 							}
 						},
 						{
 							"type":"school",
 							"style":{
 								"draw":1,
-								"background_color":"#E3D26F",
-								"border_color":"#0C0A3E"
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"college",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
 							}
 						},
 						{
 							"type":"apartments",
 							"style":{
 								"draw":1,
-								"background_color":"#2978A0",
-								"border_color":"#0C0A3E"
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"residential",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"dormitory",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"commercial",
+							"style":{
+								"draw":1,
+								"background_color":"#e8d0c6",
+								"border_color":"#dcb8a9"
 							}
 						}
 				    ]
 				},
 				{
-					"class":"buildingPart",
+					"class":"buildingpart",
 					"cnt":2,
 					"types":[
 						{
 							"type":"room",
 							"style":{
 								"draw":0,
-								"background_color":"#f5c756",
-								"border_color":"#253031"
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
 							}
 						},
 						{
 							"type":"corridor",
 							"style":{
 								"draw":0,
-								"background_color":"#f8d786",
-								"border_color":"#253031"
+								"background_color":"#cec9da",
+								"border_color":"#b3abc5"
 							}
 						}
 					]
 				},
 				{
 					"class":"POI",
-					"cnt":3,
+					"cnt":4,
 					"types":[
 						{
 							"type":"router",
@@ -126,14 +198,21 @@
 							"type":"elevator",
 							"style":{
 								"draw":0,
-								"background_color":"#5785f6"
+								"background_color":"#abb1c5"
+							}
+						},
+						{
+							"type":"stairs",
+							"style":{
+								"draw":0,
+								"background_color":"#abb1c5"
 							}
 						},
 						{
 							"type":"doors",
 							"style":{
 								"draw":0,
-								"background_color":"#f2b00e"
+								"background_color":"#a199b1"
 							}
 						}
 					]
@@ -146,113 +225,185 @@
 			"class_array":[
 				{
 					"class":"highway",
-					"cnt":6,
+					"cnt":10,
 					"types":[
 						{
 							"type":"primary",
 							"style":{
 								"draw":1,
-								"width":5,
-								"background_color":"#EC4E20"
+								"width":12,
+								"background_color":"#e46d71"
 							}
 						},
 						{
 							"type":"secondary",
 							"style":{
 								"draw":1,
-								"width":3,
-								"background_color":"#ff6400"
+								"width":10,
+								"background_color":"#FDBF6F"
 							}
 						},
 						{
 							"type":"unclassified",
 							"style":{
 								"draw":1,
-								"width":2,
-								"background_color":"#969590"
+								"width":8,
+								"background_color":"#ffffff"
 							}
 						},
 						{
 							"type":"residental",
 							"style":{
 								"draw":1,
-								"width":2,
-								"background_color":"#E4E4E4"
+								"width":10,
+								"background_color":"#bbbbbb"
 							}
 						},
 						{
 							"type":"pedestrian",
 							"style":{
 								"draw":1,
-								"width":2,
-								"background_color":"#EC4E20"
+								"width":8,
+								"background_color":"#eeeeee"
 							}
 						},
 						{
 							"type":"footway",
 							"style":{
 								"draw":1,
-								"width":1,
-								"background_color":"#b4c696"
+								"width":4,
+								"background_color":"#d79331"
+							}
+						},
+						{
+							"type":"road",
+							"style":{
+								"draw":1,
+								"width":10,
+								"background_color":"#d0d0d0"
+							}
+						},
+						{
+							"type":"tertiary",
+							"style":{
+								"draw":1,
+								"width":8,
+								"background_color":"#f7f496"
+							}
+						},
+						{
+							"type":"cycleway",
+							"style":{
+								"draw":1,
+								"width":4,
+								"background_color":"#008102"
+							}
+						},
+						{
+							"type":"byway",
+							"style":{
+								"draw":1,
+								"width":8,
+								"background_color":"#ef7771"
+							}
+						},
+						{
+							"type":"motorway",
+							"style":{
+								"draw":1,
+								"width":16,
+								"background_color":"#809BC0"
 							}
 						}
 					]
 				},
 				{
 					"class":"building",
-					"cnt":3,
+					"cnt":7,
 					"types":[
 						{
 							"type":"university",
 							"style":{
 								"draw":1,
-								"background_color":"#E3D26F",
-								"border_color":"#7B1E7A"
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
 							}
 						},
 						{
 							"type":"school",
 							"style":{
 								"draw":1,
-								"background_color":"#E3D26F",
-								"border_color":"#0C0A3E"
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"college",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
 							}
 						},
 						{
 							"type":"apartments",
 							"style":{
 								"draw":1,
-								"background_color":"#2978A0",
-								"border_color":"#0C0A3E"
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"residential",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"dormitory",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"commercial",
+							"style":{
+								"draw":1,
+								"background_color":"#e8d0c6",
+								"border_color":"#dcb8a9"
 							}
 						}
 				    ]
 				},
 				{
-					"class":"buildingPart",
+					"class":"buildingpart",
 					"cnt":2,
 					"types":[
 						{
 							"type":"room",
 							"style":{
-								"draw":1,
-								"background_color":"#f5c756",
-								"border_color":"#253031"
+								"draw":0,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
 							}
 						},
 						{
 							"type":"corridor",
 							"style":{
-								"draw":1,
-								"background_color":"#f8d786",
-								"border_color":"#253031"
+								"draw":0,
+								"background_color":"#cec9da",
+								"border_color":"#b3abc5"
 							}
 						}
 					]
 				},
 				{
 					"class":"POI",
-					"cnt":3,
+					"cnt":4,
 					"types":[
 						{
 							"type":"router",
@@ -264,15 +415,22 @@
 						{
 							"type":"elevator",
 							"style":{
-								"draw":1,
-								"background_color":"#5785f6"
+								"draw":0,
+								"background_color":"#abb1c5"
+							}
+						},
+						{
+							"type":"stairs",
+							"style":{
+								"draw":0,
+								"background_color":"#abb1c5"
 							}
 						},
 						{
 							"type":"doors",
 							"style":{
-								"draw":1,
-								"background_color":"#f2b00e"
+								"draw":0,
+								"background_color":"#a199b1"
 							}
 						}
 					]
@@ -285,117 +443,408 @@
 			"class_array":[
 				{
 					"class":"highway",
-					"cnt":6,
+					"cnt":10,
 					"types":[
 						{
 							"type":"primary",
 							"style":{
 								"draw":1,
-								"width":5,
-								"background_color":"#EC4E20"
+								"width":10,
+								"background_color":"#e46d71"
 							}
 						},
 						{
 							"type":"secondary",
 							"style":{
 								"draw":1,
-								"width":3,
-								"background_color":"#ff6400"
+								"width":8,
+								"background_color":"#FDBF6F"
 							}
 						},
 						{
 							"type":"unclassified",
 							"style":{
 								"draw":1,
-								"width":2,
-								"background_color":"#969590"
+								"width":6,
+								"background_color":"#ffffff"
 							}
 						},
 						{
 							"type":"residental",
 							"style":{
 								"draw":1,
-								"width":2,
-								"background_color":"#E4E4E4"
+								"width":8,
+								"background_color":"#bbbbbb"
 							}
 						},
 						{
 							"type":"pedestrian",
 							"style":{
 								"draw":1,
-								"width":2,
-								"background_color":"#EC4E20"
+								"width":6,
+								"background_color":"#eeeeee"
 							}
 						},
 						{
 							"type":"footway",
 							"style":{
 								"draw":1,
-								"width":1,
-								"background_color":"#b4c696"
+								"width":3,
+								"background_color":"#d79331"
+							}
+						},
+						{
+							"type":"road",
+							"style":{
+								"draw":1,
+								"width":8,
+								"background_color":"#d0d0d0"
+							}
+						},
+						{
+							"type":"tertiary",
+							"style":{
+								"draw":1,
+								"width":6,
+								"background_color":"#f7f496"
+							}
+						},
+						{
+							"type":"cycleway",
+							"style":{
+								"draw":1,
+								"width":3,
+								"background_color":"#008102"
+							}
+						},
+						{
+							"type":"byway",
+							"style":{
+								"draw":1,
+								"width":6,
+								"background_color":"#ef7771"
+							}
+						},
+						{
+							"type":"motorway",
+							"style":{
+								"draw":1,
+								"width":12,
+								"background_color":"#809BC0"
 							}
 						}
 					]
 				},
 				{
 					"class":"building",
-					"cnt":3,
+					"cnt":7,
 					"types":[
 						{
 							"type":"university",
 							"style":{
 								"draw":1,
-								"border_color":"#7B1E7A"
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
 							}
 						},
 						{
 							"type":"school",
 							"style":{
 								"draw":1,
-								"background_color":"#E3D26F",
-								"border_color":"#0C0A3E"
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"college",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
 							}
 						},
 						{
 							"type":"apartments",
 							"style":{
 								"draw":1,
-								"background_color":"#2978A0",
-								"border_color":"#0C0A3E"
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"residential",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"dormitory",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"commercial",
+							"style":{
+								"draw":1,
+								"background_color":"#e8d0c6",
+								"border_color":"#dcb8a9"
 							}
 						}
 				    ]
 				},
 				{
-					"class":"buildingPart",
+					"class":"buildingpart",
 					"cnt":2,
 					"types":[
 						{
 							"type":"room",
 							"style":{
 								"draw":1,
-								"background_color":"#f5c756",
-								"border_color":"#253031"
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
 							}
 						},
 						{
 							"type":"corridor",
 							"style":{
 								"draw":1,
-								"background_color":"#f8d786",
-								"border_color":"#253031"
+								"background_color":"#cec9da",
+								"border_color":"#b3abc5"
 							}
 						}
 					]
 				},
 				{
 					"class":"POI",
-					"cnt":3,
+					"cnt":4,
 					"types":[
 						{
 							"type":"router",
 							"style":{
+								"draw":0,
+								"background_color":"#f67957"
+							}
+						},
+						{
+							"type":"elevator",
+							"style":{
+								"draw":0,
+								"background_color":"#abb1c5"
+							}
+						},
+						{
+							"type":"stairs",
+							"style":{
+								"draw":0,
+								"background_color":"#abb1c5"
+							}
+						},
+						{
+							"type":"doors",
+							"style":{
+								"draw":0,
+								"background_color":"#a199b1"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"zoom_level":4,
+			"class_cnt":4,
+			"class_array":[
+				{
+					"class":"highway",
+					"cnt":10,
+					"types":[
+						{
+							"type":"primary",
+							"style":{
 								"draw":1,
+								"width":8,
+								"background_color":"#e46d71"
+							}
+						},
+						{
+							"type":"secondary",
+							"style":{
+								"draw":1,
+								"width":6,
+								"background_color":"#FDBF6F"
+							}
+						},
+						{
+							"type":"unclassified",
+							"style":{
+								"draw":1,
+								"width":4,
+								"background_color":"#ffffff"
+							}
+						},
+						{
+							"type":"residental",
+							"style":{
+								"draw":1,
+								"width":6,
+								"background_color":"#bbbbbb"
+							}
+						},
+						{
+							"type":"pedestrian",
+							"style":{
+								"draw":1,
+								"width":4,
+								"background_color":"#eeeeee"
+							}
+						},
+						{
+							"type":"footway",
+							"style":{
+								"draw":1,
+								"width":2,
+								"background_color":"#d79331"
+							}
+						},
+						{
+							"type":"road",
+							"style":{
+								"draw":1,
+								"width":6,
+								"background_color":"#d0d0d0"
+							}
+						},
+						{
+							"type":"tertiary",
+							"style":{
+								"draw":1,
+								"width":4,
+								"background_color":"#f7f496"
+							}
+						},
+						{
+							"type":"cycleway",
+							"style":{
+								"draw":1,
+								"width":2,
+								"background_color":"#008102"
+							}
+						},
+						{
+							"type":"byway",
+							"style":{
+								"draw":1,
+								"width":4,
+								"background_color":"#ef7771"
+							}
+						},
+						{
+							"type":"motorway",
+							"style":{
+								"draw":1,
+								"width":10,
+								"background_color":"#809BC0"
+							}
+						}
+					]
+				},
+				{
+					"class":"building",
+					"cnt":7,
+					"types":[
+						{
+							"type":"university",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"school",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"college",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"apartments",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"residential",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"dormitory",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"commercial",
+							"style":{
+								"draw":1,
+								"background_color":"#e8d0c6",
+								"border_color":"#dcb8a9"
+							}
+						}
+				    ]
+				},
+				{
+					"class":"buildingpart",
+					"cnt":2,
+					"types":[
+						{
+							"type":"room",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"corridor",
+							"style":{
+								"draw":1,
+								"background_color":"#cec9da",
+								"border_color":"#b3abc5"
+							}
+						}
+					]
+				},
+				{
+					"class":"POI",
+					"cnt":4,
+					"types":[
+						{
+							"type":"router",
+							"style":{
+								"draw":0,
 								"background_color":"#f67957"
 							}
 						},
@@ -403,14 +852,239 @@
 							"type":"elevator",
 							"style":{
 								"draw":1,
-								"background_color":"#5785f6"
+								"background_color":"#abb1c5"
+							}
+						},
+						{
+							"type":"stairs",
+							"style":{
+								"draw":1,
+								"background_color":"#abb1c5"
 							}
 						},
 						{
 							"type":"doors",
 							"style":{
 								"draw":1,
-								"background_color":"#f2b00e"
+								"background_color":"#a199b1"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"zoom_level":5,
+			"class_cnt":4,
+			"class_array":[
+				{
+					"class":"highway",
+					"cnt":10,
+					"types":[
+						{
+							"type":"primary",
+							"style":{
+								"draw":1,
+								"width":6,
+								"background_color":"#e46d71"
+							}
+						},
+						{
+							"type":"secondary",
+							"style":{
+								"draw":1,
+								"width":2,
+								"background_color":"#FDBF6F"
+							}
+						},
+						{
+							"type":"unclassified",
+							"style":{
+								"draw":1,
+								"width":1,
+								"background_color":"#ffffff"
+							}
+						},
+						{
+							"type":"residental",
+							"style":{
+								"draw":1,
+								"width":2,
+								"background_color":"#bbbbbb"
+							}
+						},
+						{
+							"type":"pedestrian",
+							"style":{
+								"draw":1,
+								"width":1,
+								"background_color":"#eeeeee"
+							}
+						},
+						{
+							"type":"footway",
+							"style":{
+								"draw":1,
+								"width":1,
+								"background_color":"#d79331"
+							}
+						},
+						{
+							"type":"road",
+							"style":{
+								"draw":1,
+								"width":2,
+								"background_color":"#d0d0d0"
+							}
+						},
+						{
+							"type":"tertiary",
+							"style":{
+								"draw":1,
+								"width":1,
+								"background_color":"#f7f496"
+							}
+						},
+						{
+							"type":"cycleway",
+							"style":{
+								"draw":1,
+								"width":1,
+								"background_color":"#008102"
+							}
+						},
+						{
+							"type":"byway",
+							"style":{
+								"draw":1,
+								"width":1,
+								"background_color":"#ef7771"
+							}
+						},
+						{
+							"type":"motorway",
+							"style":{
+								"draw":1,
+								"width":8,
+								"background_color":"#809BC0"
+							}
+						}
+					]
+				},
+				{
+					"class":"building",
+					"cnt":7,
+					"types":[
+						{
+							"type":"university",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"school",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"college",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"apartments",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"residential",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"dormitory",
+							"style":{
+								"draw":1,
+								"background_color":"#efead7",
+								"border_color":"#d9cda0"
+							}
+						},
+						{
+							"type":"commercial",
+							"style":{
+								"draw":1,
+								"background_color":"#e8d0c6",
+								"border_color":"#dcb8a9"
+							}
+						}
+				    ]
+				},
+				{
+					"class":"buildingpart",
+					"cnt":2,
+					"types":[
+						{
+							"type":"room",
+							"style":{
+								"draw":1,
+								"background_color":"#dacec9",
+								"border_color":"#c5b3ab"
+							}
+						},
+						{
+							"type":"corridor",
+							"style":{
+								"draw":1,
+								"background_color":"#cec9da",
+								"border_color":"#b3abc5"
+							}
+						}
+					]
+				},
+				{
+					"class":"POI",
+					"cnt":4,
+					"types":[
+						{
+							"type":"router",
+							"style":{
+								"draw":0,
+								"background_color":"#f67957"
+							}
+						},
+						{
+							"type":"elevator",
+							"style":{
+								"draw":1,
+								"background_color":"#abb1c5"
+							}
+						},
+						{
+							"type":"stairs",
+							"style":{
+								"draw":1,
+								"background_color":"#abb1c5"
+							}
+						},
+						{
+							"type":"doors",
+							"style":{
+								"draw":1,
+								"background_color":"#a199b1"
 							}
 						}
 					]
