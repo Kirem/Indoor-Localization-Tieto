@@ -19,6 +19,29 @@
     },
     {
       "key": {
+        "uuid": "1a106d94_97abf41d",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-17T15:22:06Z",
+      "side": 1,
+      "message": "rozbic na metody + dodac dla interesujacych nas obiektów ich nazwe (pole w klasie bazowej)",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 72,
+        "endChar": 46
+      },
+      "revId": "17ceab99f39f67e4577635340a39bf63677e6f03",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a106d94_d7728c10",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OverpassDataFetcher.java",
         "patchSetId": 3
