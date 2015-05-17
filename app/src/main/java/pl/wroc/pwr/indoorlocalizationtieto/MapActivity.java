@@ -1,6 +1,9 @@
 package pl.wroc.pwr.indoorlocalizationtieto;
 
 import android.app.AlertDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.content.DialogInterface;
@@ -46,7 +49,9 @@ public class MapActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
-
+        if (!isNetworkAvailable()) {
+            Toast.makeText(this, "NETWORK NOT AVAILABLE!", Toast.LENGTH_SHORT).show();
+        }
         mapFragment = new MapFragment(this);
         searchFragment = new SearchFragment();
         specificationFragment = new SpecificationFragment();
@@ -184,5 +189,12 @@ public class MapActivity extends ActionBarActivity {
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         mDrawerToggle.syncState();
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }

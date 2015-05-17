@@ -2,6 +2,7 @@ package pl.wroc.pwr.indoorlocalizationtieto.UI;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,11 +27,13 @@ import pl.wroc.pwr.indoorlocalizationtieto.renderer.MapView;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.Renderer;
 
 public class MapFragment extends Fragment implements View.OnClickListener, JsonLoadedListener {
-    public static final String LATITUDE = "51.09408";
-    public static final String LONGITUDE = "17.018144";
-    //        public static final String LATITUDE = "51.10897";
-//    public static final String LONGITUDE = "17.06019";
+    //    public static final String LATITUDE = "51.09408";
+//    public static final String LONGITUDE = "17.018144";
+    public static final String LATITUDE = "51.10897";
+    public static final String LONGITUDE = "17.06019";
     public static final String RADIUS = "100";
+    //    public static final String LATITUDE_PWR = "51.10897";
+//    public static final String LONGITUDE_PWR = "17.06019";
     private MapView mapView;
     private GeometryRenderer renderer;
     private ImageButton butPlus;
@@ -41,6 +44,7 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
 
     public MapFragment() {
     }
+
 
     public MapFragment(Context context) {
         createMap();
@@ -65,10 +69,11 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
         mapView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                renderer.setPositionCalculator
-                        (new MapObjectPointCalculator(Float.valueOf(LATITUDE),
-                                Float.valueOf(LONGITUDE), mapView.getHeight(), mapView.getWidth(), Float.valueOf(RADIUS)/**10*/));
+                MapObjectPointCalculator positionCalculator = new MapObjectPointCalculator(Float.valueOf(LATITUDE),
+                        Float.valueOf(LONGITUDE), mapView.getHeight(), mapView.getWidth(), Float.valueOf(RADIUS)/**10*/);
+                renderer.setPositionCalculator(positionCalculator);
                 mapView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                mapView.setPointCalculator(positionCalculator);
                 Log.i("OnCreateView", "calculator set:" + mapView.getHeight());
             }
         });
@@ -77,12 +82,12 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
         return rootView;
     }
 
-
     private void createMap() {
         OverpassDataFetcher fetcher = new OverpassDataFetcher();
         String string[] = new String[]{LATITUDE, LONGITUDE, RADIUS};
         Log.i("OBJECTS", "startedloading: ");
         fetcher.startFetching(string, this);
+//        mapView.setPosition(Float.valueOf(LONGITUDE), Float.valueOf(LATITUDE));
     }
 
     @Override
@@ -113,6 +118,14 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
                         Toast.makeText(getActivity(), "objects loaded: " + map.getObjects().size(), Toast.LENGTH_SHORT).show();
                         renderer.setMapObjects(map.getObjects());
                         Log.i("OBJECTS", "parsed: ");
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                mapView.setPosition(17.0603798f, 51.1089762f);
+//                                mapView.invalidate();
+                            }
+                        }, 2000);
                         mapView.invalidate();
                     }
                 });
