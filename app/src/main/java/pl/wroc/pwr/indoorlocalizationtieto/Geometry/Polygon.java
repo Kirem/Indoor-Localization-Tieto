@@ -9,6 +9,8 @@ import java.util.List;
 public class Polygon implements Geometry {
     protected List<Point> points;
 
+    public Polygon(){}
+
     public Polygon(List<Point> pointsList) {
         points = new ArrayList<>();
         points.addAll(pointsList);
