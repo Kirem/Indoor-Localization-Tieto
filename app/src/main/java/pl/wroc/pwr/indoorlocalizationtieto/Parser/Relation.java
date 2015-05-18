@@ -8,6 +8,7 @@ import java.util.Map;
 
 public class Relation extends OSMElement {
 
+    // Pair <TYPe, REFERENCE TO OSM ELEMENT>
     private List<Pair<String, OSMElement>> members;
 
     public Relation(String TYPE, long id, Map<String, String> tags, List<Pair<String, OSMElement>> members) {
@@ -29,7 +30,7 @@ public class Relation extends OSMElement {
     public List<OSMElement> getMembersList(String type) {
         List<OSMElement> membersList = new ArrayList<>();
         for (Pair<String, OSMElement> tempMember : members) {
-            if (tempMember.first == type) {
+            if (tempMember.first.equals(type)) {
                 membersList.add(tempMember.second);
             }
         }
