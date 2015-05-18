@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a106d94_6c2aea2d",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-05-18T14:43:58Z",
+      "side": 1,
+      "message": "Singleton tutaj to średni pomysł. Daj konstruktor w stylu:\n\nSearcher(Map map){\n  this.map \u003d map;\n  this.createIndex();\n}\n\nvoid createIndex(){\n  //Tutaj może być tworzenie indeksu. Na początek może to być\n  Pair\u003c String , MapObject \u003e  ...\n  // Potem możesz ulepszyć w np. drzewa\n}",
+      "revId": "bdb133ddc0fca53a499c2493d22780f689454db2",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
