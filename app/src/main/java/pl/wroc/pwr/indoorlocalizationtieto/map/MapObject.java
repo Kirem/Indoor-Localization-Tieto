@@ -35,6 +35,10 @@ public abstract class MapObject {
         return options;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setOptions(Map<String, String> options) {
         this.options = options;
     }
