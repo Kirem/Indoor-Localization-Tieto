@@ -117,12 +117,22 @@ public class OSMDataParser {
             List<Polygon> tempPolygons = new ArrayList<>();
             //Parsowanie pięter
             if (tempRelation.checkTag("type", "level")) {
-                parsedMap.addObject(createLevel(tempRelation, tempPolygons,
-                        createRoomsList(tempRelation, parsedMap, tempPolygons),
-                        createDoorsList(tempRelation, parsedMap)));
+                ArrayList<Room> tempRoomsList = createRoomsList(tempRelation, parsedMap, tempPolygons);
+                ArrayList<Door> tempDoorsList = createDoorsList(tempRelation, parsedMap);
+                        parsedMap.addObject(createLevel(tempRelation, tempPolygons,tempRoomsList,
+                        tempDoorsList));
             }
-            //Parsowanie budynkow
+/*            //Parsowanie budynkow
             else if(tempRelation.checkTag("building", "yes")) {
+                parsedMap.addObject(createBuilding(tempRelation,
+                        createPolygon(tempRelation, parsedMap),
+                        createLevelsList(tempRelation, parsedMap)));
+            }*/
+        }
+        for (Long relationsKey : tempRelationsMap.keySet()) {
+            Relation tempRelation = tempRelationsMap.get(relationsKey);
+            //Parsowanie budynkow
+             if (tempRelation.checkTag("building", "yes")) {
                 parsedMap.addObject(createBuilding(tempRelation,
                         createPolygon(tempRelation, parsedMap),
                         createLevelsList(tempRelation, parsedMap)));
@@ -199,8 +209,8 @@ public class OSMDataParser {
             }
         }
         tempDoor.setOptions(getOptions(tempNode, "buildingpart"));
-        tempDoor.setOptions(getOptions(tempNode, "door:safearea"));
-        tempDoor.setOptions(getOptions(tempNode, "door:unsafearea"));
+//        tempDoor.setOptions(getOptions(tempNode, "door:safearea"));
+//        tempDoor.setOptions(getOptions(tempNode, "door:unsafearea"));
         return tempDoor;
     }
     private Crossing createCrossroad(Node tempNode, ArrayList<Road> tempRoadList) {
@@ -219,7 +229,7 @@ public class OSMDataParser {
     }
     private Building createBuilding(Relation tempRelation, Polygon tempPolygon, ArrayList<Level> tempLevels) {
         Building tempBuilding = new Building(tempRelation.getId(), tempPolygon, tempLevels);
-        tempBuilding.setOptions(getOptions(tempRelation, "building"));
+        tempBuilding.setOptions(getOptions(tempRelation, "amenity"));
         return tempBuilding;
     }
     private ArrayList<Door> createDoorsList(Relation tempRelation, Map parsedMap) {
@@ -267,6 +277,7 @@ public class OSMDataParser {
                 }
             }
         }
+        Log.i("PARSER Lista pokoi", "SIZE " +tempRooms.size());
         return tempRooms;
     }
     private ArrayList<Level> createLevelsList(Relation tempRelation, Map parsedMap) {

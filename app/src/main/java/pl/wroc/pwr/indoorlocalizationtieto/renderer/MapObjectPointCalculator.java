@@ -61,4 +61,23 @@ public class MapObjectPointCalculator {
         return position;
     }
 
+    public PointF decalibrate(double x, double y) {
+//        Log.i("POSITION", "user x = " + latDis + " user y = " + lonDis);
+        x += centerX;
+        y += centerY;
+        PointF position = new PointF(0.0f, 0.0f);
+        double lonDis;
+        double latDis;
+        lonDis = (x * 360) / mapWidth - 180;
+
+        double mercN = ((mapHeight - 2 * y) * Math.PI) / mapWidth;
+        double latRad = 2 * Math.atan(Math.pow(Math.E, mercN)) - Math.PI / 2;
+        latDis = latRad * (180 / Math.PI);
+
+        Log.i("LATLON", "Lat: " + latDis + "lon:" + lonDis);
+        position.x = (float) latDis;
+        position.y = (float) lonDis;
+        return position;
+    }
+
 }

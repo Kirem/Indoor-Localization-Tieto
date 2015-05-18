@@ -131,7 +131,7 @@ public class OverpassDataFetcher {
                             JSONObject tempMember = membersJArray.getJSONObject(j);
                             String tempMemberType = tempMember.getString(TYPE);
                             long tempMemberRef = tempMember.getLong(REF);
-                           // String tempMemberRole = tempMember.optString(ROLE);
+//                            String tempMemberRole = tempMember.optString(ROLE);
                             switch (tempMemberType) {
                                 case "node":
                                     relationsMembers.add(new Pair<String, OSMElement>(tempMemberType,

@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PointF;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,7 @@ public class GeometryRenderer implements Renderer {
     private List<MapObjectStyle> styles;
     private String objectClass;
     private String objectType;
-    private float zoomScale = 1;
+    private float zoomScale = 5;
     private int width;
     private int height;
 
@@ -77,6 +78,7 @@ public class GeometryRenderer implements Renderer {
             objectClass = options.get(MapObject.OBJECT_CLASS);
             objectType = options.get(MapObject.OBJECT_TYPE);
             if (objectClass == null || objectType == null) continue;
+//            Log.i("RENDER", "CLASS: " + objectClass + " type: " + objectType);
             styles = styleManager.getStyleSetForData((int) zoomLevel, objectClass, objectType);
             drawObject(canvas, object, styles);
         }
