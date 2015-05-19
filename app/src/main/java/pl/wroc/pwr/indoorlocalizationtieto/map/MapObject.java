@@ -44,6 +44,10 @@ public abstract class MapObject {
         this.objectGeometry = objectGeometry;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public boolean equals(Object o) {
         return this.id == ((MapObject)o).id;
