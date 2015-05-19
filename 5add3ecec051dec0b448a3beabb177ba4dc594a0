@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_88ed7b8e",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-19T20:53:16Z",
+      "side": 1,
+      "message": "to jeszcze wywal te funkcje pod parseOSMData() i będzie spoko",
+      "range": {
+        "startLine": 55,
+        "startChar": 2,
+        "endLine": 55,
+        "endChar": 28
+      },
+      "revId": "5add3ecec051dec0b448a3beabb177ba4dc594a0",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
