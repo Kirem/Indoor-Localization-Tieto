@@ -14,7 +14,7 @@ public class TestParserActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_parser2);
+        setContentView(R.layout.activity_test_parser);
         OverpassDataFetcher fetcher = new OverpassDataFetcher();
         JsonLoadedListener listener = new JsonLoadedListener() {
             @Override
