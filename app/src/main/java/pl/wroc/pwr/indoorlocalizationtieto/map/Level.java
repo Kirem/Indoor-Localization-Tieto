@@ -10,7 +10,6 @@ public class Level extends MapObject {
     private ArrayList<Room> rooms;
     private ArrayList<Door> doors;
     private float currentLevel;
-    //TODO zmienic nazwe currentLevel...
 
     public Level(long id, Multipolygon shape, int currentLevel) {
         super(id, shape);
