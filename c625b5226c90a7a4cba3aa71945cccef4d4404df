@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_f757c224",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/localization/LocalizationTestActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-20T18:49:11Z",
+      "side": 1,
+      "message": "nie wrzucajcie odnośników, bez tych odnośników...",
+      "range": {
+        "startLine": 18,
+        "startChar": 6,
+        "endLine": 18,
+        "endChar": 53
+      },
+      "revId": "c625b5226c90a7a4cba3aa71945cccef4d4404df",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
