@@ -3,6 +3,8 @@ package pl.wroc.pwr.indoorlocalizationtieto.renderer;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.PointF;
 import android.os.Build;
 import android.util.AttributeSet;
@@ -18,6 +20,7 @@ public class MapView extends View {
     private static final float ZOOM_SPAN_SCALE = 0.05f;
     private Renderer renderer = null;
     private float zoomLevel = 1;
+    private float zoomMultiplier = 4;
     private PointF offset;
     private PointF viewSize;
     private PointF mapSize;
@@ -62,7 +65,8 @@ public class MapView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+//        super.onDraw(canvas);
+
         if (renderer != null) {
             renderer.draw(canvas, offset);
         }
@@ -87,6 +91,21 @@ public class MapView extends View {
             offset.x = x;
             offset.y = y;
         }
+    }
+
+    public void zoomIn() {
+        zoomLevel++;
+        renderer.setZoomLevel(zoomLevel);
+        invalidate();
+    }
+
+    public void zoomOut() {
+        zoomLevel--;
+        if(zoomLevel<1){
+            zoomLevel = 1;
+        }
+        renderer.setZoomLevel(zoomLevel);
+        invalidate();
     }
 
     private class MapMoveListener implements OnTouchListener {
@@ -151,7 +170,7 @@ public class MapView extends View {
         @Override
         public boolean onScale(ScaleGestureDetector detector) {
 
-            float spanDelta = (detector.getCurrentSpan() - detector.getPreviousSpan()) * ZOOM_SPAN_SCALE;
+            float spanDelta = (detector.getCurrentSpan() - detector.getPreviousSpan()) * ZOOM_SPAN_SCALE/(zoomLevel*zoomMultiplier*0.5f);
             if (spanDelta > 1) {
                 spanDelta = 1;
             } else if (spanDelta < -1) {

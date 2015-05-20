@@ -2,6 +2,7 @@ package pl.wroc.pwr.indoorlocalizationtieto.renderer;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PointF;
@@ -22,16 +23,18 @@ import pl.wroc.pwr.indoorlocalizationtieto.renderer.style.MapObjectStyle;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.style.StyleManager;
 
 public class GeometryRenderer implements Renderer {
-    ArrayList<MapObject> renderedMapObjects;
-    StyleManager styleManager;
+    private ArrayList<MapObject> renderedMapObjects;
+    private StyleManager styleManager;
     private Paint defaultPaint;
     private Paint activePaint;
     private float zoomLevel;
     private MapObjectPointCalculator positionCalculator;
-    Map<String, String> options;
-    List<MapObjectStyle> styles;
-    String objectClass;
-    String objectType;
+    private Map<String, String> options;
+    private List<MapObjectStyle> styles;
+    private String objectClass;
+    private String objectType;
+    private float zoomScale = 1;
+
 
     public GeometryRenderer(ArrayList<MapObject> objects, Context context) {
         renderedMapObjects = new ArrayList<>(objects);
@@ -66,7 +69,8 @@ public class GeometryRenderer implements Renderer {
     public void draw(Canvas canvas, PointF offset) {
 
         canvas.save();
-        canvas.translate(offset.x * zoomLevel, offset.y * zoomLevel);
+        canvas.translate(offset.x * zoomLevel * zoomScale, offset.y * zoomLevel * zoomScale);
+
         for (MapObject object : renderedMapObjects) {
             options = object.getOptions();
             objectClass = options.get(MapObject.OBJECT_CLASS);
@@ -84,8 +88,9 @@ public class GeometryRenderer implements Renderer {
             for (MapObjectStyle style : styles) {
                 activePaint.set(defaultPaint);
                 style.stylise(activePaint);
-                if (object.getObjectGeometry() != null)
+                if (object.getObjectGeometry() != null) {
                     drawGeometry(canvas, object.getObjectGeometry());
+                }
             }
         }
     }
@@ -105,27 +110,18 @@ public class GeometryRenderer implements Renderer {
     }
 
     private void drawPoint(Canvas canvas, Point point) {
-        canvas.drawPoint(scaleX(point.getX()), scaleY(point.getY()), activePaint);
-    }
-
-    private float scaleX(double point) {
-        return (float) positionCalculator.calibrateX(point);
-//        return (float) (point - xOffset) * zoomLevel * scale;
-    }
-
-    private float scaleY(double point) {
-        return (float) positionCalculator.calibrateY(point);
-//        return (float) (point - yOffset) * zoomLevel * scale;
+        PointF wsp = positionCalculator.calibrate(point.getX(), point.getY());
+        canvas.drawPoint(wsp.x * zoomLevel * zoomScale, wsp.y * zoomLevel * zoomScale, activePaint);
     }
 
     private void drawLine(Canvas canvas, Point startingPoint, Point endingPoint) {
-        canvas.drawLine(scaleX(startingPoint.getX()), scaleY(startingPoint.getY()),
-                scaleX(endingPoint.getX()), scaleY(endingPoint.getY()), activePaint);
+        PointF wsp1 = positionCalculator.calibrate(startingPoint.getX(), startingPoint.getY());
+        PointF wsp2 = positionCalculator.calibrate(endingPoint.getX(), endingPoint.getY());
+        canvas.drawLine(wsp1.x * zoomLevel * zoomScale, wsp1.y * zoomLevel * zoomScale,
+                wsp2.x * zoomLevel * zoomScale, wsp2.y * zoomLevel * zoomScale, activePaint);
     }
 
     private void drawLine(Canvas canvas, Line line) {
-//        Point startingPoint = line.getP1();
-//        Point endingPoint = line.getP2();
         drawLine(canvas, line.getP1(), line.getP2());
     }
 
@@ -141,7 +137,6 @@ public class GeometryRenderer implements Renderer {
     }
 
     private void drawPolygon(Canvas canvas, Polygon polygon) {
-//        Path path = getClosedPath(polygon);
         canvas.drawPath(getClosedPath(polygon), activePaint);
     }
 
@@ -160,12 +155,15 @@ public class GeometryRenderer implements Renderer {
         Path path = new Path();
         path.setFillType(Path.FillType.EVEN_ODD);
         Point first = pointList.get(0);
-        path.moveTo(scaleX(first.getX()), scaleY(first.getY()));
+        PointF wsp = positionCalculator.calibrate(first.getX(), first.getY());
+        PointF wsp1;
+        path.moveTo(wsp.x * zoomLevel * zoomScale, wsp.y * zoomLevel * zoomScale);
         for (int i = 1; i < pointList.size(); i++) {
             point = pointList.get(i);
-            path.lineTo(scaleX(point.getX()), scaleY(point.getY()));
+            wsp1 = positionCalculator.calibrate(point.getX(), point.getY());
+            path.lineTo(wsp1.x * zoomLevel * zoomScale, wsp1.y * zoomLevel * zoomScale);
         }
-        path.lineTo(scaleX(first.getX()), scaleY(first.getY()));
+        path.lineTo(wsp.x * zoomLevel * zoomScale, wsp.y * zoomLevel * zoomScale);
         return path;
     }
 
