@@ -6,64 +6,58 @@ import android.util.Log;
 public class MapObjectPointCalculator {
     private static final double KM_PER_DEGREE_LAT = 110.574;
     private static final double KM_PER_DEGREE_LONG = 111.320;//*cos(lat)km
+    private static final double EARTH_CIRCUIT = 40075014;//m
+
 
     private final float latitude;
     private final float longitude;
-    private float viewHeight;
+    private double mapHeight;
+    private double mapWidth;
     //radius in meters
     private final float radius;
-    private float degreesPerPixelHorizontal;
-    private float degreesPerPixelVertical;
-    private float sourceHeight;
 
-    public MapObjectPointCalculator(float latitude, float longitude, int vHeight, float radius) {
+    private double scale;
+    double centerX;
+    double centerY;
+
+    public MapObjectPointCalculator(float latitude, float longitude, int vHeight, int vWidth, float radius) {
         this.latitude = latitude;
         this.longitude = longitude;
-        this.viewHeight = vHeight;
-        this.radius = radius;
-        Log.i("Calibrate", "radius: " + radius*0.001);
+        this.radius = radius * 5;
+        setScale();
+        this.mapHeight = vHeight * scale;
+        this.mapWidth = vWidth * scale;
+        centerX = ((longitude + 180) * (mapWidth / 360));
+        double latRad = (latitude * Math.PI / 180);
 
-        double top = latitude + (radius * 0.001) / (KM_PER_DEGREE_LAT);
-        Log.i("Calibrate", "top: " + top);
+        double mercN = Math.log(Math.tan((Math.PI / 4) + (latRad / 2)));
+        centerY = ((mapHeight / 2) - (mapWidth * mercN / (2 * Math.PI)));
+        Log.i("POSITION_TAG", "position x = " + centerX + " position y = " + centerY);
+        Log.i("POSITION_TAG", "scale:  " + scale);
+        Log.i("POSITION_TAG", "radius:  " + radius);
 
-            double bottom = latitude - (radius * 0.001) / (KM_PER_DEGREE_LAT);
-        Log.i("Calibrate", "bottom: " + bottom);
-        double left = longitude - (radius * 0.001) / (KM_PER_DEGREE_LONG * Math.cos(latitude));
-        Log.i("Calibrate", "left: " + left);
-        double right = longitude + (radius * 0.001) / (KM_PER_DEGREE_LONG * Math.cos(latitude));
-        Log.i("Calibrate", "rigt: " + right);
-        setScale(top, bottom, left, right);
+
     }
 
-    private void setScale(double top, double bottom, double left, double right) {
-        degreesPerPixelVertical = (float) (viewHeight / (top - bottom));
-        Log.i("Calibrate", "scale vertical: " + degreesPerPixelVertical);
-
-        degreesPerPixelHorizontal = viewHeight / ((float) (right - left));
-        Log.i("Calibrate", "scale horizontal: " + degreesPerPixelHorizontal);
+    private void setScale() {
+        this.scale = EARTH_CIRCUIT / radius;
     }
 
-    public PointF calibratePoint(PointF realPosition) {
-
-        return calibrate(realPosition.x, realPosition.y);
-    }
-
-    private PointF calibrate(float latDis, float lonDis) {
+    public PointF calibrate(double latDis, double lonDis) {
         PointF position = new PointF(0.0f, 0.0f);
-        position.x = latDis * degreesPerPixelHorizontal;
-        position.y = lonDis * degreesPerPixelVertical;
+        double x;
+        double y;
+        x = ((lonDis + 180) * (mapWidth / 360));
+        double latRad = (float) (latDis * Math.PI / 180);
+
+        double mercN = Math.log(Math.tan((Math.PI / 4) + (latRad / 2)));
+        y = ((mapHeight / 2) - (mapWidth * mercN / (2 * Math.PI)));
+        x -= centerX;
+        y -= centerY;
+
+        position.x = (float) x;
+        position.y = (float) y;
         return position;
     }
-
-    public double calibrateX(double latDis) {
-//        Log.i("Calibrate", "Old x = " + latDis + " new x = " + (latitude - latDis) * degreesPerPixelVertical);
-        return (latDis - latitude) * degreesPerPixelHorizontal;
-    }
-
-    public double calibrateY(double longDis) {
-//        Log.i("Calibrate", "Old y = " + longDis + " new y = " + (longitude - longDis) * degreesPerPixelVertical);
-        return (longDis - longitude) * degreesPerPixelVertical;
-    }
-
 
 }

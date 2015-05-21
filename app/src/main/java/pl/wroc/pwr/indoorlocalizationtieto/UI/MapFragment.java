@@ -28,6 +28,8 @@ import pl.wroc.pwr.indoorlocalizationtieto.renderer.Renderer;
 public class MapFragment extends Fragment implements View.OnClickListener, JsonLoadedListener {
     public static final String LATITUDE = "51.09408";
     public static final String LONGITUDE = "17.018144";
+    //        public static final String LATITUDE = "51.10897";
+//    public static final String LONGITUDE = "17.06019";
     public static final String RADIUS = "100";
     private MapView mapView;
     private GeometryRenderer renderer;
@@ -44,8 +46,6 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
         createMap();
         renderer = new GeometryRenderer(new ArrayList<MapObject>(), context);
         renderer.setStyle(R.raw.mapjsonzoom);
-
-
     }
 
     @Override
@@ -67,10 +67,9 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
             public void onGlobalLayout() {
                 renderer.setPositionCalculator
                         (new MapObjectPointCalculator(Float.valueOf(LATITUDE),
-                                Float.valueOf(LONGITUDE), mapView.getHeight(), Float.valueOf(RADIUS)/**10*/));
+                                Float.valueOf(LONGITUDE), mapView.getHeight(), mapView.getWidth(), Float.valueOf(RADIUS)/**10*/));
                 mapView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 Log.i("OnCreateView", "calculator set:" + mapView.getHeight());
-
             }
         });
         mapView.setRenderer(renderer);
@@ -90,9 +89,9 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.butPlus) {
-
+            mapView.zoomIn();
         } else if (id == R.id.butMinus) {
-
+            mapView.zoomOut();
         } else if (id == R.id.butUp) {
 
         } else if (id == R.id.butDown) {
@@ -113,6 +112,7 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
                     public void run() {
                         Toast.makeText(getActivity(), "objects loaded: " + map.getObjects().size(), Toast.LENGTH_SHORT).show();
                         renderer.setMapObjects(map.getObjects());
+                        Log.i("OBJECTS", "parsed: ");
                         mapView.invalidate();
                     }
                 });
