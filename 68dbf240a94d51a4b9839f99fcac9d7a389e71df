@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_d36c8b39",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/MapActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-21T19:44:41Z",
+      "side": 1,
+      "message": "chyba juz niepotrzebne?",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 86
+      },
+      "revId": "68dbf240a94d51a4b9839f99fcac9d7a389e71df",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
