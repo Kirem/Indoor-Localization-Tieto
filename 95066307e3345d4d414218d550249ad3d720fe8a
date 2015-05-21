@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_738d7f31",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryRenderer.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-21T18:46:39Z",
+      "side": 1,
+      "message": "nie bede sie tego czepial, skasuje sie kiedys :D",
+      "range": {
+        "startLine": 78,
+        "startChar": 17,
+        "endLine": 78,
+        "endChar": 21
+      },
+      "revId": "95066307e3345d4d414218d550249ad3d720fe8a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_1376f33e",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/GeometryRenderer.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-21T18:46:39Z",
+      "side": 1,
+      "message": "warunków na polygon i multipolygon nie potrzeba na 100%?",
+      "range": {
+        "startLine": 123,
+        "startChar": 0,
+        "endLine": 129,
+        "endChar": 62
+      },
+      "revId": "95066307e3345d4d414218d550249ad3d720fe8a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_93992371",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapView.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-21T18:46:39Z",
+      "side": 1,
+      "message": "100/3 ?",
+      "range": {
+        "startLine": 53,
+        "startChar": 62,
+        "endLine": 53,
+        "endChar": 71
+      },
+      "revId": "95066307e3345d4d414218d550249ad3d720fe8a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
