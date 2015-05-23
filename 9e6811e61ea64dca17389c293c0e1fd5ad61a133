@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_1fbef1ff",
+        "filename": "app/src/main/res/raw/access_points.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-23T13:40:17Z",
+      "side": 1,
+      "message": "Co to jest ?",
+      "revId": "9e6811e61ea64dca17389c293c0e1fd5ad61a133",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
