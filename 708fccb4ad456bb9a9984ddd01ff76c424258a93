@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_8abb9dc3",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Map.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-24T11:14:46Z",
+      "side": 1,
+      "message": "tutaj można dodać jeszcze resztę obiektów spoza budynku.",
+      "range": {
+        "startLine": 29,
+        "startChar": 10,
+        "endLine": 32,
+        "endChar": 17
+      },
+      "revId": "708fccb4ad456bb9a9984ddd01ff76c424258a93",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
