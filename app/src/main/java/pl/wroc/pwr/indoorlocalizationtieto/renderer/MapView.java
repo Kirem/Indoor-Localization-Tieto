@@ -213,7 +213,7 @@ public class MapView extends View {
         public void run() {
             MapView.this.invalidate();
             if (MapView.this.isShown())
-                postDelayed(this, 1000 / 3);//30frames/sec
+                postDelayed(this, 1000 / 30);//30frames/sec
         }
     }
 }
