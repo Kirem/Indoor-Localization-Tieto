@@ -2,6 +2,46 @@
   "comments": [
     {
       "key": {
+        "uuid": "facab960_1e8989eb",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-26T18:38:18Z",
+      "side": 1,
+      "message": "A gdziej jakieś pobieranie?",
+      "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_de656146",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-26T18:38:18Z",
+      "side": 1,
+      "message": "W ten sposób nic się nie zmienia prędkość. Jak byś zrobił HashMap\u003cString, List\u003cMapObject\u003e\u003e To według mnnie byłoby to dużo lepsze/bardziej logiczne. W końcu byś indeksował jakoś wtedy.",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 46
+      },
+      "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "facab960_ded56144",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
         "patchSetId": 2
@@ -18,6 +58,29 @@
         "startChar": 22,
         "endLine": 25,
         "endChar": 23
+      },
+      "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_fe5a2582",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-26T18:38:18Z",
+      "side": 1,
+      "message": "na pewno pokój w nazwie posiada \"pokoj\"?",
+      "range": {
+        "startLine": 30,
+        "startChar": 26,
+        "endLine": 30,
+        "endChar": 32
       },
       "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
