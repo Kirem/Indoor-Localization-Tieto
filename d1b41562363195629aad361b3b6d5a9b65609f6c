@@ -133,6 +133,30 @@
       "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_0121289f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-26T21:47:13Z",
+      "side": 1,
+      "message": "nie, o sam fakt, w jaki sposób pokój jest zapisywany w parserze? jest \"pokoj 112/c3\" przykladowo jako nazwa, czy jak?",
+      "parentUuid": "facab960_7e9375fa",
+      "range": {
+        "startLine": 30,
+        "startChar": 26,
+        "endLine": 30,
+        "endChar": 32
+      },
+      "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
