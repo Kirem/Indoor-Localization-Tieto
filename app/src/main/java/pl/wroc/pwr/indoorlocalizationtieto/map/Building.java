@@ -7,7 +7,7 @@ import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Multipolygon;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Polygon;
 
 public class Building extends MapObject{
-    ArrayList<Level> levels;
+    private ArrayList<Level> levels;
 //TODO jak zaprojektowac wyjscia z budynkow?
 
     public Building(long id, Multipolygon buildingShape) {

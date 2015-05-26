@@ -4,19 +4,11 @@ import java.util.ArrayList;
 import pl.wroc.pwr.indoorlocalizationtieto.Geometry.Geometry;
 
 public class Map {
-//    private static Map singleton = null;
     ArrayList<MapObject> objects;
     public Map() {
         objects = new ArrayList<>();
     }
 
-
-/*    public static Map getInstance() {
-        if(singleton==null){
-            singleton = new Map();
-        }
-        return singleton;
-    }*/
     public void addObject(MapObject object){
         objects.add(object);
     }
@@ -29,5 +21,28 @@ public class Map {
             geometries.addAll(object.getGeometries());
         }
         return geometries;
+    }
+
+    /**
+     *
+     * @param level
+     * @return returns ArrayList of MapObject elements for demanded level.
+     */
+    public ArrayList<MapObject> getObjectsForLevel(float level){
+        ArrayList<MapObject> objectsForLevel = new ArrayList<>();
+        for(MapObject mapObject: objects){
+            if(level == 0){
+                if( (mapObject instanceof Road ) ||  (mapObject instanceof Building)
+                        || (mapObject instanceof Crossing)){
+                objectsForLevel.add(mapObject);
+                }
+            }
+            if(mapObject instanceof Level){
+                if(((Level) mapObject).getCurrentLevel()==level){
+                    objectsForLevel.add(mapObject);
+                }
+            }
+        }
+        return objectsForLevel;
     }
 }
