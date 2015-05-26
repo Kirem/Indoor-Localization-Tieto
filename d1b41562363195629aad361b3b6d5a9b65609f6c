@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "facab960_5e86b1ba",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-26T20:11:52Z",
+      "side": 1,
+      "message": "prawda :D",
+      "parentUuid": "facab960_de656146",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 46
+      },
+      "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "facab960_ded56144",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
         "patchSetId": 2
@@ -76,6 +100,30 @@
       "writtenOn": "2015-05-26T18:38:18Z",
       "side": 1,
       "message": "na pewno pokój w nazwie posiada \"pokoj\"?",
+      "range": {
+        "startLine": 30,
+        "startChar": 26,
+        "endLine": 30,
+        "endChar": 32
+      },
+      "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_7e9375fa",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-26T20:11:52Z",
+      "side": 1,
+      "message": "chodzi Ci o polski znak ?",
+      "parentUuid": "facab960_fe5a2582",
       "range": {
         "startLine": 30,
         "startChar": 26,
