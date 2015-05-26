@@ -12,6 +12,11 @@ public class Graph {
         edges = new ArrayList<>();
     }
 
+    public Graph(ArrayList<Vertex> vertexes, ArrayList<Edge> edges) {
+        this.vertexes = new ArrayList<>(vertexes);
+        this.edges = new ArrayList<>(edges);
+    }
+
     public void addEdge(Vertex vertex1, Vertex vertex2, double dist) throws IllegalArgumentException{
 
         if(! (vertexes.contains(vertex1) && vertexes.contains(vertex2))) {
@@ -49,9 +54,9 @@ public class Graph {
 
     public ArrayList<Vertex> getVertexes(){ return vertexes; }
 
-    public double getEdgeDistance(double vertex1Id, double vertex2Id){
-        Vertex v1 = new Vertex(vertex1Id);
-        Vertex v2 = new Vertex(vertex2Id);
+    public double getEdgeDistance(double vertex1ID, double vertex2ID) {
+        Vertex v1 = getVertexById(vertex1ID); //new Vertex(vertex1);
+        Vertex v2 = getVertexById(vertex2ID); //new Vertex(vertex2);
         Edge e = new Edge(v1, v2, 0);
         for(Edge edge: edges){
             if(edge.equals(e)){
@@ -75,8 +80,9 @@ public class Graph {
     }
 
     public List<Double> getNeighboursForVertex(double vertexId){
-        Vertex tem = new Vertex(vertexId);
-        return vertexes.get(vertexes.indexOf(tem)).getNeighbours();
+        //Vertex tem = new Vertex(vertexId);
+        //return vertexes.get(vertexes.indexOf(tem)).getNeighbours();
+        return getVertexById(vertexId).getNeighbours();
     }
 
     public String toString(){
