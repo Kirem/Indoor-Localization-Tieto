@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "facab960_21b1ccf8",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-05-27T07:35:19Z",
+      "side": 1,
+      "message": "Przydałoby się - na arzie może być jakieś bardzo proste iterujące po całej tablicy i sprawdzające czy Pair\u003cstring,...\u003e zawiera String z argumentu + jeszcze jakieś testy. Coś w stylu tego co napisałem niżej.",
+      "parentUuid": "facab960_1e8989eb",
+      "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "facab960_de656146",
         "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
         "patchSetId": 2
@@ -53,6 +71,30 @@
       "writtenOn": "2015-05-26T20:11:52Z",
       "side": 1,
       "message": "prawda :D",
+      "parentUuid": "facab960_de656146",
+      "range": {
+        "startLine": 22,
+        "startChar": 12,
+        "endLine": 22,
+        "endChar": 46
+      },
+      "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_a1c5dc5c",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-05-27T07:35:19Z",
+      "side": 1,
+      "message": "Na razie nie trzeba bawić się w optymalizację. Hash też nie jest najlepszą opcją ponieważ hashuje cały string. Czyli jeśli chcesz aby pokazał pokoje 1 12 104 po wpisaniu 1 to też nie da rady. Tak na prawdę do tego używa się np. drzew, ale z ich implementacją jest troche zabawy, a Wy czasu nie macie.",
       "parentUuid": "facab960_de656146",
       "range": {
         "startLine": 22,
@@ -154,6 +196,47 @@
         "endLine": 30,
         "endChar": 32
       },
+      "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_e1a604c1",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-05-27T07:35:19Z",
+      "side": 1,
+      "message": "+1. Sprawdzanie typu powinno się odbywać nie po nazwie, a po typie w mapie.",
+      "parentUuid": "facab960_0121289f",
+      "range": {
+        "startLine": 30,
+        "startChar": 26,
+        "endLine": 30,
+        "endChar": 32
+      },
+      "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_01acc89f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-05-27T07:35:19Z",
+      "side": 1,
+      "message": "Dodajesz sam string ze słowem \"pokoj\"? może chociaż ROOM+\" \"+name. Tak samo dla pozostałych.",
       "revId": "d1b41562363195629aad361b3b6d5a9b65609f6c",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": false
