@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_d5b9ac2f",
+        "filename": "app/src/androidTest/java/pl/wroc/pwr/indoorlocalizationtieto/SearcherTest/SearcherTest.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-05-28T12:44:31Z",
+      "side": 1,
+      "message": "Super. Ale testy powinny sprawdzać trochę więcej rzeczy. Np. dodaj jeszcze jeden element np. pokój 125.\n\nDodaj test jeśli query to jest \"12\" i sprawdzi czy zwrócił 2 odpowiednie elementy.\n\nW teście który masz powinieneś sprawdzić czy czasem nie zwrócił niepasującego wyniku czyli czy długość ArrayListy jest 1",
+      "revId": "7570a917b2d3dc8e8293bb935002639cff97c839",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_15831457",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-05-28T12:44:31Z",
+      "side": 1,
+      "message": "Dla mnie wychląda ten plik OK. Rozumiem, że np. \"pokój\" to taki keyword. Możesz pomyśleć o tym aby w przyszłości oprócz słowa pokój dodawać np. ref lub typ pokoju. Ale to już w kolejnym commicie",
+      "revId": "7570a917b2d3dc8e8293bb935002639cff97c839",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
