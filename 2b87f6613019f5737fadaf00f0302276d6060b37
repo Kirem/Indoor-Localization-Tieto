@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_6fd72fc2",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/SearchEngine/Searcher.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1004248
+      },
+      "writtenOn": "2015-05-28T06:45:07Z",
+      "side": 1,
+      "message": "na razie coś prostego w stylu:\nDla każdego elemenu w pairs\n jeśli string zawiera \"query\"\n   then dodaj do results",
+      "revId": "2b87f6613019f5737fadaf00f0302276d6060b37",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
