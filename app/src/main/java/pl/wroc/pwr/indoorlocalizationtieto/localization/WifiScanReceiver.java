@@ -1,95 +1,166 @@
 package pl.wroc.pwr.indoorlocalizationtieto.localization;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import pl.wroc.pwr.indoorlocalizationtieto.R;
 
 /**
  * Created by Mateusz on 2015-05-09.
+ * Scan receiver for capturing data about access points and signal level
  */
 public class WifiScanReceiver extends BroadcastReceiver {
     private WifiManager wifiManager;
-    private HashMap<ReferencePoint, Integer> referencePointOccurences;
-    private List<ScanResult> scanResults;
     private LocalizationData localizationData;
     private Context context;
     private Localization localization;
-    private int scanCounter;
+
+    private List<ScanResult> scanResults;
+
+    private boolean changingLevel;
+    private boolean alertBuilt;
 
     /*
     testowe text fieldy
      */
-//    TextView textViewLat;
-//    TextView textViewLon;
-//    TextView textViewCounter;
+    private TextView textViewLat;
+    private TextView textViewLon;
+    private TextView textViewCounter;
+    private TextView textViewLevelChanging;
+    private TextView textViewTicks;
 
-    public WifiScanReceiver(WifiManager wifiManager, Context context, Localization localization) {
+    private boolean tick; //helper line
+
+    /**
+     * Constructor for WifiScanReceiver
+     * @param wifiManager - WifiManager object
+     * @param context - application context
+     * @param localization - instance of Localization class
+     */
+    protected WifiScanReceiver(WifiManager wifiManager, Context context, Localization localization) {
         this.wifiManager = wifiManager;
         this.context = context;
         this.localization = localization;
-        LocalizationFetcher localizationFetcher = new LocalizationFetcher(this.context);
-        localizationData = localizationFetcher.fetchData();
-        referencePointOccurences = new HashMap<>();
-        scanCounter = 0;
 
-//        textViewLat = (TextView) ((Activity)context).findViewById(R.id.textView);
-//        textViewLon = (TextView) ((Activity)context).findViewById(R.id.textView2);
-//        textViewCounter = (TextView) ((Activity)context).findViewById(R.id.textView3);
+        LocalizationFetcher localizationFetcher = new LocalizationFetcher(this.context);
+        this.localizationData = localizationFetcher.fetchData();
+
+        this.alertBuilt = false;
+        this.changingLevel = false;
+        this.tick = false;
+
+        this.textViewLat = (TextView) ((Activity) context).findViewById(R.id.textView);
+        this.textViewLon = (TextView) ((Activity) context).findViewById(R.id.textView2);
+        this.textViewCounter = (TextView) ((Activity) context).findViewById(R.id.textView3);
+        this.textViewLevelChanging = (TextView) ((Activity) context).findViewById(R.id.textView4);
+        this.textViewTicks = (TextView) ((Activity) context).findViewById(R.id.textView5);
     }
 
-    //invoke every
     @Override
     public void onReceive(Context context, Intent intent) {
-        if(wifiManager.isWifiEnabled()) {
+        if (wifiManager.isWifiEnabled()) {
             wifiManager.startScan();
-            scanResults = wifiManager.getScanResults();
-            Thread thread = new Thread(new LocalizeByRefPointsRunnable(this, localizationData, scanResults));
-            thread.start();
-            wifiManager.startScan();
+            if (changingLevel && !alertBuilt) {
+                alertBuilt = true;
+                changingLevel = false;
 
-//            textViewLat.setText("Lat: " + localization.getPosLat());
-//            textViewLon.setText("Lon: " + localization.getPosLon());
-//            textViewCounter.setText("level: " + localization.getPosLevel());
+                //run alert dialog asking if changing floor
+                AlertDialog.Builder builderYesNo = new AlertDialog.Builder(context);
+
+                builderYesNo.setTitle("Change floor");
+                builderYesNo.setMessage("Do you want to change floor? Current = " + localization.getPosLevel());
+
+                builderYesNo.setPositiveButton("Yes, +1", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        changeLevel(localization.getPosLevel() + 1);
+                        //changingLevel = false;
+                        dialog.dismiss();
+                        runThreadSleep();
+                    }
+
+                });
+
+                builderYesNo.setNeutralButton("NO", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        //changingLevel = false;
+                        dialog.dismiss();
+                        runThreadSleep();
+                    }
+                });
+
+                builderYesNo.setNegativeButton("Yes, -1", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        changeLevel(localization.getPosLevel() - 1);
+                        //changingLevel = false;
+                        dialog.dismiss();
+                        runThreadSleep();
+                    }
+                });
+
+                AlertDialog alert = builderYesNo.create();
+                alert.show();
+            } else {
+                scanResults = wifiManager.getScanResults();
+                Thread thread = new Thread(new LocalizeByRefPointsRunnable(this, localizationData, scanResults));
+                thread.start();
+                wifiManager.startScan();
+                tick = !tick;
+            }
+            textViewLat.setText("Lat: " + localization.getPosLat());
+            textViewLon.setText("Lon: " + localization.getPosLon());
+            textViewCounter.setText("level: " + localization.getPosLevel());
+            textViewLevelChanging.setText("Changing: " + isChangingLevel());
+            textViewTicks.setText("Tick: " + !tick);
             wifiManager.startScan();
         }
     }
 
-    public List<ScanResult> getScanResults() {
+    protected List<ScanResult> getScanResults() {
         return scanResults;
     }
 
-    public void updateLocation(ReferencePoint referencePoint) {
-        localization.updateLocation(
-                referencePoint.getLocation().getX(),
-                referencePoint.getLocation().getY(),
-                referencePoint.getLevel()
-        );
+    synchronized protected void changeLevel(int level) {
+        setChangingLevel(false);
+        localization.setPosLevel(level);
     }
 
     protected Localization getLocalization() {
         return localization;
     }
 
-    protected void addReferencePointOccurences(ReferencePoint referencePoint) {
-        if(referencePointOccurences.containsKey(referencePoint)) {
-            int temp = referencePointOccurences.get(referencePoint);
-            referencePointOccurences.put(referencePoint, temp +1);
-        } else
-            referencePointOccurences.put(referencePoint, 1);
+    protected boolean isChangingLevel() {
+        return changingLevel;
     }
 
-    protected WifiManager getWifiManager() {
-        return wifiManager;
+    protected synchronized void setChangingLevel(boolean changingLevel) {
+        this.changingLevel = changingLevel;
+    }
+
+    protected Context getContext() {
+        return context;
+    }
+
+    private void runThreadSleep() {
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    Thread.sleep(10000, 0);
+                    alertBuilt = false;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 }
