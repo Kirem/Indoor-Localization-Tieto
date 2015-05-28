@@ -47,6 +47,10 @@ public abstract class MapObject {
         this.name = name;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     @Override
     public boolean equals(Object o) {
         return this.id == ((MapObject)o).id;

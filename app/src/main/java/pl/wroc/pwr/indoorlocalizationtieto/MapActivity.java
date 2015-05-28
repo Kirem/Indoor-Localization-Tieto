@@ -5,10 +5,12 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -44,6 +46,7 @@ public class MapActivity extends ActionBarActivity {
     private SearchFragment searchFragment;
     private SpecificationFragment specificationFragment;
     private Intent intent;
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,7 @@ public class MapActivity extends ActionBarActivity {
     }
 
     private void init() {
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
         mapFragment = new MapFragment(this);
         searchFragment = new SearchFragment();
         specificationFragment = new SpecificationFragment();
@@ -150,7 +154,6 @@ public class MapActivity extends ActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
     }
 
     private void setupDrawer() {
@@ -171,6 +174,10 @@ public class MapActivity extends ActionBarActivity {
         };
         mDrawerToggle.setDrawerIndicatorEnabled(true);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+    }
+
+    private boolean readPreference(String key){
+        return preferences.getBoolean(key, false);
     }
 
     @Override
@@ -218,6 +225,4 @@ public class MapActivity extends ActionBarActivity {
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
-
-
 }

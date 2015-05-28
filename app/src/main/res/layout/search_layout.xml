@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <SearchView
-        android:layout_width="match_parent"
+    <EditText
+        android:layout_width="271dp"
         android:layout_height="wrap_content"
-        android:id="@+id/searchView"
-        android:layout_weight="1.06"
-        android:queryHint="Wpisz czego szukasz..." />
+        android:id="@+id/eTSearch"
+        android:text="Wpisz czego szukasz..."
+        android:layout_alignBottom="@+id/butSearch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Szukaj"
+        android:id="@+id/butSearch"
+        android:layout_gravity="right"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/eTSearch"/>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="442dp"
-        android:id="@+id/listView" />
+        android:id="@+id/listView"
+        android:layout_above="@+id/butClue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/eTSearch" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -22,5 +37,8 @@
         android:layout_height="wrap_content"
         android:text="Jak szukać"
         android:id="@+id/butClue"
-        android:layout_gravity="right" />
-</LinearLayout>
+        android:layout_gravity="right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

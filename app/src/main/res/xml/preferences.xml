@@ -8,21 +8,21 @@
         <CheckBoxPreference
             android:key="pref_shortest_path"
             android:title="@string/pref_shortest_path"
-            android:defaultValue="false" />
+            android:defaultValue="false"/>
 
         <CheckBoxPreference
             android:key="pref_avoid_rooms"
             android:title="@string/pref_avoid_rooms"
-            android:defaultValue="true" />
+            android:defaultValue="true"/>
 
         <CheckBoxPreference
             android:key="pref_avoid_elevators"
             android:title="@string/pref_avoid_elevators"
-            android:defaultValue="false" />
+            android:defaultValue="false"/>
 
         <CheckBoxPreference
             android:key="pref_avoid_stairs"
             android:title="@string/pref_avoid_stairs"
-            android:defaultValue="false" />
+            android:defaultValue="false"/>
     </PreferenceCategory>
 </PreferenceScreen>

@@ -12,4 +12,5 @@
     <string name="pref_avoid_rooms">Unikaj nawigacji przez pokoje</string>
     <string name="pref_avoid_elevators">Unikaj wind</string>
     <string name="pref_avoid_stairs">Unikaj schodów</string>
+    <string name="preferences_file">PreferencesFile</string>
 </resources>
