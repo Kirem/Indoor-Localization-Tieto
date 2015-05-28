@@ -18,6 +18,7 @@ import java.io.Writer;
 import pl.wroc.pwr.indoorlocalizationtieto.R;
 
 /**
+ * Class for fetching data about Access Points and Reference Points from JSON files
  * Created by Mateusz on 2015-05-10.
  */
 public class LocalizationFetcher {
@@ -25,11 +26,14 @@ public class LocalizationFetcher {
     String jsonString;
     Context context;
 
-    public LocalizationFetcher(Context context) {
+    protected LocalizationFetcher(Context context) {
         this.context = context;
     }
 
-    public LocalizationData fetchData() {
+    /**
+     * Method for fetching data from resource raw JSON files
+     */
+    protected LocalizationData fetchData() {
         //get string from access_points.json file
         LocalizationData localizationData = new LocalizationData();
         InputStream inputStream = context.getResources().openRawResource(R.raw.access_points);
@@ -106,10 +110,11 @@ public class LocalizationFetcher {
                 double lat = tempJsonObj.getDouble("lat");
                 double lon = tempJsonObj.getDouble("lon");
                 int level = tempJsonObj.getInt("level");
-                ReferencePoint referencePoint = new ReferencePoint(lat, lon, level);
+                boolean stairs = tempJsonObj.getBoolean("stairs_elevator");
+                ReferencePoint referencePoint = new ReferencePoint(lat, lon, level, stairs);
 
                 JSONArray tempJsonArray = tempJsonObj.getJSONArray("access_points");
-                for(int j = 0; j < tempJsonArray.length(); j++) {
+                for (int j = 0; j < tempJsonArray.length(); j++) {
                     JSONObject tempJsonObj2 = tempJsonArray.getJSONObject(j);
                     String macAddress = tempJsonObj2.getString("mac_address");
                     int minRssi = tempJsonObj2.getInt("min_rssi");

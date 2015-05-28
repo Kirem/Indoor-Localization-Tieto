@@ -2392,17 +2392,3 @@
         {
           "mac_address": "c8:3a:35:06:0f:88",
           "max_rssi": -88,
-          "min_rssi": -94
-        },
-        {
-          "mac_address": "ea:08:8b:d4:5e:51",
-          "max_rssi": -75,
-          "min_rssi": -75
-        }
-      ],
-      "lon": 17.060254,
-      "lat": 51.108859,
-      "level": 0
-    }
-  ]
-}
