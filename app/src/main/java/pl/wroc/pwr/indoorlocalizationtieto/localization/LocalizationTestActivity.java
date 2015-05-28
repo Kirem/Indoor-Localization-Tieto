@@ -9,21 +9,21 @@ import pl.wroc.pwr.indoorlocalizationtieto.R;
 
 /**
  * Created by Mateusz on 2015-05-10.
+ * Test Activity for localization module
  */
 public class LocalizationTestActivity extends ActionBarActivity {
     private Localization localization;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.localization_layout);
 
         localization = new Localization(this);
-        localization.startScan(); //start scannig for devices
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_map, menu);
         return true;
     }
