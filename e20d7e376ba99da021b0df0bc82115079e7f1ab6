@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_072cbf98",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-31T16:21:32Z",
+      "side": 1,
+      "message": "nie widzę żadnego użycia tempLevelList ?",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 138,
+        "endChar": 92
+      },
+      "revId": "e20d7e376ba99da021b0df0bc82115079e7f1ab6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_2721c39f",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/Parser/OSMDataParser.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-31T16:21:32Z",
+      "side": 1,
+      "message": "tempLevelsList ?",
+      "range": {
+        "startLine": 142,
+        "startChar": 24,
+        "endLine": 142,
+        "endChar": 65
+      },
+      "revId": "e20d7e376ba99da021b0df0bc82115079e7f1ab6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_a734f3de",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/map/Level.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-31T16:21:32Z",
+      "side": 1,
+      "message": "Tego wcześniej nie było.",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 29
+      },
+      "revId": "e20d7e376ba99da021b0df0bc82115079e7f1ab6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_c731f7ed",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/renderer/MapObjectPointCalculator.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1004292
+      },
+      "writtenOn": "2015-05-31T16:21:32Z",
+      "side": 1,
+      "message": "Pomyślałem, że fajnie by było wyciągnąć w komentarz przed funkcje wzór który został użyty, nie chodzi o to, żeby to robić teraz, ale taka uwaga na przyszłość, bo później jak ktoś robi review, to nie wiem co sie dzieje :D",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 51
+      },
+      "revId": "e20d7e376ba99da021b0df0bc82115079e7f1ab6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
