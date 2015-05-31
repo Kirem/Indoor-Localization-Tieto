@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_8c09d633",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/localization/WifiScanReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-31T14:54:43Z",
+      "side": 1,
+      "message": "no to jak testowe to...",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 35
+      },
+      "revId": "13afe950ec5adea8b30abd340c9140669f5a3609",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
