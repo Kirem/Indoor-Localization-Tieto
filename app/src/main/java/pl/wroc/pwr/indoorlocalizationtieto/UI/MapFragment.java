@@ -24,7 +24,6 @@ import pl.wroc.pwr.indoorlocalizationtieto.map.MapObject;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.GeometryRenderer;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.MapObjectPointCalculator;
 import pl.wroc.pwr.indoorlocalizationtieto.renderer.MapView;
-import pl.wroc.pwr.indoorlocalizationtieto.renderer.Renderer;
 
 public class MapFragment extends Fragment implements View.OnClickListener, JsonLoadedListener {
     //    public static final String LATITUDE = "51.09408";
@@ -32,15 +31,29 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
     public static final String LATITUDE = "51.10897";
     public static final String LONGITUDE = "17.06019";
     public static final String RADIUS = "100";
-    //    public static final String LATITUDE_PWR = "51.10897";
-//    public static final String LONGITUDE_PWR = "17.06019";
+    private static final float LATIT[] = new float[]{
+            51.10894f, 51.10896f, 51.10898f, 51.10900f, 51.10902f
+    };
+    private static final float LONGIT[] = new float[]{
+            17.06038f, 17.06034f, 17.06028f, 17.06023f, 17.06019f
+    };
+
+    private static final float LATIT_IND[] = new float[]{
+            51.10891f, 51.10890f, 51.10886f, 51.10886f, 51.10885f, 51.10887f
+    };
+    private static final float LONGIT_IND[] = new float[]{
+            17.06038f, 17.06036f, 17.06047f, 17.06035f, 17.06030f, 17.06022f
+    };
+
+    private static int counter = 0;
+    Map map;
+    private int mapLevel = 0;
     private MapView mapView;
     private GeometryRenderer renderer;
     private ImageButton butPlus;
     private ImageButton butMinus;
     private ImageButton butUp;
     private ImageButton butDown;
-    Map map;
 
     public MapFragment() {
     }
@@ -87,7 +100,6 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
         String string[] = new String[]{LATITUDE, LONGITUDE, RADIUS};
         Log.i("OBJECTS", "startedloading: ");
         fetcher.startFetching(string, this);
-//        mapView.setPosition(Float.valueOf(LONGITUDE), Float.valueOf(LATITUDE));
     }
 
     @Override
@@ -98,9 +110,13 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
         } else if (id == R.id.butMinus) {
             mapView.zoomOut();
         } else if (id == R.id.butUp) {
-
+            mapLevel++;
+            renderer.setMapObjects(map.getObjectsForLevel(mapLevel));
+            mapView.invalidate();
         } else if (id == R.id.butDown) {
-
+            mapLevel--;
+            renderer.setMapObjects(map.getObjectsForLevel(mapLevel));
+            mapView.invalidate();
         }
     }
 
@@ -116,16 +132,21 @@ public class MapFragment extends Fragment implements View.OnClickListener, JsonL
                     @Override
                     public void run() {
                         Toast.makeText(getActivity(), "objects loaded: " + map.getObjects().size(), Toast.LENGTH_SHORT).show();
-                        renderer.setMapObjects(map.getObjects());
+                        renderer.setMapObjects(map.getObjectsForLevel(mapLevel));
                         Log.i("OBJECTS", "parsed: ");
-                        new Handler().postDelayed(new Runnable() {
+                        mapView.setMapCenter(Float.valueOf(LATITUDE), Float.valueOf(LONGITUDE));
+                        mapView.setZoomLevel(4);
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
-
-                                mapView.setPosition(17.0603798f, 51.1089762f);
-//                                mapView.invalidate();
+                                mapView.setPosition(LONGIT[counter], LATIT[counter++]);
+                                mapView.invalidate();
+                                if (counter < LONGIT.length) {
+                                     //handler.postDelayed(this, 3000);
+                                }
                             }
-                        }, 2000);
+                        }, 1000);
                         mapView.invalidate();
                     }
                 });

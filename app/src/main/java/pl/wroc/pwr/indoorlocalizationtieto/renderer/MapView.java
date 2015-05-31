@@ -15,6 +15,7 @@ import android.view.ViewTreeObserver;
 public class MapView extends View {
     public static final String MAP_VIEW_TAG = "MAP_VIEW_TAG";
     public static final int MAX_ZOOM_LEVEL = 5;
+    private static final float ZOOM_SCALE = 5.0f;
     private static final float ZOOM_SPAN_SCALE = 0.1f;
     private Renderer renderer = null;
     private float zoomLevel = 1;
@@ -65,7 +66,7 @@ public class MapView extends View {
         canvas.save();
         canvas.translate(offset.x * zoomLevel, offset.y * zoomLevel);
         if (renderer != null) {
-            userPosition.setOffset(new PointF(offset.x * zoomLevel, offset.y * zoomLevel));
+            userPosition.setZoom(zoomLevel * ZOOM_SCALE);
             renderer.draw(canvas, offset);
             userPosition.draw(canvas);
         }
@@ -96,12 +97,16 @@ public class MapView extends View {
         }
     }
 
-    public void setPosition(float lon, float lat) {
+    public void setMapCenter(float lat, float lon) {
         PointF p = pointCalculator.calibrate(lat, lon);
         if (p.x < mapSize.x && p.y < mapSize.y) {
             offset.x = p.x + getWidth() / 2;
             offset.y = p.y + getHeight() / 2;
         }
+    }
+
+    public void setPosition(float lon, float lat) {
+        PointF p = pointCalculator.calibrate(lat, lon);
         Log.i("MAP", "user x = " + p.x + " user y = " + p.y);
         userPosition.setxPos((int) p.x);
         userPosition.setyPos((int) p.y);
@@ -127,10 +132,14 @@ public class MapView extends View {
         zoomLevel += 1;
         if (zoomLevel > MAX_ZOOM_LEVEL)
             zoomLevel = MAX_ZOOM_LEVEL;
+
         renderer.setZoomLevel(zoomLevel);
     }
 
     public void setZoomLevel(float zoomLevel) {
+        offset.x -= offset.x * (zoomLevel / this.zoomLevel * 0.45) - offset.x;
+        offset.y -= offset.y * (zoomLevel / this.zoomLevel * 0.45) - offset.y;
+
         if (zoomLevel > MAX_ZOOM_LEVEL) {
             zoomLevel = MAX_ZOOM_LEVEL;
         } else if (zoomLevel < 1) {
@@ -178,6 +187,12 @@ public class MapView extends View {
                 offset.x -= distanceX;
             }
             return super.onScroll(e1, e2, distanceX, distanceY);
+        }
+
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+            pointCalculator.decalibrate(e.getX(), e.getY());
+            return true;
         }
     }
 

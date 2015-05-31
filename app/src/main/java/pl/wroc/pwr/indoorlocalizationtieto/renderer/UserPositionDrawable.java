@@ -17,6 +17,7 @@ public class UserPositionDrawable extends Drawable {
     private PointF offset;
     private int xPos;
     private int yPos;
+    private float zoom;
 
     public UserPositionDrawable(int x, int y) {
         this.xPos = x;
@@ -46,7 +47,7 @@ public class UserPositionDrawable extends Drawable {
 
     @Override
     public void draw(Canvas canvas) {
-        canvas.drawPoint(xPos, yPos, paint);
+        canvas.drawPoint(xPos * zoom, yPos * zoom, paint);
     }
 
     @Override
@@ -64,8 +65,7 @@ public class UserPositionDrawable extends Drawable {
         return PixelFormat.OPAQUE;
     }
 
-    public void setOffset(PointF offset) {
-
-        this.offset = offset;
+    public void setZoom(float zoom) {
+        this.zoom = zoom;
     }
 }
