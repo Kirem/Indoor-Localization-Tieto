@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_ec18a286",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/UI/SearchFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-31T14:50:25Z",
+      "side": 1,
+      "message": "a co jak selectedObject \u003d\u003d null?",
+      "range": {
+        "startLine": 46,
+        "startChar": 46,
+        "endLine": 46,
+        "endChar": 70
+      },
+      "revId": "d67bb1c6a19e54a4bb655dd14c9baa273f08a092",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_0c1ea670",
+        "filename": "app/src/main/java/pl/wroc/pwr/indoorlocalizationtieto/UI/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-31T14:50:25Z",
+      "side": 1,
+      "message": "duże ładniej",
+      "range": {
+        "startLine": 16,
+        "startChar": 3,
+        "endLine": 20,
+        "endChar": 75
+      },
+      "revId": "d67bb1c6a19e54a4bb655dd14c9baa273f08a092",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_2c136a67",
+        "filename": "app/src/main/res/layout/search_layout.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-31T14:50:25Z",
+      "side": 1,
+      "message": "unikaj podawania dokładnych wartości bo na różnych ekranach będzie to inaczej wyglądać",
+      "range": {
+        "startLine": 8,
+        "startChar": 30,
+        "endLine": 8,
+        "endChar": 35
+      },
+      "revId": "d67bb1c6a19e54a4bb655dd14c9baa273f08a092",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_4c18ae81",
+        "filename": "app/src/main/res/layout/search_layout.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1004256
+      },
+      "writtenOn": "2015-05-31T14:50:25Z",
+      "side": 1,
+      "message": "do czego on?",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 47
+      },
+      "revId": "d67bb1c6a19e54a4bb655dd14c9baa273f08a092",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
